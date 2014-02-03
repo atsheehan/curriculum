@@ -12,3 +12,12 @@ def multiply_lists(lists)
     "Lists must be same length"
   end
 end
+
+def multiply_lists(lists)
+  num_arrays = lists.split("|").map{|a| a.split(' ').map(&:to_i) }
+  if num_arrays[0].length == num_arrays[1].length
+    num_arrays[0].zip(num_arrays[1]).map{|nums| nums.reduce(:*) }.join(" ")
+  else
+    "Lists must be same length"
+  end
+end
