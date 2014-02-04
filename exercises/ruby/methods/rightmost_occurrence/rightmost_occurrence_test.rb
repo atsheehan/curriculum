@@ -9,18 +9,22 @@ describe "#rightmost_occurrence" do
   end
 
   it "returns the correct index when is only character" do
+    skip
     rightmost_occurrence('t', 't').must_equal 0
   end
 
   it "returns the correct index when is in middle of string" do
+    skip
     rightmost_occurrence('cat dog', 'd').must_equal 4
   end
 
   it "returns the correct index when char occurs more than once" do
+    skip
     rightmost_occurrence('cat dog tutu', 't').must_equal 10
   end
 
   it "is not case sensitive" do
+    skip
     rightmost_occurrence('Sometimes I like yOu', 'o').must_equal 18
   end
 end
