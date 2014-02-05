@@ -14,3 +14,10 @@ QUESTIONS
 - How many eggs should the restaurant manager order to cover all 3
 restaurants for 1 month?
 - What is the list of all lactose free items in ordered by price?
+
+### STRETCH GOAL:
+
+Come up with one more question you would like to answer from the data.
+Write the test first and then the method that will answer your question.
+Congrats, you just TDD'd a method!
+
