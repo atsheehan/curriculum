@@ -21,6 +21,15 @@ describe 'tic tac toe' do
     winner?(input).must_equal true
   end
 
+  it 'is false when no winners exist' do
+
+    input = [['o', ' ', ' '],
+             [' ', ' ', ' '],
+             ['o', ' ', ' ']]
+
+    winner?(input).must_equal false
+  end
+
   it 'finds diagonal winners' do
     skip
     input1 = [['x', ' ', ' '],
