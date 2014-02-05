@@ -8,6 +8,6 @@ array.
 ### Sample input
 numberSort([1,3,2,4])
 numberSort([1,3,2,4], 'desc')
-### Sample outpu
+### Sample output
 [1,2,3,4]
 [4,3,2,1]
