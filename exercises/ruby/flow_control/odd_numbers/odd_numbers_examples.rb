@@ -20,7 +20,7 @@ until i > 100
   i += 1
 end
 
-# Exmaple 4
+# Example 4
 
 100.times do |i|
   puts i if (i % 2 != 0)
