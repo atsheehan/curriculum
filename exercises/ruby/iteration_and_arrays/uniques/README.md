@@ -5,7 +5,8 @@
 ### CHALLENGE DESCRIPTION
 
 You are given a sorted list of numbers with duplicates. Print out the
-sorted list with duplicates removed.
+sorted list with duplicates removed. You are not allowed to use the uniq
+method!
 
 INPUT SAMPLE:
 
