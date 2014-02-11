@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Write a method that prints out a 12x12 multiplication table.
+Write a method that prints out a tab delimited 12x12 multiplication table.
 
 As an extra challenge, write a method that allows the dimensions of the multiplication
 table to be passed in as an argument.
