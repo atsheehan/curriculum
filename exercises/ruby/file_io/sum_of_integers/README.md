@@ -2,7 +2,7 @@
 
 ## Instructions
 
-Write a method that accepts a file path as an argument. Your method should
+Write a method named `sum` that accepts a file path as an argument. Your method should
 return the sum of all of the integers contained within the file.
 
 ## Sample Input
