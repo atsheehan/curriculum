@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './zoo_keeper'
+require_relative '../lib/zoo_keeper'
 
 describe 'earn hash methods' do
   # this before block makes the @animals hash
@@ -68,4 +68,3 @@ describe 'earn hash methods' do
     output[2].must_include 'lion'
   end
 end
-
