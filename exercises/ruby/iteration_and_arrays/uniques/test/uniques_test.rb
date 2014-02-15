@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './uniques'
+require_relative '../lib/uniques'
 
 describe 'uniques' do
   it 'should remove duplicates from string' do

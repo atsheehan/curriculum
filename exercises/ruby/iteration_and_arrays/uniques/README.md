@@ -1,11 +1,9 @@
-### Iteration & Arrays - Green Level
+# Unique Elements
 
-## UNIQUE ELEMENTS
-
-### CHALLENGE DESCRIPTION
+## Instructions
 
 You are given a sorted list of numbers with duplicates. Print out the
-sorted list with duplicates removed. You are not allowed to use the uniq
+sorted list with duplicates removed. You are not allowed to use the `uniq`
 method!
 
 INPUT SAMPLE:
@@ -24,12 +22,4 @@ Print out the sorted list with duplicates removed.
 ```ruby
 1,2,3,4
 2,3,4,5
-```
-
-### Directions
-
-Add your solution to `uniques.rb` and run the test file with:
-
-```bash
-ruby uniques_test.rb
 ```
