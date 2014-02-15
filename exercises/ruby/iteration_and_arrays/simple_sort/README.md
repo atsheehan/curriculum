@@ -1,8 +1,6 @@
-### Iteration & Arrays Drill - Yellow Level
+# Simple Sort
 
-## SIMPLE SORTING
-
-### CHALLENGE DESCRIPTION:
+## Instructions
 
 Write a ruby program which sorts numbers. You are not allowed to use any
 of the native sort methods found in ruby, you have to write your own!
@@ -17,12 +15,4 @@ OUTPUT SAMPLE:
 
 ```ruby
 "-99.22 -88.87 10.58 30.02 107.33"
-```
-
-### Directions
-
-Add your solution to `simple_sort.rb` and run the test file with:
-
-```bash
-ruby simple_sort_test.rb
 ```

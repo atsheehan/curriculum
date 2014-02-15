@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './simple_sort'
+require_relative '../lib/simple_sort'
 
 describe 'simple sort' do
 
@@ -12,4 +12,3 @@ describe 'simple sort' do
     output.must_equal "-99.22 -88.87 10.58 30.02 107.33"
   end
 end
-
