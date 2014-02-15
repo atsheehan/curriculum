@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './tic_tac_toe'
+require_relative '../lib/tic_tac_toe'
 
 describe 'tic tac toe' do
   it 'finds horizontal winners' do
@@ -13,7 +13,6 @@ describe 'tic tac toe' do
   end
 
   it 'finds vertical winners' do
-    skip
     input = [['o', ' ', ' '],
              ['o', ' ', ' '],
              ['o', ' ', ' ']]
@@ -22,7 +21,6 @@ describe 'tic tac toe' do
   end
 
   it 'is false when no winners exist' do
-
     input = [['o', ' ', ' '],
              [' ', ' ', ' '],
              ['o', ' ', ' ']]
@@ -31,7 +29,6 @@ describe 'tic tac toe' do
   end
 
   it 'finds diagonal winners' do
-    skip
     input1 = [['x', ' ', ' '],
               [' ', 'x', ' '],
               [' ', ' ', 'x']]
