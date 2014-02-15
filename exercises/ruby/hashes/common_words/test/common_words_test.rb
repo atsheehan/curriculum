@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './common_words'
+require_relative '../lib/common_words'
 
 describe 'common words' do
   it 'returns most common word' do
@@ -24,4 +24,3 @@ describe 'common words' do
     most_common(input).must_include 'short'
   end
 end
-
