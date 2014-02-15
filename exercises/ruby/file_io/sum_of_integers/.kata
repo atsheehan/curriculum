@@ -1,0 +1,4 @@
+---
+name: Sum of Integers
+difficulty: 2
+test_runner: ruby
