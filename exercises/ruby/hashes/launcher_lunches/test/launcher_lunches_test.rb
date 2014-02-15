@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './launcher_lunches'
+require_relative '../lib/launcher_lunches'
 
 describe 'launcher lunches' do
   it 'returns most expensize item' do
@@ -23,4 +23,3 @@ describe 'launcher lunches' do
     lactose_free_items.must_equal [:corn_on_the_cob, :sad_cereal, :apathetic_eggs, :mopey_falafels, :fluffer_nutter_with_bacon, :veggie_surprise_bag]
   end
 end
-
