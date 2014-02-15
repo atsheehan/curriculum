@@ -1,8 +1,6 @@
-### Iteration & Arrays Drill - Yellow Level
+# Tic Tac Toe
 
-## TIC TAC TOE WINNERS
-
-### CHALLENGE DESCRIPTION:
+## Instructions
 
 Write a ruby program which determines if there is a winning combination
 of `x` or `o` on a tic tac toe board.
@@ -26,18 +24,8 @@ true
 false
 ```
 
-### Directions
-
-Add your solution to `tic_tac_toe.rb` and run the test file with:
-
-```bash
-ruby tic_tac_toe_test.rb
-```
-
-### Hint
+## Hints
 
 Get the horizontal test to pass first, then remove `skip` from the
 vertical test and get it to pass.  Finally, solve the diagonal test
 case.
-
-

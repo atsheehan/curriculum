@@ -1,28 +1,22 @@
-### Hashes
+# Morse Code
 
-## MORSE CODE DECODER
-
-### CHALLENGE DESCRIPTION:
+## Instructions
 
 Write a ruby program which decodes a string of [International Morse
 Code](http://en.wikipedia.org/wiki/International_Morse_Code).
 
-INPUT SAMPLE:
+## Sample Usage
 
-```ruby
+### Input
+
+```no-highlight
 .-.. .- ..- -. -.-. .... / .- -.-. .- -.. . -- -.-- / .. ... / .-.. ---
 -.-. .- - . -.. / .- - / ...-- ...-- / .... .- .-. .-. .. ... --- -. /
  .- ...- . .-.-.-
-
 ```
 
-OUTPUT SAMPLE:
+## Output
 
-```ruby
+```no-highlight
 "LAUNCH ACADEMY IS LOCATED AT 33 HARRISON AVE."
 ```
-
-### Directions
-
-Run the test and add your solution to `morse_code.rb`.
-
