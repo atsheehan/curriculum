@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'fizz_buzz'
+require_relative '../lib/fizz_buzz'
 
 describe "FizzBuzz" do
   it "fizzes and buzzes appropriately" do
@@ -108,7 +108,7 @@ Fizz
 Buzz
     eos
 
-    code = File.read('fizz_buzz.rb')
+    code = File.read(File.join(File.dirname(__FILE__), '../lib/fizz_buzz.rb'))
     proc { eval(code) }.must_output expected_output
   end
 end
