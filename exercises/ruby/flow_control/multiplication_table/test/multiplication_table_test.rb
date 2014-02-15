@@ -1,9 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'multiplication_table'
-
-# Part 1
+require_relative '../lib/multiplication_table'
 
 describe "#multiplication_table" do
   it "prints out a 12x12 multiplication table" do
@@ -26,12 +24,8 @@ describe "#multiplication_table" do
   end
 end
 
-# Part 2
-
 describe "#multiplication_table" do
   it "prints out a mutliplication table of a given size" do
-    skip "This feature is optional."
-
     expected_output = <<-eos
 1\t2\t3\t4\t5
 2\t4\t6\t8\t10
