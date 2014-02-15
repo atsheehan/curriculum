@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'distance_between_points'
+require_relative '../lib/distance_between_points'
 
 describe "#distance" do
   it "finds the distance between two points that are the same" do
@@ -12,7 +12,6 @@ describe "#distance" do
   end
 
   it "finds the distance between two points" do
-    skip
     point1 = [0, 0]
     point2 = [3, 0]
 
@@ -20,7 +19,6 @@ describe "#distance" do
   end
 
   it "finds the distance between points with negative" do
-    skip
     point1 = [0, 0]
     point2 = [-5, 0]
 
@@ -28,7 +26,6 @@ describe "#distance" do
   end
 
   it "rounds the distance to 3 decimal places" do
-    skip
     point1 = [0, 0]
     point2 = [-3, 1]
 
