@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative './multiply_lists'
+require_relative '../lib/multiply_lists'
 
 describe 'multiply lists' do
   it 'multiplies lists of positive integers' do

@@ -1,12 +1,9 @@
-### Iteration & Arrays Drill - Red Level
+# Multiply Lists
 
-## MULTIPLY LISTS
-
-### CHALLENGE DESCRIPTION
+## Instructions
 
 Implement a ruby program that takes in 2 lists of positive integers and
 multiplies corresponding elements in each list.
-
 
 Your program should accept a single string containing two lists of
 positive integers. Lists are separated by a pipe `|` character and
@@ -36,13 +33,5 @@ Valid Input / Output Examples:
 1 4 8 | 3 7 => "Lists must be same length"
 ```
 
-### Directions
-
 To complete this drill get all three test cases to pass by replacing
-"SOLUTION GOES HERE" in `multiply_lists.rb` with your solution.  To run the
-provided tests enter the following in the terminal:
-
-```bash
-ruby multiply_lists_test.rb
-```
-
+"SOLUTION GOES HERE" in `lib/multiply_lists.rb` with your solution.
