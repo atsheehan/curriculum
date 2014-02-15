@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'armstrong_numbers'
+require_relative '../lib/armstrong_numbers'
 
 describe "#armstrong_number?" do
   it "correctly identifies armstrong numbers of length 1" do
