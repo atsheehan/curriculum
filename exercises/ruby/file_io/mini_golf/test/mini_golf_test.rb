@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'mini_golf'
+require_relative '../lib/mini_golf'
 
 describe "#display_scores" do
   it "displays the scores in the correctly" do
