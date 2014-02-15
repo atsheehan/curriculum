@@ -19,6 +19,7 @@ Mini Golf Scores
 9. Faizaan with 79 strokes.
     eos
 
-    proc { display_scores('scores.csv') }.must_output expected_output
+    sample_file = File.join(File.dirname(__FILE__), 'scores.csv')
+    proc { display_scores(sample_file) }.must_output expected_output
   end
 end
