@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'odd_numbers'
+require_relative '../lib/odd_numbers'
 
 describe "Odd Numbers" do
   it "prints all odd numbers from 1 to 100" do
@@ -58,7 +58,7 @@ describe "Odd Numbers" do
 99
     eos
 
-    code = File.read('odd_numbers.rb')
+    code = File.read(File.join(File.dirname(__FILE__), '../lib/odd_numbers.rb'))
     proc { eval(code) }.must_output expected_output
   end
 end
