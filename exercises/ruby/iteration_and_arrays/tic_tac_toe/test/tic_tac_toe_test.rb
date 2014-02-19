@@ -13,6 +13,7 @@ describe 'tic tac toe' do
   end
 
   it 'finds vertical winners' do
+    skip
     input = [['o', ' ', ' '],
              ['o', ' ', ' '],
              ['o', ' ', ' ']]
@@ -21,6 +22,7 @@ describe 'tic tac toe' do
   end
 
   it 'is false when no winners exist' do
+    skip
     input = [['o', ' ', ' '],
              [' ', ' ', ' '],
              ['o', ' ', ' ']]
@@ -29,6 +31,7 @@ describe 'tic tac toe' do
   end
 
   it 'finds diagonal winners' do
+    skip
     input1 = [['x', ' ', ' '],
               [' ', 'x', ' '],
               [' ', ' ', 'x']]

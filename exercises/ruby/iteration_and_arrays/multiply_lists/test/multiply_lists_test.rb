@@ -12,6 +12,7 @@ describe 'multiply lists' do
   end
 
   it 'multiplies lists of single integers' do
+    skip
     input = "70 | 7"
 
     output = multiply_lists(input)
@@ -19,6 +20,7 @@ describe 'multiply lists' do
   end
 
   it 'returns error message if lists are not same length' do
+    skip
     input = "29 8 3 | 7 2"
 
     output = multiply_lists(input)

@@ -9,14 +9,17 @@ describe "#leap_year?" do
   end
 
   it "identifies year is not a leap year" do
+    skip
     leap_year?(2014).must_equal false
   end
 
   it "identifies when century is not a leap year" do
+    skip
     leap_year?(2100).must_equal false
   end
 
   it "identifies when century is a leap year" do
+    skip
     leap_year?(2000).must_equal true
   end
 end

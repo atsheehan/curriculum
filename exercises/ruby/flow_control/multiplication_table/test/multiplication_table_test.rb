@@ -25,6 +25,8 @@ describe "#multiplication_table" do
 end
 
 describe "#multiplication_table" do
+  skip
+
   it "prints out a mutliplication table of a given size" do
     expected_output = <<-eos
 1\t2\t3\t4\t5

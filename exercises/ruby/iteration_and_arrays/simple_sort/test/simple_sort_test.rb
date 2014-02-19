@@ -4,7 +4,6 @@ require 'minitest/autorun'
 require_relative '../lib/simple_sort'
 
 describe 'simple sort' do
-
   it 'sorts a list of numbers' do
     input = "30.02 -88.87 10.58 -99.22 107.33"
 

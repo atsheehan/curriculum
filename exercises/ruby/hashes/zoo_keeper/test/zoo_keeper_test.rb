@@ -29,6 +29,7 @@ describe 'earn hash methods' do
   end
 
   it 'returns a hash containing only lonely animals' do
+    skip
     output = lonely_animals(@animals)
 
     output.must_include 'leopard'
@@ -37,11 +38,13 @@ describe 'earn hash methods' do
   end
 
   it 'returns a count of the total number of animals' do
+    skip
     #this method can return a count
     total_animals(@animals).must_equal 22
   end
 
   it 'returns a hash with newly added animals' do
+    skip
     # the add_new_animals method should only add animals
     # if there are none of that type of animal already at the zoo
     # (the animals are very territorial)
@@ -61,6 +64,7 @@ describe 'earn hash methods' do
   end
 
   it 'returns a hash with animals grouped by count' do
+    skip
     output = group_by_count(@animals)
 
     output[6].must_include 'alligator'
