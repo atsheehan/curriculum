@@ -2,20 +2,19 @@
 
 ## Instructions
 
-Write a method that takes two parameters, a string and a character. Your method
-should then find the rightmost occurrence of that character in the string and
-return the index of the position of that character occurrence in the string.
+Write a method that returns the index of the rightmost occurrence of a given
+character within a given string.
 
 **You are not allowed to use the `String#rindex` method.**
 
 ## Sample Input
 
 ```no-highlight
-the cat jumped on the car, t
+"big bad bikers", "b"
 ```
 
 ## Sample Output
 
 ```no-highlight
-18
+8
 ```
