@@ -1,0 +1,4 @@
+---
+name: Odd Numbers
+difficulty: 1
+test_runner: ruby

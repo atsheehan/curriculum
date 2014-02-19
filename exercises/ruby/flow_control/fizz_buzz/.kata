@@ -1,0 +1,4 @@
+---
+name: Fizz buzz
+difficulty: 2
+test_runner: ruby

@@ -1,0 +1,4 @@
+---
+name: Hex to Decimal
+difficulty: 3
+test_runner: ruby
