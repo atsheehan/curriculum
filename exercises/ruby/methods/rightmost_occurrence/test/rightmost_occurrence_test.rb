@@ -1,7 +1,7 @@
 require 'minitest/spec'
 require 'minitest/autorun'
 
-require_relative 'rightmost_occurrence'
+require_relative '../lib/rightmost_occurrence'
 
 describe "#rightmost_occurrence" do
   it "returns nil if no matches are found" do
