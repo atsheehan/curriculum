@@ -1,0 +1,4 @@
+---
+name: Fizz Buzz
+difficulty: 1
+test_runner: javascript
