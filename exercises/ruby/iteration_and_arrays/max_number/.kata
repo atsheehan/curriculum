@@ -1,0 +1,4 @@
+---
+name: Max Number
+difficulty: 1
+test_runner: rspec
