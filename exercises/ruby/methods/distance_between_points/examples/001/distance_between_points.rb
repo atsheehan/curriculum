@@ -1,5 +1,3 @@
-# Example 1
-
 def distance(point1, point2)
   x1 = point1[0]
   y1 = point1[1]
