@@ -1,5 +1,3 @@
-# Example 1
-
 def word_frequency(file_path)
   text = File.read(file_path)
   frequency = {}
