@@ -1,6 +1,3 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/multiplication_table'
 
 describe "#multiplication_table" do
@@ -20,13 +17,14 @@ describe "#multiplication_table" do
 12\t24\t36\t48\t60\t72\t84\t96\t108\t120\t132\t144
     eos
 
-    proc { multiplication_table }.must_output expected_output
+    capture_output do
+      multiplication_table
+      expect($stdout.string).to eq expected_output
+    end
   end
 end
 
 describe "#multiplication_table" do
-  skip
-
   it "prints out a mutliplication table of a given size" do
     expected_output = <<-eos
 1\t2\t3\t4\t5
@@ -36,6 +34,25 @@ describe "#multiplication_table" do
 5\t10\t15\t20\t25
     eos
 
-    proc { multiplication_table(5) }.must_output expected_output
+    capture_output do
+      multiplication_table(5)
+      expect($stdout.string).to eq expected_output
+    end
   end
+end
+
+def capture_output(&block)
+  original_stdout = $stdout
+  $stdout = fake_stdout = StringIO.new
+  original_stderr = $stderr
+  $stderr = fake_stderr = StringIO.new
+
+  begin
+    yield
+  ensure
+    $stdout = original_stdout
+    $stderr = original_stderr
+  end
+
+  [fake_stdout.string, fake_stderr.string]
 end
