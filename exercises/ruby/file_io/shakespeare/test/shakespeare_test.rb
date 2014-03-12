@@ -1,13 +1,13 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/shakespeare'
 
 describe "#word_frequency" do
   it "outputs the frequency that each word appears" do
-    frequency = word_frequency('hamlet.txt')
-    frequency["bernardo"].must_equal 30
-    frequency["jelly"].must_equal 1
-    frequency["excellent"].must_equal 10
+    sample_file = File.join(File.dirname(__FILE__), 'hamlet.txt')
+
+    frequency = word_frequency(sample_file)
+
+    expect(frequency["bernardo"]).to eq 30
+    expect(frequency["jelly"]).to eq 1
+    expect(frequency["excellent"]).to eq 10
   end
 end
