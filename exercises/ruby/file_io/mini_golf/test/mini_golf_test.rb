@@ -1,10 +1,9 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/mini_golf'
 
 describe "#display_scores" do
   it "displays the scores in the correctly" do
+    sample_file = File.join(File.dirname(__FILE__), 'scores.csv')
+
     expected_output = <<-eos
 Mini Golf Scores
 
@@ -19,7 +18,25 @@ Mini Golf Scores
 9. Faizaan with 79 strokes.
     eos
 
-    sample_file = File.join(File.dirname(__FILE__), 'scores.csv')
-    proc { display_scores(sample_file) }.must_output expected_output
+    capture_output do
+      display_scores(sample_file)
+      expect($stdout.string).to eq expected_output
+    end
   end
+end
+
+def capture_output(&block)
+  original_stdout = $stdout
+  $stdout = fake_stdout = StringIO.new
+  original_stderr = $stderr
+  $stderr = fake_stderr = StringIO.new
+
+  begin
+    yield
+  ensure
+    $stdout = original_stdout
+    $stderr = original_stderr
+  end
+
+  [fake_stdout.string, fake_stderr.string]
 end
