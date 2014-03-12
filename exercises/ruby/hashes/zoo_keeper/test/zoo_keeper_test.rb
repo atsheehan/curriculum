@@ -1,13 +1,10 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/zoo_keeper'
 
 describe 'earn hash methods' do
   # this before block makes the @animals hash
   # available in all of the tests
-  before do
-    @animals = {
+  let(:animals) do
+    {
       'leopard'   => 1,
       'gorilla'   => 3,
       'hippo'     => 4,
@@ -20,31 +17,29 @@ describe 'earn hash methods' do
   end
 
   it 'returns a hash with only animals that start with vowels' do
-    output = starts_with_vowel(@animals)
+    output = starts_with_vowel(animals)
 
-    output.must_include 'eagle'
-    output.must_include 'ostrich'
-    output.must_include 'alligator'
-    output.wont_include 'zebra'
+    expect(output).to include 'eagle'
+    expect(output).to include 'ostrich'
+    expect(output).to include 'alligator'
+
+    expect(output).to_not include 'zebra'
   end
 
   it 'returns a hash containing only lonely animals' do
-    skip
-    output = lonely_animals(@animals)
+    output = lonely_animals(animals)
 
-    output.must_include 'leopard'
-    output.must_include 'zebra'
-    output.wont_include 'hippo'
+    expect(output).to include 'leopard'
+    expect(output).to include 'zebra'
+
+    expect(output).to_not include 'hippo'
   end
 
   it 'returns a count of the total number of animals' do
-    skip
-    #this method can return a count
-    total_animals(@animals).must_equal 22
+    expect(total_animals(animals)).to eq 22
   end
 
   it 'returns a hash with newly added animals' do
-    skip
     # the add_new_animals method should only add animals
     # if there are none of that type of animal already at the zoo
     # (the animals are very territorial)
@@ -55,20 +50,19 @@ describe 'earn hash methods' do
       'eagle' => 5
     }
 
-    output = add_new_animals(@animals, new_shipment)
+    output = add_new_animals(animals, new_shipment)
 
-    output['hippo'].must_equal 4
-    output['panda'].must_equal 4
-    output['tiger'].must_equal 3
-    output['eagle'].must_equal 3
+    expect(output['hippo']).to eq 4
+    expect(output['panda']).to eq 4
+    expect(output['tiger']).to eq 3
+    expect(output['eagle']).to eq 3
   end
 
   it 'returns a hash with animals grouped by count' do
-    skip
-    output = group_by_count(@animals)
+    output = group_by_count(animals)
 
-    output[6].must_include 'alligator'
-    output[2].must_include 'ostrich'
-    output[2].must_include 'lion'
+    expect(output[6]).to include 'alligator'
+    expect(output[2]).to include 'ostrich'
+    expect(output[2]).to include 'lion'
   end
 end

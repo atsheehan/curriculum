@@ -1,6 +1,3 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/tic_tac_toe'
 
 describe 'tic tac toe' do
@@ -9,29 +6,26 @@ describe 'tic tac toe' do
              [' ', ' ', ' '],
              [' ', ' ', ' ']]
 
-    winner?(input).must_equal true
+    expect(winner?(input)).to eq true
   end
 
   it 'finds vertical winners' do
-    skip
     input = [['o', ' ', ' '],
              ['o', ' ', ' '],
              ['o', ' ', ' ']]
 
-    winner?(input).must_equal true
+    expect(winner?(input)).to eq true
   end
 
   it 'is false when no winners exist' do
-    skip
     input = [['o', ' ', ' '],
              [' ', ' ', ' '],
              ['o', ' ', ' ']]
 
-    winner?(input).must_equal false
+    expect(winner?(input)).to eq false
   end
 
   it 'finds diagonal winners' do
-    skip
     input1 = [['x', ' ', ' '],
               [' ', 'x', ' '],
               [' ', ' ', 'x']]
@@ -40,7 +34,7 @@ describe 'tic tac toe' do
               [' ', 'o', ' '],
               ['o', ' ', ' ']]
 
-    winner?(input1).must_equal true
-    winner?(input2).must_equal true
+    expect(winner?(input1)).to eq true
+    expect(winner?(input2)).to eq true
   end
 end

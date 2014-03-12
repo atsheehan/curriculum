@@ -1,30 +1,23 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/rightmost_occurrence'
 
 describe "#rightmost_occurrence" do
   it "returns nil if no matches are found" do
-    rightmost_occurrence('abc', 'x').must_equal nil
+    expect(rightmost_occurrence('abc', 'x')).to eq nil
   end
 
   it "returns the correct index when is only character" do
-    skip
-    rightmost_occurrence('t', 't').must_equal 0
+    expect(rightmost_occurrence('t', 't')).to eq 0
   end
 
   it "returns the correct index when is in middle of string" do
-    skip
-    rightmost_occurrence('cat dog', 'd').must_equal 4
+    expect(rightmost_occurrence('cat dog', 'd')).to eq 4
   end
 
   it "returns the correct index when char occurs more than once" do
-    skip
-    rightmost_occurrence('cat dog tutu', 't').must_equal 10
+    expect(rightmost_occurrence('cat dog tutu', 't')).to eq 10
   end
 
   it "is not case sensitive" do
-    skip
-    rightmost_occurrence('Sometimes I like yOu', 'o').must_equal 18
+    expect(rightmost_occurrence('Sometimes I like yOu', 'o')).to eq 18
   end
 end

@@ -1,4 +1,4 @@
 ---
 name: Armstrong Numbers
 difficulty: 2
-test_runner: ruby
+test_runner: rspec

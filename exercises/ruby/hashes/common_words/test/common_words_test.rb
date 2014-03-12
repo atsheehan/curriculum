@@ -1,28 +1,22 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/common_words'
 
 describe 'common words' do
   it 'returns most common word' do
     input = 'a short list of words with some words'
 
-    most_common(input).must_include 'words'
+    expect(most_common(input)).to eq ['words']
   end
 
   it 'ignores case of letters and punctuation when return most common word' do
-    skip
-    input = 'Words in a short, short words list of words!'
+    input = 'Words in a short, short words, lists of words!'
 
-    most_common(input).must_include 'words'
-    most_common(input).wont_include 'short'
+    expect(most_common(input)).to eq ['words']
   end
 
   it 'returns most common words if there are ties' do
-    skip
     input = 'a short list of words with some short words in it'
 
-    most_common(input).must_include 'words'
-    most_common(input).must_include 'short'
+    expect(most_common(input)).to include 'words'
+    expect(most_common(input)).to include 'short'
   end
 end
