@@ -1,6 +1,3 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/odd_numbers'
 
 describe "Odd Numbers" do
@@ -59,6 +56,26 @@ describe "Odd Numbers" do
     eos
 
     code = File.read(File.join(File.dirname(__FILE__), '../lib/odd_numbers.rb'))
-    proc { eval(code) }.must_output expected_output
+
+    capture_output do
+      eval(code)
+      expect($stdout.string).to eq expected_output
+    end
   end
+end
+
+def capture_output(&block)
+  original_stdout = $stdout
+  $stdout = fake_stdout = StringIO.new
+  original_stderr = $stderr
+  $stderr = fake_stderr = StringIO.new
+
+  begin
+    yield
+  ensure
+    $stdout = original_stdout
+    $stderr = original_stderr
+  end
+
+  [fake_stdout.string, fake_stderr.string]
 end
