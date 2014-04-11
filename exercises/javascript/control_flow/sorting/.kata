@@ -1,4 +1,5 @@
 ---
 name: Sorting
 difficulty: 1
+language: javascript
 test_runner: javascript

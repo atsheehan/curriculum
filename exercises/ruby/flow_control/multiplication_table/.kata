@@ -1,4 +1,5 @@
 ---
 name: Multiplication Table
 difficulty: 3
+language: ruby
 test_runner: rspec

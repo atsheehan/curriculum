@@ -1,4 +1,5 @@
 ---
 name: Swapcase
 difficulty: 2
+language: javascript
 test_runner: javascript

@@ -1,4 +1,5 @@
 ---
 name: Sum of Integers
 difficulty: 2
+language: ruby
 test_runner: rspec
