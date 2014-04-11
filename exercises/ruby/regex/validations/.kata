@@ -1,4 +1,5 @@
 ---
 name: Regular Expression Drills
 difficulty: 3
+language: ruby
 test_runner: rspec

@@ -1,4 +1,5 @@
 ---
 name: Getting Personal
 difficulty: 1
+language: ruby
 test_runner: rspec
