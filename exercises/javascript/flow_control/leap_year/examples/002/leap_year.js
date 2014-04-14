@@ -1,11 +1,3 @@
-// Example 1
-
-function leapYear(year){
-  return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
-}
-
-// Example 2
-
 function leapYear(year){
   if (year % 400 == 0){
     return true;
