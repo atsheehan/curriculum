@@ -1,6 +1,7 @@
 function wordToDigit(word){
   convertedWord = '';
   seperatedWords = word.split(';');
+
   seperatedWords.forEach(function(word){
     switch (word) {
       case 'zero':
@@ -35,5 +36,6 @@ function wordToDigit(word){
         break;
     }
   });
+
   return parseInt(convertedWord);
 }

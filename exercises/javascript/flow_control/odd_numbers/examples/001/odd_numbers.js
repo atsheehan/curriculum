@@ -1,5 +1,3 @@
-// Example 1
-
 function oddNumbers(){
   oddNumbers = [];
   for (var i=1; i <= 100; i++){
