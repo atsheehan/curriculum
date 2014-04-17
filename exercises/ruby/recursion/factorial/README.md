@@ -1,4 +1,4 @@
-# Fibonacci Numbers
+# Factorial
 
 [Factorial - Wikipedia]((http://en.wikipedia.org/wiki/Factorial)
 
@@ -16,12 +16,12 @@ Write a ruby program that calculates the factorial of a given number.
 ## Example
 
 ```
-fibonacci(6)
-=> 8
+factorial(3)
+=> 6
 
-Fibonacci.calculate(8)
-=> 21
+factorial(4)
+=> 24
 
-Fibonacci.calculate(13)
-=> 233
+factorial(5)
+=> 120
 ```

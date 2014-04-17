@@ -30,9 +30,9 @@ the 1000th number in the Fibonacci Series in under a second.
 fibonacci(6)
 => 8
 
-Fibonacci.calculate(8)
+fibonacci(8)
 => 21
 
-Fibonacci.calculate(13)
+fibonacci(13)
 => 233
 ```
