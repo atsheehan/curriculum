@@ -17,7 +17,7 @@ describe 'launcher lunches' do
   end
 
   it 'lists all items for lactose intolerant individuals by price' do
-    lactose_free_items = [
+    lf_items = [
       :corn_on_the_cob,
       :sad_cereal,
       :apathetic_eggs,
@@ -26,6 +26,6 @@ describe 'launcher lunches' do
       :veggie_surprise_bag
     ]
 
-    expect(lactose_free_items).to eq lactose_free_items
+    expect(lactose_free_items).to eq lf_items
   end
 end
