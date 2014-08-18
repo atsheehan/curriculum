@@ -19,7 +19,7 @@ end
 # restaurant data
 def restaurants
   {
-    "Sam's Sandwhiches" => {
+    "Sam's Sandwiches" => {
       hours: 7,
       meals: {
         breakfast: {

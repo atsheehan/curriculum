@@ -19,7 +19,6 @@ describe 'launcher lunches' do
   it 'lists all items for lactose intolerant individuals by price' do
     lf_items = [
       :corn_on_the_cob,
-      :sad_cereal,
       :apathetic_eggs,
       :mopey_falafels,
       :fluffer_nutter_with_bacon,
