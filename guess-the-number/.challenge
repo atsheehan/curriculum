@@ -1,5 +1,6 @@
 ---
 title: Guess the Number
 slug: guess-the-number
+description: A command-line guessing game.
 ignore:
 - "README.md"
