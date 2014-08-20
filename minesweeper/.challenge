@@ -1,0 +1,6 @@
+---
+title: Minesweeper
+slug: minesweeper
+description: A graphical puzzle game.
+ignore:
+- "README.md"
