@@ -1,0 +1,7 @@
+---
+title: Help Request Volume
+slug: help-request-volume
+description: Analyze data from a CSV file.
+ignore:
+- "README.md"
+- "help_requests.csv"
