@@ -1,0 +1,5 @@
+---
+name: Multiply Lists
+difficulty: 3
+language: ruby
+test_runner: rspec

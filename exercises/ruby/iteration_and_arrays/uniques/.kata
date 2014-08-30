@@ -1,0 +1,5 @@
+---
+name: Uniques
+difficulty: 1
+language: ruby
+test_runner: rspec

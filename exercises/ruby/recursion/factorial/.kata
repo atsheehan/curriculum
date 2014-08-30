@@ -1,0 +1,5 @@
+---
+name: Factorial
+difficulty: 2
+test_runner: rspec
+language: ruby

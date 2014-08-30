@@ -1,0 +1,5 @@
+---
+name: Fizz buzz
+difficulty: 2
+test_runner: rspec
+language: ruby
