@@ -1,0 +1,7 @@
+---
+title: "Data Types"
+type: "article"
+description: "Discusses how the \"type\" of our data affects what operations we can perform on it using methods."
+tags: "data-types, methods, arguments, return-values"
+depends: "expressions"
+position: 3
