@@ -1,0 +1,7 @@
+---
+title: "Optimal Guesser"
+type: "challenge"
+description: "Guess a number between 1 and 1,000,000,000 in less than 30 attempts."
+depends: "guess-the-number"
+ignore:
+- "optimal-guesser.md"
