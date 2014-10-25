@@ -2,7 +2,6 @@
 title: "Rock, Paper, Scissors"
 type: "challenge"
 description: "Pit human vs. machine in this riveting, command-line version of the classic game of chance."
-depends: "conditionals, data-types"
-position: 5
+depends: "compound-interest-calculator"
 ignore:
 - "rock-paper-scissors.md"
