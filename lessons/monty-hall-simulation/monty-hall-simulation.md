@@ -4,7 +4,7 @@ Taken from [Wikipedia][wikipedia]:
 
 ### Instructions
 
-Write a program to simulate the game show and report how often each the user guesses correctly. The program should simulate two different scenarios: one where the user switches doors and another when the user doesn't. The simulation should be run **n** times to generate more accurate probabilities for how often the player guesses correctly in each scenario. Print out the outcomes for both scenarios as a percentage of games guessed correctly.
+Write a program to simulate the game show and report how often each the user guesses correctly. The program should simulate two different scenarios: one where the user switches doors and another when the user doesn't. The simulation should be run **n** times where **n** is passed as a command-line argument (i.e. `ruby monty_hall.rb 100` should run the simulation 100 times). Print out the outcomes for both scenarios as a percentage of games guessed correctly.
 
 ### Sample Usage
 
