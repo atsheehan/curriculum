@@ -27,29 +27,37 @@ In ASCII text, each character’s cost is a single 8-bit byte. The total cost of
 Write a program called data-compression.rb that compresses a text file. See below for an example of how this program could compress a text file:
 
 To compress a file (using Kant's Fundamental Principles of the Metaphysic of Morals as an example), in your terminal, run the following command:
-```
+
+```no-highlight
 ruby data-compression.rb -c fundamental_kant.txt
 ```
+
 You should see a printout like the one below and your current folder will now have a file called fundamental_kant.txt.compressed:
-```
+
+```no-highlight
 fundamental_kant.txt.compressed created
 ________________________________________________________
-Original file name    : fundamental_kant.txt
+Original file name     : fundamental_kant.txt
 Compressed file name   : fundamental_kant.txt.compressed
-Original file size    : 176K
+Original file size     : 176K
 Compressed file size   : 71K
 Compression took 0.1989 seconds
 Compressed file is 59.7% smaller than the original file
 Compression Ratio: 2.48 x
 ________________________________________________________
 ```
+
 To uncompress the .compressed file:
-```
+
+```no-highlight
 ruby data-compression.rb -u fundamental_kant.txt.compressed
 ```
+
 Your current folder will now have _fundamental_kant.txt which will contain the uncompressed text.
-The prinout will look like the one below:
-```
+
+The printout will look like the one below:
+
+```no-highlight
 file uncompressed
 _fundamental_kant.txt created
 ```
