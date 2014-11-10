@@ -1,0 +1,7 @@
+---
+title: "Data Compression"
+type: "challenge"
+description: "Write a program to compress a text file."
+depends: "data-compression"
+ignore:
+- "data-compression.md"
