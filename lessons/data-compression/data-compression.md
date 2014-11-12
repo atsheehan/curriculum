@@ -63,4 +63,4 @@ _fundamental_kant.txt created
 ```
 
 ###Hints
-For purposes of this project, avoid using the ZLIB library. There are some great resources on the web that discuss various compression algorithms. A few in particular like a `Huffman` algorithm or `LZW compression might be worth looking at here.
+For purposes of this project, avoid using the ZLIB library. There are some great resources on the web that discuss various compression algorithms. A few in particular like a `Huffman` algorithm or `LZW compression` might be worth looking at here.
