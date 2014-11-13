@@ -98,7 +98,5 @@ Now when you run your program, it will retrieve the latest results directly from
 
 We want to avoid sharing our API keys since those are linked to our individual accounts and can be abused by other users if they were publicly known. Since we're storing the API key in an environment variable it is not explicitly included in our codebase. If another developer wanted to use our program, they could sign up for their own API key and set it as their environment variable to achieve the same result.
 
-### Sample Usage
-
 [in_theaters_api_call]: http://developer.rottentomatoes.com/docs/read/json/v10/In_Theaters_Movies
 [rotten_tomatoes_api]: http://developer.rottentomatoes.com/
