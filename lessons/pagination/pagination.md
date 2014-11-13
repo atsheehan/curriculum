@@ -19,7 +19,7 @@ results_count = 392
 current_page = 8
 
 paginate(current_page, results_count, max_pages, results_per_page)
-  => []
+  => [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 ```
 
 Run the test suite
