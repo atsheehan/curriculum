@@ -12,7 +12,7 @@ Write a method that returns an array of page numbers to display when given:
 
 ### Sample Usage
 
-```no-highlight
+```ruby
 results_per_page = 10
 max_pages = 10
 results_count = 392
@@ -47,3 +47,14 @@ rspec ./pagination_spec.rb:10 # #paginate should return an array
 
 * Pseudocode your solution before you start coding.
 * Let the test suite provided guide you to a solution.
+* Start simple. Get your code working for an easy case first. Then, move to a more complex case.
+* Methods that might be useful:
+  * `.ceil`
+  ```
+  (9 / 2.0).ceil # => 5
+  ```
+  * `.floor`
+  ```
+  (9 / 2.0).floor # => 4
+  ```
+* Look into 'optional method parameters' for Ruby methods.
