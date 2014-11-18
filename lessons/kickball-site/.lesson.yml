@@ -5,4 +5,4 @@ description: "Build web app with CSV data."
 depends: "in-theaters"
 ignore:
 - "kickball-site.md"
-- "lackp_starting_rosters.csv"
+- "roster.json"
