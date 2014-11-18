@@ -17,7 +17,8 @@ I want to view the professional teams
 So that I can learn more about the players
 ```
 
-Acceptance Criteria
+Acceptance Criteria:
+
 * I can navigate to a distinct url and web page for each team
 * Each team page displays the team's name
 * Each team page displays each player's name along with their position
@@ -30,7 +31,8 @@ I want to see all players in a certain position
 So that I can see who plays each position in the league
 ```
 
-Acceptance Criteria
+Acceptance Criteria:
+
 * I can navigate to a distinct url for each position
 * Each position page displays the position
 * Each position page lists each player in that position along with their team name
