@@ -1,0 +1,8 @@
+---
+title: "Kickball Site"
+type: "challenge"
+description: "Build web app with CSV data."
+depends: "in-theaters"
+ignore:
+- "kickball-site.md"
+- "roster.json"
