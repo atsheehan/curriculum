@@ -1,0 +1,8 @@
+---
+title: "News Aggregator"
+type: "challenge"
+description: "Persist user data via an HTML form."
+depends: "kickball-site"
+ignore:
+- "news-aggregator.md"
+- "roster.json"
