@@ -1,0 +1,6 @@
+---
+title: "numvowels"
+type: "exercise"
+description: "Count the number of vowels in a string."
+ignore:
+- "numvowels.md"

@@ -1,0 +1,6 @@
+---
+title: "rap-stars"
+type: "exercise"
+description: "Perform a series of calculations on a csv of rap star data"
+ignore:
+- "rap-stars.md"

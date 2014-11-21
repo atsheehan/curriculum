@@ -1,0 +1,7 @@
+---
+title: "badwords"
+type: "exercise"
+description: "Replaces certain words in a string with '----'"
+depends:
+ignore:
+- "badwords.md"

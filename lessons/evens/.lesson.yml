@@ -1,0 +1,6 @@
+---
+title: "evens"
+type: "exercise"
+description: "Return all the even numbers in a array."
+ignore:
+- "evens.md"
