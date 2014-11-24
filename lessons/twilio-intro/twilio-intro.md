@@ -1,6 +1,6 @@
 This tutorial will walk you through creating an application that allows you to
-send and receive text messages in your web browser using [Ruby](ruby),
-[Sinatra](sinatra), and [Twilio](twilio).
+send and receive text messages in your web browser using [Ruby][ruby],
+[Sinatra][sinatra], and [Twilio][twilio].
 
 You can find [the final source code on GitHub][source].
 
