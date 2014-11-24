@@ -2,6 +2,8 @@ This tutorial will walk you through creating an application that allows you to
 send and receive text messages in your web browser using [Ruby](ruby),
 [Sinatra](sinatra), and [Twilio](twilio).
 
+You can find [the final source code on GitHub](source).
+
 ### Learning Goals
 
 - Use the Twilio API to send SMS messages
@@ -453,6 +455,7 @@ displayed on the index page that brings you to the conversation page:
 [environment-variables]: http://en.wikipedia.org/wiki/Environment_variable "Environment Variables"
 [ignoring-files]: https://help.github.com/articles/ignoring-files/ "Ignoring Files"
 [ruby]: http://ruby-lang.org/ "Ruby"
+[source]: https://github.com/LaunchAcademy/twilio-intro "Source"
 [twilio-ruby-helper-api]: http://twilio-ruby.readthedocs.org/en/latest/index.html "Twilio Ruby Helper API"
 [twilio-ruby]: https://github.com/twilio/twilio-ruby "Twilio gem"
 [twilio]: http://twilio.com/ "twilio"
