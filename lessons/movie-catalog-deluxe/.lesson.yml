@@ -1,0 +1,7 @@
+---
+title: "Movie Catalog Deluxe"
+type: "challenge"
+description: "Display information pulled from a PostgreSQL database."
+depends: "hollywood-trivia, movie-catalog"
+ignore:
+- "movie-catalog-deluxe.md"
