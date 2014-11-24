@@ -2,7 +2,7 @@ This tutorial will walk you through creating an application that allows you to
 send and receive text messages in your web browser using [Ruby](ruby),
 [Sinatra](sinatra), and [Twilio](twilio).
 
-You can find [the final source code on GitHub](source).
+You can find [the final source code on GitHub][source].
 
 ### Learning Goals
 
@@ -15,17 +15,17 @@ You can find [the final source code on GitHub](source).
 Before we start writing any code, let's make sure we've got all of the tools
 that we're going to need.
 
-First, head over to [Twilio](twilio) and sign up for an account. You can get an
+First, head over to [Twilio][twilio] and sign up for an account. You can get an
 account and number for free. The free plan does have some restrictions but you
 can use it to get started and send messages before you have to decide whether or
 not you want to add some money to your account.
 
-We're going to use [Bundler](bundler) to keep track of and install all of our
-dependencies. If you're not yet familiar with [Bundler](bundler), head over to
-[bundler.io](bundler) and give it a read.
+We're going to use [Bundler][bundler] to keep track of and install all of our
+dependencies. If you're not yet familiar with [Bundler][bundler], head over to
+[bundler.io][bundler] and give it a read.
 
 Start by creating a file named `Gemfile` in the root directory of your project.
-We're going to be using the [twilio-ruby](twilio-ruby) gem to interact with
+We're going to be using the [twilio-ruby][twilio-ruby] gem to interact with
 Twilio's API, so we should also add it to our `Gemfile`.
 
 ```ruby
@@ -44,7 +44,7 @@ Create a file named `app.rb`. We'll use this to hold the code for our
 application.
 
 Before we can start interacting with the Twilio API, we need to configure
-[twilio-ruby](twilio-ruby) to use our account credentials to authenticate our
+[twilio-ruby][twilio-ruby] to use our account credentials to authenticate our
 requests.
 
 ```ruby
@@ -61,7 +61,7 @@ end
 ```
 
 > How do I know how to do such magic? As with all (good) gems, you can find
-> information about how to use it in the [README](twilio-ruby).
+> information about how to use it in the [README][twilio-ruby].
 
 ### Storing Your Configuration in the Environment
 
@@ -73,13 +73,13 @@ If you're planning on adding this project to your GitHub, you certainly don't
 want people to be able to see what your credentials are.
 
 A common way to solve this problem is to rely on [environment
-variables](environment-variables) for your application's configuration. You can
-read more about the philosophy behind this at [12factor.net](12factor).
+variables][environment-variables] for your application's configuration. You can
+read more about the philosophy behind this at [12factor.net][12factor].
 
-We can use the [dotenv](dotenv) gem to easily define the environment variables
+We can use the [dotenv][dotenv] gem to easily define the environment variables
 for our development environment and export them each time we run our app.
 
-Add the [dotenv](dotenv) gem to your `Gemfile`, and run `bundle install`:
+Add the [dotenv][dotenv] gem to your `Gemfile`, and run `bundle install`:
 
 ```ruby
 # Gemfile
@@ -105,7 +105,7 @@ Create a file named `.gitignore` in the root directory of your project:
 
 > A `.gitignore` allows you to specify file name patterns that you want to
 > ignore. You can read more about this at [GitHub Help - Ignoring
-> Files](ignoring-files).
+> Files][ignoring-files].
 
 Create a `.env` file that we can use to store our Twilio API credentials
 as environment variables:
@@ -137,7 +137,7 @@ end
 
 ### Sending an SMS
 
-Now that we've configured [twilio-ruby](twilio-ruby) to use our credentials we
+Now that we've configured [twilio-ruby][twilio-ruby] to use our credentials we
 can create a client that we can use to talk to Twilio:
 
 ```ruby
@@ -215,7 +215,7 @@ Now that we've figured out how to send text messages, let's use
 [Sinatra](sinatra) to build a web interface that lets us view all the incoming
 and outgoing messages.
 
-Since our application is going to be depending on having the sinatra gem
+Since our application is going to be depending on having the Sinatra gem
 available, we should add it to our `Gemfile` and run `bundle install`:
 
 ```ruby
@@ -448,7 +448,7 @@ displayed on the index page that brings you to the conversation page:
 - **Style the app:** Nobody wants to use an app that looks like this!
 - **Do more cool stuff with Twilio:** Sending SMS messages isn't the only thing
   that Twilio lets you do. Check out [the rest of the
-  docs](twilio-ruby-helper-api) to find out how to do more cool stuff.
+  docs][twilio-ruby-helper-api] to find out how to do more cool stuff.
 
 [bundler]: http://bundler.io/ "Bundler"
 [dotenv]: https://github.com/bkeepers/dotenv "dotenv"
