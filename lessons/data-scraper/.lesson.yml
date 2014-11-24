@@ -1,0 +1,7 @@
+---
+title: "Snoop Dogg's Coffeemaker Reviews"
+type: "challenge"
+description: "Help Snoop Dogg Find Common Words Used in Coffeemaker Reviews"
+depends:
+ignore:
+- "data-scraper.md"
