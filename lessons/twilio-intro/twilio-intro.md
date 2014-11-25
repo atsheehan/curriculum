@@ -455,6 +455,7 @@ displayed on the index page that brings you to the conversation page:
 [environment-variables]: http://en.wikipedia.org/wiki/Environment_variable "Environment Variables"
 [ignoring-files]: https://help.github.com/articles/ignoring-files/ "Ignoring Files"
 [ruby]: http://ruby-lang.org/ "Ruby"
+[sinatra]: http://www.sinatrarb.com/ "Sinatra"
 [source]: https://github.com/LaunchAcademy/twilio-intro "Source"
 [twilio-ruby-helper-api]: http://twilio-ruby.readthedocs.org/en/latest/index.html "Twilio Ruby Helper API"
 [twilio-ruby]: https://github.com/twilio/twilio-ruby "Twilio gem"
