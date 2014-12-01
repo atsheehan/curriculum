@@ -46,8 +46,7 @@ def load_workout_data(filename)
     workout = workouts.find { |wo| wo.id == row[:workout_id] }
 
     if workout.nil?
-      date = DateTime.strptime(row[:date], '%m/%d/%y')
-      workout = Workout.new(row[:workout_id], date)
+      workout = Workout.new(row[:workout_id], row[:date])
       workouts << workout
     end
 
