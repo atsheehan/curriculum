@@ -1,0 +1,7 @@
+---
+title: "Minesweeper"
+type: "challenge"
+description: "Build a graphical puzzle game."
+depends: "space-jams"
+ignore:
+- "minesweeper.md"
