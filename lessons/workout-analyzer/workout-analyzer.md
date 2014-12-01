@@ -27,7 +27,7 @@ You'll want two files in your app: a file that defines the `Workout` class, call
 require_relative 'workout'
 require 'csv'
 
-# create a hash of workout info from CSV
+# create an array of Workout objects
 def load_workout_data(filename)
   workouts = []
 
