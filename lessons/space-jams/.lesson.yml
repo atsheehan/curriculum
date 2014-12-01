@@ -1,0 +1,8 @@
+---
+title: "Space Jams"
+type: "challenge"
+description: "Build a ruby class with instance methods."
+depends: "word-counter"
+ignore:
+- "space-jams.md"
+- "space_jams.csv"
