@@ -9,16 +9,14 @@ Because you are a huge nerd and you like working out (let's pretend), you've dec
 Specifically, you want a program that when run will output the following summary given the data in the CSV:
 
 ```no-highlight
-Workout Stats:
-
 ID | DATE       | TYPE     | DURATION | CALORIES_BURNED
 ---|------------|----------|----------|----------------
-1  | 2014-08-15 | strength | 17.5     | 92.5
-2  | 2014-08-16 | cardio   | 40       | 320.0
-3  | 2014-08-17 | cardio   | 43.0     | 247.5
-4  | 2014-08-20 | cardio   | 35       | 280.0
-5  | 2014-08-22 | strength | 34.5     | 195.0
-6  | 2014-08-23 | other    | 90       | 540.0
+1  | 2014-08-15 | strength | 17.5     | 120.5
+2  | 2014-08-16 | cardio   | 40.0     | 320.0
+3  | 2014-08-17 | cardio   | 43.0     | 344.0
+4  | 2014-08-20 | cardio   | 35.0     | 280.0
+5  | 2014-08-22 | strength | 34.5     | 246.0
+6  | 2014-08-23 | other    | 90.0     | 450.0
 ```
 
 Define a `Workout` class that encapsulates the necessary data and the methods that calculate this information.
@@ -48,7 +46,8 @@ def load_workout_data(filename)
     workout = workouts.find { |wo| wo.id == row[:workout_id] }
 
     if workout.nil?
-      workout = Workout.new(row[:workout_id], row[:date])
+      date = DateTime.strptime(row[:date], '%m/%d/%y')
+      workout = Workout.new(row[:workout_id], date)
       workouts << workout
     end
 
