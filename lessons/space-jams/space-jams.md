@@ -18,7 +18,7 @@ Your `Album` class should have the following instance methods:
 ```no-highlight
 Name: Space Jams
 Artist(s): Tony Wrecks
-Duration (min.): 43.99
+Duration (min.): 41.45
 Tracks:
 - Bout My Bread
 - Grindin Skit
