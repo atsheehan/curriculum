@@ -4,7 +4,7 @@
 
 # Instructions
 
-You've got a list of tracks in the `space-jams.csv` file. You want to print out summary information about each album in the CSV. Create an `Album` class with some methods that'll help you do that.
+You've got a list of tracks in the `space_jams.csv` file. You want to print out summary information about each album in the CSV. Create an `Album` class with some methods that'll help you do that.
 
 Your `Album` class should have the following instance methods:
 
