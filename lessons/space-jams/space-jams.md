@@ -1,8 +1,8 @@
-# Learning Goals
+### Learning Goals
 
-* Build your first Ruby class and instance methods.
+* Build a Ruby class with instance methods.
 
-# Instructions
+### Instructions
 
 You've got a list of tracks in the `space_jams.csv` file. You want to print out summary information about each album in the CSV. Create an `Album` class with some methods that'll help you do that.
 
@@ -66,7 +66,7 @@ albums.each do |album|
 end
 ```
 
-## Hints
+### Hints
 
 If you're having trouble getting started, ignore the tracks to start. Build an `Album` class that has only `id`, `title`, and `artists` attributes, and a summary method that prints out just album name and artists:
 
@@ -79,7 +79,7 @@ Then you can add a `tracks` attribute and populate each album's `@track`'s insta
 
 Finally, you can write the `duration_min` method and modify your `summary` method to output duration and track information.
 
-## Extra Challenge
+### Extra Challenge
 
 You know what would be nice? If tracks were their own objects, instead of just hashes.
 
@@ -92,4 +92,3 @@ Add a `Track` class. A track should have the following attributes, with getter m
 - `duration_ms` (duration in milliseconds)
 
 Change your `Album` class so that it's `@tracks` instance variable is an array of `Track` objects instead of an array of hashes.
-
