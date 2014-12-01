@@ -44,22 +44,24 @@ Create a `runner.rb` file that reads in the tracks from the CSV, creates a new `
 require 'csv'
 require_relative 'album'
 
-# load in the tracks from the CSV
-tracks = []
+albums = []
 
 CSV.foreach('space_jams.csv', headers: true, header_converters: :symbol) do |row|
-  tracks << row.to_hash
-end
+  track = row.to_hash
+  album = albums.find { |a| a.id == track[:album_id] }
 
-# create a hash of albums, using the album ID as the key and the Album object as the value
-albums = {}
+  # if the album hasn't been added to the albums array yet, add it
+  if album.nil?
+    album = Album.new(track[:album_id], track[:album_name], track[:artists])
+    albums << album
+  end
 
-tracks.each do |track|
-  # add the album to the albums hash if it's not yet in the albums hash
+  # add the track to the album's @tracks instance variable
+  album.tracks << track
 end
 
 # print out the summary for each album
-albums.each do |id, album|
+albums.each do |album|
   puts album.summary
 end
 ```
