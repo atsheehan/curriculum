@@ -16,23 +16,25 @@ Your `Album` class should have the following instance methods:
 * `summary` - returns a string of summary information about the album in the following format:
 
 ```no-highlight
-Name: Out Among The Stars
-Artist(s): Johnny Cash
-Duration (min.): 39.17
+Name: Space Jams
+Artist(s): Tony Wrecks
+Duration (min.): 43.99
 Tracks:
-- Out Among the Stars
-- Baby Ride Easy
-- She Used to Love Me a Lot
-- After All
-- I'm Movin' On
-- If I Told You Who It Was
-- Call Your Mother
-- I Drove Her Out of My Mind
-- Tennessee
-- Rock and Roll Shoes
-- Don't You Think It's Come Our Time
-- I Came to Believe
-- She Used to Love Me a Lot - JC/EC Version
+- Bout My Bread
+- Grindin Skit
+- Drop It In Tha Bank
+- Batter Up
+- I Get Toe Up
+- Dat Nigga
+- My Drop
+- Heavyweights
+- Preapproved - Freestyle
+- Soldiers
+- Don't Wanna See Me
+- Lookin Clean
+- One For Tha Money
+- Toe Up Slowed And Chopped
+- Swagger Up Slowed And Chopped
 ```
 
 Create a `runner.rb` file that reads in the tracks from the CSV, creates a new `Album` object for each album in the data, and prints out the summary for each album:
@@ -68,8 +70,8 @@ end
 If you're having trouble getting started, ignore the tracks to start. Build an `Album` class that has only `id`, `title`, and `artists` attributes, and a summary method that prints out just album name and artists:
 
   ```no-highlight
-  Name: Out Among The Stars
-  Artist(s): Johnny Cash
+  Name: Space Jams
+  Artist(s): Tony Wrecks
   ```
 
 Then you can add a `tracks` attribute and populate each album's `@track`'s instance variable when you iterate through the tracks to create your `albums` hash.
