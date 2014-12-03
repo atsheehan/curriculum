@@ -1,0 +1,7 @@
+---
+title: "Lunar Kitchen I"
+type: "challenge"
+description: "Recipes app using PosgreSQL and Sinatra."
+depends: "recipe-box"
+ignore:
+- "sinatra-lunar-kitchen.md"
