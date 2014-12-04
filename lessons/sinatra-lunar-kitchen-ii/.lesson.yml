@@ -1,0 +1,7 @@
+---
+title: "Lunar Kitchen II"
+type: "challenge"
+description: "Integrate ActiveRecord into a Sinatra application."
+depends: "sinatra-lunar-kitchen, contact-manager"
+ignore:
+- "sinatra-lunar-kitchen-ii.md"
