@@ -1,0 +1,6 @@
+---
+title: "Contact Manager"
+type: "tutorial"
+description: "Integrate ActiveRecord into a Sinatra application."
+depends: "sinatra-lunar-kitchen"
+tags: "sinatra, active-record"
