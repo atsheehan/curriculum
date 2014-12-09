@@ -1,0 +1,6 @@
+---
+title: "Contact Validations"
+type: "tutorial"
+description: "Get some practice with using ActiveRecord validations."
+depends: "sinatra-lunar-kitchen-ii"
+tags: "sinatra, active-record, validations"
