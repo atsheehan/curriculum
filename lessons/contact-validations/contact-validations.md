@@ -1,18 +1,12 @@
 We've written a small Sinatra application to keep track of all of our contacts. Currently, there aren't any validations in place to help make sure that we're entering valid data. We need to fix that!
 
-## Learning Goals
+### Learning Goals
 
 - Learn how to use built-in Active Record validation helpers
 - Become exposed to RSpec/Capybara tests
 - Decipher test feedback to determine which validations need to be added
 
-## Resources
-
-- [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
-- [RSpec - Getting Started](https://relishapp.com/rspec/docs/gettingstarted)
-- [Capybara](https://github.com/jnicklas/capybara)
-
-## Getting Started
+### Setup
 
 ```no-highlight
 # Clone down the repo from GitHub
@@ -37,7 +31,7 @@ rake db:migrate
 rake db:test:prepare
 ```
 
-## Instructions
+### Instructions
 
 We've already written some tests that cover the validations that we wish we had.
 You can run the tests with `rspec spec`. When you run the tests, you should see
@@ -127,3 +121,9 @@ appropriate validations until all of the tests are passing.
 
 **You should not modify any of the tests themselves but feel free to open and
 and read them to figure out what the test is looking for.**
+
+### Resources
+
+- [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
+- [RSpec - Getting Started](https://relishapp.com/rspec/docs/gettingstarted)
+- [Capybara](https://github.com/jnicklas/capybara)
