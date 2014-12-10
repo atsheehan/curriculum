@@ -2,27 +2,13 @@ require_relative '../lib/order'
 
 describe Order do
   before :each do
-    item_attrs = [{
-      name: "Magnifying Glass",
-      manufacturer: "Spys-R-Us",
-      price: 5.75,
-      description: "Great for inspecting clues."
-    }, {
-      name: "Spy Notebook",
-      manufacturer: "Spys-R-Us",
-      price: 10.50
-    }]
+    @order = Order.new("12/10/2014", "Gene Parmesan", "PayPal",
+      "100 Spy Street, Newport Beach, CA 92625")
 
-    @order = Order.new(
-      placed_at: "12/10/2014",
-      customer: "Gene Parmesan",
-      payment_method: "PayPal",
-      shipping_address: "100 Spy Street, Newport Beach, CA 92625"
-    )
+    @order.items << Item.new("Magnifying Glass","Spys-R-Us",
+      5.75, "Great for inspecting clues.")
 
-    item_attrs.each do |attrs|
-      @order.items << Item.new(attrs)
-    end
+    @order.items << Item.new("Spy Notebook", "Spys-R-Us", 10.50)
   end
 
   describe '#total' do
@@ -33,8 +19,7 @@ describe Order do
 
   describe '#summary' do
     it 'returns summary information' do
-      expected_summary = %q(
-Date: 12/10/2014
+      expected_summary = %q(Date: 12/10/2014
 Customer: Gene Parmesan
 Payment method: PayPal
 Shipping address: 100 Spy Street, Newport Beach, CA 92625
@@ -50,8 +35,7 @@ Name: Spy Notebook
 Manufacturer: Spys-R-Us
 Price: $10.50
 
-Total: $16.25
-      )
+Total: $16.25)
       expect(@order.summary).to eq(expected_summary)
     end
   end
