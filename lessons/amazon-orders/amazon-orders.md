@@ -4,9 +4,9 @@ You have a serious online shopping addiction and order way too much stuff on Ama
 
 ## Instructions
 
-### Item class
+### Item
 
-Create an `Item` class that represents each item on an order.  It should contain the following methods:
+Create an `Item` class that represents an item on an order.  It should contain the following methods:
 
 * `name` returns the name of the item.
 * `description` returns a description of the item, if the item has a description.
@@ -21,7 +21,7 @@ Manufacturer: Spys-R-Us
 Price: $5.75
 ```
 
-### Order class
+### Order
 
 Create an `Order` class to represent your Amazon order.  It should have the following methods:
 
@@ -66,3 +66,47 @@ Placeholders for both classes can be found in lib/item.rb and lib/order.rb. A te
 ```no-highlight
 $ rspec spec
 ```
+
+You should receive the following errors:
+
+```no-highlight
+FFFFFFFF
+
+Failures:
+
+1) Item has a name
+Failure/Error: Item.new(
+  ArgumentError:
+  wrong number of arguments (1 for 0)
+  # ./spec/item_spec.rb:5:in `initialize'
+  # ./spec/item_spec.rb:5:in `new'
+  # ./spec/item_spec.rb:5:in `block (2 levels) in <top (required)>'
+  # ./spec/item_spec.rb:22:in `block (2 levels) in <top (required)>'
+
+2) Item has a manufacturer
+Failure/Error: Item.new(
+  ArgumentError:
+  wrong number of arguments (1 for 0)
+  # ./spec/item_spec.rb:5:in `initialize'
+  # ./spec/item_spec.rb:5:in `new'
+  # ./spec/item_spec.rb:5:in `block (2 levels) in <top (required)>'
+  # ./spec/item_spec.rb:26:in `block (2 levels) in <top (required)>'
+
+< ... more errors / failures here ... >
+
+Finished in 0.00357 seconds (files took 0.14391 seconds to load)
+8 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/item_spec.rb:21 # Item has a name
+rspec ./spec/item_spec.rb:25 # Item has a manufacturer
+rspec ./spec/item_spec.rb:29 # Item has a price
+rspec ./spec/item_spec.rb:33 # Item has an optional description
+rspec ./spec/item_spec.rb:39 # Item#summary returns summary information with a description
+rspec ./spec/item_spec.rb:50 # Item#summary returns summary information without a description
+rspec ./spec/order_spec.rb:29 # Order#total returns the total cost of the items
+rspec ./spec/order_spec.rb:35 # Order#summary returns summary information
+```
+
+Review the files in the `spec` directory to determine how the `Order` and `Item` classes are used. Start by implementing the `Item` class. Once all of the tests for that are passing, implement the `Order` class.
