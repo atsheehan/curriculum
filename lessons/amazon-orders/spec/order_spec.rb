@@ -55,3 +55,4 @@ Total: $16.25
       expect(@order.summary).to eq(expected_summary)
     end
   end
+end
