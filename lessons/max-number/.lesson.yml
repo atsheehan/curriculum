@@ -1,0 +1,6 @@
+---
+title: "Max Number"
+type: "exercise"
+description: "Find the largest number in an array."
+ignore:
+- "max-number.md"
