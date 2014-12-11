@@ -1,6 +1,0 @@
----
-title: Hangman
-slug: hangman
-description: A command-line guessing game.
-ignore:
-- "README.md"
