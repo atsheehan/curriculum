@@ -253,10 +253,4 @@ Acceptance Criteria
 - I can't delete a question that was posted by another user
 ```
 
-### Submission
-
-Push your code to GitHub and submit your app to Horizon.
-
-{% question 'repo' %}
-
 [forms_for_models]: http://guides.rubyonrails.org/form_helpers.html#dealing-with-model-objects
