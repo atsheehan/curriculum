@@ -1,0 +1,7 @@
+---
+title: "Rescue Mission"
+type: "challenge"
+description: "Build a website like stackoverflow.com for posting questions and answers."
+depends: "meetups-in-space"
+ignore:
+- "rescue-mission.md"
