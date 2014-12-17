@@ -1,6 +1,6 @@
-require_relative '../lib/student'
-require_relative '../lib/assignment'
-require_relative '../lib/grade'
+require_relative "../lib/student"
+require_relative "../lib/assignment"
+require_relative "../lib/grade"
 
 describe Grade do
   let(:student) { Student.new("Richard Beastmster") }

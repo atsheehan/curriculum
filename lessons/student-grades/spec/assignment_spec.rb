@@ -1,6 +1,6 @@
-require_relative '../lib/student'
-require_relative '../lib/assignment'
-require_relative '../lib/grade'
+require_relative "../lib/student"
+require_relative "../lib/assignment"
+require_relative "../lib/grade"
 
 describe Assignment do
   before :each do
