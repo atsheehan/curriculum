@@ -31,7 +31,7 @@ describe Assignment do
 
   describe "#average_grade" do
     it "returns the average grade for the assignment" do
-      expect(@assignment.average_grade).to eq(93.7)
+      expect(@assignment.average_grade).to be_within(0.001).of(93.7)
     end
 
     it "returns a message if no grades are recorded" do

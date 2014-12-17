@@ -29,7 +29,7 @@ describe Student do
 
   describe "#average_grade" do
     it "returns the average grade" do
-      expect(@student.average_grade).to eq(95.75)
+      expect(@student.average_grade).to be_within(0.001).of(95.75)
     end
 
     it "returns a message if no grades are recorded" do
