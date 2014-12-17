@@ -20,6 +20,7 @@ Create an `Assignment` class.  It should contain the following methods:
   ```no-highlight
   Assignment: Git Quiz
   Due date: 10/24/2014
+  Average Score: 94.4
 
   GRADES:
 
