@@ -5,4 +5,3 @@ description: "Write Ruby classes to represent students' grades on assignments."
 depends: "space-jams"
 ignore:
 - "student-grades.md"
-- "lib/grades.csv"
