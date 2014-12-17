@@ -14,6 +14,7 @@ Create an `Assignment` class.  It should contain the following methods:
 
 * `name` returns the name of the assignment
 * `due_date` returns the date the assignment is due
+*  `grades` returns an array of all that assignment's `Grade` objects
 * `average_grade` returns the average grade for that assignment
 * `report` returns a summary listing out the assignment, each student's name and the grade they received on the assignment.  Students should be ordered alphabetically by first name:
 
