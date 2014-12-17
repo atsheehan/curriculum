@@ -1,0 +1,7 @@
+---
+title: "Book Reviews in Space"
+type: "challenge"
+description: "Build a website like Goodreads to review books"
+depends:
+ignore:
+- "book-reviews-in-space.md"
