@@ -1,0 +1,9 @@
+<h3>All TV Shows</h3>
+
+<ul>
+  <% @television_shows.each do |show| %>
+    <li>
+      <%= "#{show.title} (#{show.network})" %>
+    </li>
+  <% end %>
+</ul>
