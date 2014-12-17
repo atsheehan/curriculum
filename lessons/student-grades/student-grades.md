@@ -64,14 +64,8 @@ Create a `Grade` class that represents a given student's grade on a particular a
 
 ## Setup
 
-The `runner.rb` file in the `lib/` directory contains code to load in students, assignments, and grades from a CSV, and call each of the above methods on those objects.
-
-Add your code to the `assignment.rb`, `grade.rb`, and `student.rb` files in the `lib/` directory.  
-
-Start by running the `runner.rb` file.  Follow the error messages you get to drive your implementation of the methods listed above:
+Run the test suite and use the failing tests to guide your implementation:
 
 ```no-highlight
-$ ruby lib/runner.rb
+$ rspec spec
 ```
-
-You should see the following output when you're done:
