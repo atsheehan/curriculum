@@ -1,0 +1,7 @@
+---
+title: "TV Shows"
+type: "challenge"
+description: "Add a test suite to an existing Rails application."
+depends: "rescue-mission"
+ignore:
+- "tv-shows.md"
