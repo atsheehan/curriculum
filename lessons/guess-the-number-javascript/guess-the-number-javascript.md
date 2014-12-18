@@ -1,10 +1,6 @@
 ### Instructions
 
-JavaScript is a client side, interpreted programming language. In this mission, we'll study JavaScript and how we can use it to write some basic programs.
-
-In this exercise, we'll build an implementation of our Guess The Number game using the `alert` and `prompt` functions of JavaScript.
-
-### Instructions
+Build an implementation of "Guess The Number" using the `alert` and `prompt` functions of JavaScript.
 
 #### Setup
 
@@ -38,7 +34,6 @@ $ open lib/index.html
 ```
 
 If you receive a popup, everything is hooked up correctly.
-
 
 #### Practice using `prompt` and `alert` in the developer console
 
@@ -95,7 +90,7 @@ if (spammer.toLowerCase() === 'adam'){
 
 Now you're equipped to tackle the guess the number game. We'll be writing our code inside of `lib/guess_the_number.js`. When you open up `lib/index.html` inside of a web browser it will run the code that is located inside of this file. Your program should do the following:
 
-  * Generate a random number
-  * Get the user's name
-  * Ask the user to enter a number
-  * If the number equals the random number let the user know that they've won, other wise let them know that they lost
+* Generate a random number
+* Get the user's name
+* Ask the user to enter a number
+* If the number equals the random number let the user know that they've won, other wise let them know that they lost
