@@ -1,0 +1,7 @@
+---
+title: "Guess the Number - JavaScript Edition"
+type: "challenge"
+description: "The action never stops in this browser-based guessing game."
+depends: "slacker-news, guess-the-number"
+ignore:
+- "guess-the-number-javascript.md"
