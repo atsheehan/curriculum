@@ -42,7 +42,7 @@ If you receive a popup, everything is hooked up correctly.
 
 #### Practice using `prompt` and `alert` in the developer console
 
-Let's open up Chrome and open up the developer console using `alt+command+j`. Being the malicious JavaScript developers that we, lets make some pop ups. Type in `alert("You've won an iPad");` into the Chrome developer console and hit enter. The alert should pop up.
+Let's open up the developer console in Chrome using `alt+command+j`. Being the malicious JavaScript developers that we are, let's make some pop ups. Type in `alert("You've won an iPad");` into the Chrome developer console and hit enter. The alert should pop up.
 
 Now let's be a little bit more malicious. Paste the following code into the console:
 
@@ -89,7 +89,7 @@ if (spammer.toLowerCase() === 'adam'){
   } else {
     alert(spammer + ' is not a spammer');
   }
-  ```
+```
 
 #### Build your game
 
