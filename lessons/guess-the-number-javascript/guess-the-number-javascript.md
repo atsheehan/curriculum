@@ -35,9 +35,7 @@ $ open lib/index.html
 
 If you receive a popup, everything is hooked up correctly.
 
-#### Practice using `prompt` and `alert` in the developer console
-
-Let's open up the developer console in Chrome using `alt+command+j`. Being the malicious JavaScript developers that we are, let's make some pop ups. Type in `alert("You've won an iPad");` into the Chrome developer console and hit enter. The alert should pop up.
+Let's open up the developer console in Chrome using `ALT + COMMAND + J`. Being the malicious JavaScript developers that we are, let's make some pop ups. Type in `alert("You've won an iPad");` into the Chrome developer console and hit enter. The alert should pop up.
 
 Now let's be a little bit more malicious. Paste the following code into the console:
 
@@ -79,14 +77,12 @@ Let's throw in a sprinkle of conditional logic inside of here as well:
 
 ```javascript
 var spammer = prompt("Type in a name to find out if they are a spammer or not");
-if (spammer.toLowerCase() === 'adam'){
+if (spammer.toLowerCase() === 'adam') {
   alert(spammer + ' is definitely a spammer');
-  } else {
-    alert(spammer + ' is not a spammer');
-  }
+} else {
+  alert(spammer + ' is not a spammer');
+}
 ```
-
-#### Build your game
 
 Now you're equipped to tackle the guess the number game. We'll be writing our code inside of `lib/guess_the_number.js`. When you open up `lib/index.html` inside of a web browser it will run the code that is located inside of this file. Your program should do the following:
 
