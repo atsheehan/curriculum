@@ -36,7 +36,7 @@ Start with the [Devise](https://github.com/plataformatec/devise) gem to generate
 
 ```no-highlight
 # Generate a new Rails app that is set up for PostgreSQL and skips test setup
-rails new rescue_mission --database=postgresql -T
+rails new book_reviews_in_space --database=postgresql -T
 ```
 
 ### User Registration and Devise
@@ -99,6 +99,7 @@ Acceptance Criteria
 - I must see the description of each book
 - I must see the URL of each book
 - I must see books listed in order, most recently posted first
+- I must see if a book was posted by an astronaut or a candidate
 ```
 
 #### View a Book's Details
@@ -133,7 +134,7 @@ Acceptance Criteria
 #### Viewing a Book's Reviews
 
 ```no-highlight
-As an astronaut
+As a user
 I want to view the reviews for a book
 So that I can see what people are saying about it
 
@@ -148,7 +149,7 @@ Acceptance Criteria
 #### Editing a Review
 
 ```no-highlight
-As an astronaut
+As a user
 I want to edit a review
 So that I can correct any mistakes or add updates
 
@@ -162,7 +163,7 @@ Acceptance Criteria
 #### Deleting a Review
 
 ```no-highlight
-As an astronaut
+As a user
 I want to delete a review
 So that I can delete my review if I no longer want to show it
 
@@ -175,7 +176,7 @@ Acceptance Criteria
 #### Deleting a Book
 
 ```no-highlight
-As an astronaut
+As a user
 I want to delete a book I posted
 So that I can delete a book I posted for any reason
 
