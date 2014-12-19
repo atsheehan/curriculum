@@ -49,6 +49,7 @@ rails new book_reviews_in_space --database=postgresql -T
 As a prospective user
 I want to create an account
 So that I can post books and review them
+```
 
 ```no-highlight
 As an authenticated user
