@@ -18,9 +18,13 @@ You're going to be building a website like
 - Practice TDD
 
 ### Hints
-Draw an ER diagram for your app first. Look at what the devise gem offers you first and after you have Devise installed, you will have to add a column "role" to your Users table. The default role is "candidate" which a user can later update to "astronaut." Feel free to experiment and add any other fields you think make sense (maybe "favorite book" or "favorite author," for example).
+Draw an ER diagram for your app first.
 
-Start with the [Devise](https://github.com/plataformatec/devise) gem to generate the User model for you. Work through the rest of the user stories once you have implemented Devise.
+Then, implement the [Devise](https://github.com/plataformatec/devise) gem to generate the User model for you. After installing Devise, you will have to add a column "role" to your Users table. The default role is "candidate" which a user can later update to "astronaut." Feel free to experiment and add any other fields you think make sense (maybe "favorite book" or "favorite author," for example).
+
+Work through the rest of the user stories once you have implemented Devise.
+
+Write tests for your features!
 
 ### Resources
 
