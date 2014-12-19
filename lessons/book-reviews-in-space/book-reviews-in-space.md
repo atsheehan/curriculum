@@ -54,26 +54,31 @@ So that I can post books and review them
 As an authenticated user
 I want to delete my account
 So that my information is no longer retained by the app
+```
 
 ```no-highlight
 As an authenticated user
 I want to see my profile page
 So that I can change information on it
+```
 
 ```no-highlight
 As an authenticated user
 I can change my role on my profile page to astronaut
 So I can post books and review them as an astronaut
+```
 
 ```no-highlight
 As an unauthenticated user
 I want to sign in
 So that I can post books and review them
+```
 
 ```no-highlight
 As an authenticated user
 I want to sign out
 So that no one else can post books or reviews on my behalf
+```
 
 #### Post a Book
 
