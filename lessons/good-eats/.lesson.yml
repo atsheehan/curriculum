@@ -1,0 +1,7 @@
+---
+title: "Good Eats"
+type: "challenge"
+description: "Create a web application to review restaurants."
+depends: "rescue-mission"
+ignore:
+- "good-eats.md"
