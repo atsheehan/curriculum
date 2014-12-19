@@ -2,6 +2,6 @@
 title: "Book Reviews in Space"
 type: "challenge"
 description: "Build a website like Goodreads to review books"
-depends:
+depends: "meetups-in-space"
 ignore:
 - "book-reviews-in-space.md"
