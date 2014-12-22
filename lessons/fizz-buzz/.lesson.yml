@@ -1,6 +1,6 @@
 ---
 title: "Fizz buzz"
-title: "exercise"
+type: "exercise"
 description: "Fizz buzz flow control"
 ignore:
 - "fizz-buzz.md"
