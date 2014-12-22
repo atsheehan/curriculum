@@ -1,0 +1,6 @@
+---
+title: "Odd Numbers"
+type: "exercise"
+description: "Print odd numbers."
+ignore:
+- "odd-numbers.md"
