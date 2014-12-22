@@ -1,10 +1,6 @@
 ---
 title: "Leap Year"
 type: "exercise"
-description: "Method to deteremine if year is a leap year."
-ignore: 
+description: "Determine if a given year is a leap year."
+ignore:
 - "leap-year.md"
-
-
-
-

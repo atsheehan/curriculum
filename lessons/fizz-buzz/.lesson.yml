@@ -1,6 +1,6 @@
 ---
 title: "Fizz buzz"
 type: "exercise"
-description: "Fizz buzz flow control"
+description: "Print out the numbers 1 to 100 with certain exceptions."
 ignore:
 - "fizz-buzz.md"
