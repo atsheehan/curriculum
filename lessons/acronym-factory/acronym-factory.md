@@ -16,9 +16,9 @@ Would you like to generate another acronym?
 
 What is the acronym?
 
-> AFM
+> NASA
 
-Awesome Financial Management
+Never Access Space Again
 
 Would you like to generate another acronym?
 
