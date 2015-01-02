@@ -1,0 +1,7 @@
+---
+title: "Car Listing"
+type: "challenge"
+description: "Create a web application to manage used cars."
+depends: "good-eats"
+ignore:
+- "car-listings.md"
