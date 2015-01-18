@@ -1,7 +1,7 @@
 ---
 title: "Compound Data Structure"
 type: "challenge"
-description: "Write multiple methods to parse a compound data structure to return values needed"
+description: "Write Ruby code to parse a compound data structure"
 depends: "rock-paper-scissors"
 ignore:
 - "compound-data-structure.md"

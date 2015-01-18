@@ -91,3 +91,5 @@ alacritythief
 * Reference the Ruby docs for [Arrays](http://www.ruby-doc.org/core-2.2.0/Array.html), [Hashes](http://www.ruby-doc.org/core-2.2.0/Hash.html) and [Strings](http://www.ruby-doc.org/core-2.2.0/String.html) to explore what methods Ruby has to offer.
 
 * Use `.each`. Use it a lot.
+
+
