@@ -83,6 +83,7 @@ end
 #
 `For every element 'number' in the array 'numbers' print out the number.`
 
+#
 *answer*
 ```ruby
 numbers.each do |number|
