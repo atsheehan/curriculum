@@ -2,6 +2,6 @@
 title: "Compound Data Structure Drills"
 type: "challenge"
 description: "Compound Data Structure Drills"
-depends: "simple-data-structure-drills"
+depends: "rock-paper-scissors"
 ignore:
 - "compound-data-structure-drills.md"

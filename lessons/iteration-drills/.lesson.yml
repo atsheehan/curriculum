@@ -2,6 +2,6 @@
 title: "Iteration Drills"
 type: "challenge"
 description: "Iteration Drills"
-depends: "compound-data-structure-drills"
+depends: "rock-paper-scissors"
 ignore:
 - "iteration-drills.md"
