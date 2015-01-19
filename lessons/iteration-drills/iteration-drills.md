@@ -108,7 +108,9 @@ end
 #
 1. Consider the following array:
 
+```ruby
 array = [28214, 63061, 49928, 98565, 31769, 42316, 23674, 3540, 34953, 70282, 22077, 94710, 50353, 17107, 73683, 33287, 44575, 83602, 33350, 46583]
+```
 
 Write Ruby code to find out the answers to the following questions:
 
@@ -122,7 +124,9 @@ Write Ruby code to find out the answers to the following questions:
 #
 2. Consider the following array:
 
+```ruby
 array = ["joanie", "annamarie", "muriel", "drew", "reva", "belle", "amari", "aida", "kaylie", "monserrate", "jovan", "elian", "stuart", "maximo", "dennis", "zakary", "louvenia", "lew", "crawford", "caitlyn"]
+```
 
 Write Ruby code to find out the answers to the following questions:
 
