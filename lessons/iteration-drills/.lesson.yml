@@ -1,0 +1,7 @@
+---
+title: "Iteration Drills"
+type: "challenge"
+description: "Iteration Drills"
+depends: "rock-paper-scissors"
+ignore:
+- "iteration-drills.md"
