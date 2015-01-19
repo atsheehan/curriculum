@@ -1,0 +1,6 @@
+---
+title: "Product Listing"
+type: "challenge"
+description: "Create a web application for adding and listing products"
+ignore:
+- "product-listing.md"
