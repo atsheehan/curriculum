@@ -182,6 +182,7 @@ Consider the following compound data structure:
 
 #
 1.
+
 ```ruby
 people =
 {
