@@ -1,6 +1,6 @@
 ### Instructions
 
-The variable `@twitter_data` located in `twitter_data.rb` contains twitter usernames and relevant fields of those usernames. Write a program in `code.rb` that traverses through the compound data structure to print out some data in a particular format and answer a series of questions.
+The method `twitter_data` returns twitter usernames and relevant fields of those usernames. Write a program in `code.rb` that traverses through the compound data structure to print out some data in a particular format and answer a series of questions.
 
 #### Write code to print out data in a particular format
 
