@@ -80,11 +80,11 @@ end
 ### Turning English into `.each`
 
 *example*
-#
+
 `For every element 'number' in the array 'numbers' print out the number.`
 
-#
 *answer*
+
 ```ruby
 numbers.each do |number|
   puts number
