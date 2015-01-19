@@ -1,0 +1,7 @@
+---
+title: "Iteration Drills"
+type: "challenge"
+description: "Iteration Drills"
+depends: "compound-data-structure-drills"
+ignore:
+- "iteration-drills.md"
