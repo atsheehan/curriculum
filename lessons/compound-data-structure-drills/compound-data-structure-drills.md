@@ -1,5 +1,3 @@
-## Compound Data Structure Drills
-
 Let's take a look at the following compound data structure:
 
 ```ruby
