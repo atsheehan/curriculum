@@ -1,5 +1,3 @@
-## Iteration Drills
-
 Here we will drill iteration concepts using `.each` for arrays, hashes and compound data structures.
 
 ### Turning `.each` into English
