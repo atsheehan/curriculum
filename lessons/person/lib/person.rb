@@ -1,1 +1,3 @@
-# YOUR CODE HERE
+class Person
+  # YOUR CODE HERE
+end
