@@ -1,11 +1,8 @@
-## Most Common Words
+### Instructions
 
-## Instructions
+Write a ruby program which returns an array of the most common words found in a string, including ties.
 
-Write a ruby program which returns an array of the most common words
-found in a string, including ties.
-
-## Sample Usage
+### Sample Usage
 
 ```ruby
 input = """
