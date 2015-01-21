@@ -18,7 +18,7 @@ describe Person do
   describe "#full_name" do
     it "has a full name" do
       expect(person).to respond_to(:full_name),
-        "It doesn"t need to do anything yet but you need a #full_name method!"
+        "It doesn't need to do anything yet but you need a #full_name method!"
     end
 
     it "combines first name and last name" do
