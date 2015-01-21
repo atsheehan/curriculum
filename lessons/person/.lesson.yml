@@ -1,0 +1,6 @@
+---
+title: "Getting Personal"
+type: "exercise"
+description: "Model a person using classes in Ruby."
+ignore:
+- "person.md"
