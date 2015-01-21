@@ -1,0 +1,6 @@
+---
+title: "Morse Code"
+type: "exercise"
+description: "Utilize a Hash to translate morse code into English."
+ignore:
+- "morse-code.md"
