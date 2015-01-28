@@ -51,15 +51,15 @@ dpickett used 2149 characters in their last twenty tweets.
 * Which user has the most followers?
 * Which user has the most friends?
 * Which user has the greatest number of tweets?
-* Which users have a `description` listed in `@twitter_data`?
-* Which users have a `location` listed in `@twitter_data`?
+* Which users have a `description` listed in `twitter_data`?
+* Which users have a `location` listed in `twitter_data`?
 
 ### Sample Usage
 
-* What are the twitter usernames in `@twitter_data`?
+* What are the twitter usernames in `twitter_data`?
 
 ```ruby
-@twitter_data.each do |hash|
+twitter_data.each do |hash|
   puts hash.keys.first
 end
 ```
