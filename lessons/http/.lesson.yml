@@ -1,0 +1,6 @@
+---
+title: "Expressions"
+type: "article"
+description: "Describes how Ruby evaluates the code we write and how can we use variables as placeholders within our expressions."
+tags: "expressions, variables, constants"
+position: 1
