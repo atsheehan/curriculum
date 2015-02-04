@@ -1,0 +1,6 @@
+---
+title: "Multiplication Table"
+type: "exercise"
+description: "Write a method that prints out a tab delimited 12x12 multiplication table."
+ignore:
+- "multiplication-table.md"
