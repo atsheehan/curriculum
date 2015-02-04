@@ -1,0 +1,6 @@
+---
+title: "Round Robin Scheduler"
+type: "exercise"
+description: "Schedule a round robin tournament."
+ignore:
+- "round-robin.md"
