@@ -1,0 +1,6 @@
+---
+title: "Distance Between Points"
+type: "exercise"
+description: "Write a method that calculates the distance between two given points."
+ignore:
+- "distance-between-points.md"
