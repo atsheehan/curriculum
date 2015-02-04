@@ -2,4 +2,5 @@
 title: "Enumerable"
 type: "exercise"
 description: "Implement Enumerable methods."
+ignore:
 - "enumerable.md"
