@@ -1,5 +1,0 @@
----
-name: Launcher Lunches
-difficulty: 3
-language: ruby
-test_runner: rspec

@@ -1,0 +1,6 @@
+---
+title: "Zoo Keeper"
+type: "exercise"
+description: "Implement a series of methods that iterate over a data structure."
+ignore:
+- "zoo-keeper.md"
