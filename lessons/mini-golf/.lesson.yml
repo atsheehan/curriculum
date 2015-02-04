@@ -1,0 +1,6 @@
+---
+title: "Mini Golf"
+type: "exercise"
+description: "Read in a CSV of mini golf scores and print them out."
+ignore:
+- "mini-golf.md"
