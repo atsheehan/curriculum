@@ -1,0 +1,6 @@
+---
+title: "Sum of Integers"
+type: "exercise"
+description: "Sum up some integers from a file."
+ignore:
+- "sum-of-integers.md"
