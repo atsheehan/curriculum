@@ -1,0 +1,6 @@
+---
+title: "Fibonacci Numbers"
+type: "exercise"
+description: "Calculate the nth Fibonacci number"
+ignore:
+- "fibonnaci.md"
