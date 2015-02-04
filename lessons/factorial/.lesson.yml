@@ -1,0 +1,6 @@
+---
+title: "Factorial"
+type: "exercise"
+description: "Factorial."
+ignore:
+- "factorial.md"
