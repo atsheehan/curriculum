@@ -1,0 +1,6 @@
+---
+title: "Uniques"
+type: "exercise"
+description: "Find the unique elements of a list without using .uniq."
+ignore:
+- "uniques.md"
