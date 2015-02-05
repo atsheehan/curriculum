@@ -1,6 +1,5 @@
 ---
-title: "Expressions"
+title: "HTTP"
 type: "article"
-description: "Describes how Ruby evaluates the code we write and how can we use variables as placeholders within our expressions."
-tags: "expressions, variables, constants"
-position: 1
+description: "Describes the how information is transferred over the web and displayed in your browser."
+tags: "http, web-server, http-request, http-response, get-request"
