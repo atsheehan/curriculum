@@ -1,0 +1,5 @@
+---
+title: "HTTP"
+type: "article"
+description: "Describes the how information is transferred over the web and displayed in your browser."
+tags: "http, web-server, http-request, http-response, get-request"
