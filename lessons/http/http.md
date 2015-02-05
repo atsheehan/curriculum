@@ -37,7 +37,7 @@ Here we have a single header and a few items in an unordered list. If we want to
 $ firefox home.html
 ```
 
-[Our un-styled TODO list.][unstyled-todo]
+![Our un-styled TODO list.][unstyled-todo]
 
 This is a pretty bland looking page so let's add some CSS to change the default styles. If we wanted this to be a ["Matrix"-style][matrix-style] TODO list we can add the following CSS in a file called *home.css*:
 
@@ -74,7 +74,7 @@ Then in the HTML we can add a link back to this stylesheet in the `<head>` secti
 
 After refreshing the page in the browser we should get a flashback to 1999.
 
-[TODO list, "Matrix"-style.][styled-todo]
+![TODO list, "Matrix"-style.][styled-todo]
 
 ### Hosting Pages
 
