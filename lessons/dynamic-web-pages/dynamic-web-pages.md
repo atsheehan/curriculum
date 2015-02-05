@@ -225,13 +225,13 @@ end
 
 # These lines can be removed since they are using the default values. They've
 # been included to explicitly show the configuration options.
-set :views, File.join(File.dirname(__FILE__), "/views")
-set :public_folder, File.join(File.dirname(__FILE__), "/public")
+set :views, File.join(File.dirname(__FILE__), "views")
+set :public_folder, File.join(File.dirname(__FILE__), "public")
 ```
 
 After moving the HTML to a template our code will be a lot less verbose but we need to specify which template we're going to render using `erb :index`. This will look for a file in the *views* directory named *index.erb*. We also need to specify which tasks to print out by passing in our array to the template (via `locals: { tasks: tasks }`).
 
-Once we restart the server and visit [http://localhost:4567/tasks][localhost-tasks] we should see the same page, this time loaded from a template.
+Once we restart the server and visit [http://localhost:4567/tasks][localhost-tasks] we should see the same page, this time loaded from a template. Try changing the tasks in the array and you should see that the list updates with your new items (after restarting the server).
 
 ### Dynamic Routing
 
@@ -252,7 +252,7 @@ get "/tasks/:task_name"
 
 When a request comes in, Sinatra looks through the routes we have defined and uses the first one that fits the pattern. This route will be used for any request that fits the `GET /tasks/*` pattern where `*` represents a string of characters.
 
-Once we have a request that matches this pattern, we need some way to figure out what name was used in the URL. This is where the `:task_name` portion of the route comes into play. Sinatra will extract information from a request and store in a Hash called **params**:
+Once we have a request that matches this pattern (e.g. `/tasks/buy%20milk`), we need some way to figure out what name was used in the URL. This is where the `:task_name` portion of the route comes into play. Sinatra will extract information from a request and store in a Hash called **params**:
 
 ```ruby
 get "/tasks" do
@@ -288,6 +288,16 @@ Here we can see that our route is using `params[:task_name]` to extract the name
 Now we can visit [http://localhost:4567/tasks/buy%20milk](http://localhost:4567/tasks/buy%20milk) and we will see the "buy milk" task on its own page. We can then visit [http://localhost:4567/tasks/learn%20ruby](http://localhost:4567/tasks/learn%20ruby) and we'll see that we need to "learn ruby". Both pages are using the same code and the same template: the `get "/tasks/:task_name"` route is rendering the *views/show.erb* template. The difference is in our URL which contains the name of the task we want to display.
 
 On a side note, the `<link>` element changed from `href="home.css"` to `href="/home.css"`. We changed the reference from a *relative* path to an *absolute* one which is necessary since our `/tasks/buy%20milk` URL has two segments separated by slashes. Without the initial slash we would be looking for our stylesheet relative to `/tasks/buy%20milk` which is `/tasks/home.css` instead of `/home.css`.
+
+To make navigating the app a bit easier, we can also update the *views/index.erb* template to include a link to the details page for each task:
+
+```HTML+ERB
+<% tasks.each do |task| %>
+  <li><a href="/tasks/<%= task %>"><%= task %></a></li>
+<% end %>
+```
+
+The line `<a href="/tasks/<%= task %>">` will generate a link with the task name embedded within the URL for each of the tasks in the array.
 
 ### In Summary
 
