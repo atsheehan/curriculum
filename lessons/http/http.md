@@ -108,7 +108,7 @@ Now we can create our Sinatra app in a file called *server.rb*, which should be 
 ```ruby
 require "sinatra"
 
-set :public_folder, File.join(File.dirname(__FILE__), "/public")
+set :public_folder, File.join(File.dirname(__FILE__), "public")
 ```
 
 Here we're first including the Sinatra framework (`require "sinatra"`) and then specifying that our static files are in the *public* folder we just created (we could actually leave this line our since *public* is the default name of the directory, but here we're being explicit). Sinatra handles setting up a web server for us so there is not much else we need to do.
