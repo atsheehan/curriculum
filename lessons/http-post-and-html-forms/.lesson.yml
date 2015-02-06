@@ -1,0 +1,6 @@
+---
+title: "HTTP POST and HTML Forms"
+type: "article"
+description: "Describes how users can submit data back to our web apps using HTML forms."
+depends: "dynamic-web-pages"
+tags: "html, html-forms, http, http-post, sinatra"
