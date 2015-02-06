@@ -8,7 +8,7 @@ We can create web pages using just HTML and CSS, but since many web applications
 
 ### Generating HTML
 
-In the [HTTP article](/lessons/http) we created a simple TODO web application that would serve up our HTML and CSS files when requested (sample code can be found [here][todo-sample-code]. In the end our project directory should have resembled the following:
+In the [HTTP article](/lessons/http) we created a simple TODO web application that would serve up our HTML and CSS files when requested (sample code can be found [here][todo-sample-code]). In the end our project directory should have resembled the following:
 
 ```no-highlight
 /server.rb
