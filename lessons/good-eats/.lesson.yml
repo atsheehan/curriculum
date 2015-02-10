@@ -3,5 +3,6 @@ title: "Good Eats"
 type: "challenge"
 description: "Create a web application to review restaurants."
 depends: "rescue-mission"
+visibility: "assign"
 ignore:
 - "good-eats.md"

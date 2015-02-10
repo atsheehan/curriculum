@@ -3,6 +3,7 @@ title: "Recipe Box"
 type: "challenge"
 description: "List recipes stored in a PostgreSQL database."
 depends: "movie-catalog-deluxe"
+visibility: "assign"
 ignore:
 - "recipe-box.md"
 - "recipes_database.sql"

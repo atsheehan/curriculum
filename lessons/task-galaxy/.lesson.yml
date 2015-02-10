@@ -3,5 +3,6 @@ title: "Task Galaxy"
 type: "challenge"
 description: "Design a database schema with models to represent a shared project task list."
 depends: "meetups-in-space"
+visibility: "assign"
 ignore:
 - "task-galaxy.md"
