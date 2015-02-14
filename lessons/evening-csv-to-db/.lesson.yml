@@ -1,0 +1,7 @@
+---
+title: "CSV to Database"
+type: "challenge"
+description: "Migrate CSV data to a database"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-csv-to-db.md"

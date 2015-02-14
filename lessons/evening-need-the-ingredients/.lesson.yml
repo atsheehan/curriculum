@@ -1,0 +1,7 @@
+---
+title: "Need the Ingredients"
+type: "challenge"
+description: "Use Telnet to understand POST requests"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-need-the-ingredients.md"
