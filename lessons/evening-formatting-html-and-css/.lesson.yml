@@ -1,0 +1,7 @@
+---
+title: "Brussels Sprouts Deserve Nice Websites"
+type: "challenge"
+description: "Turn an ugly website into a pretty one."
+depends: "rock-paper-scissors"
+ignore:
+- "evening-formatting-html-and-css.md"

@@ -1,0 +1,7 @@
+---
+title: "Veggie Recipe Printer"
+type: "challenge"
+description: "Write a program that prints out recipes in a particular format using Ruby and ERB."
+depends: "rock-paper-scissors"
+ignore:
+- "evening-veggie-recipe-printer.md"
