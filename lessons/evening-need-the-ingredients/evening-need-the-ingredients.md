@@ -1,7 +1,7 @@
 ##OMG We don't know all the ingredients!
 
 ###Instructions
-Our Brussel Sprouts recipe webpage only lists the first ingredient. This is a problem. How can we have sumptious Brussel Sprouts without knowing how to make them? Well, we are web developers, and hungry ones at that. We understand HTTP request-response and can use `telnet` to add the rest of the ingredients to the page. Your job is to do the following:
+Our Brussels Sprouts recipe webpage only lists the first ingredient. This is a problem. How can we have sumptious Brussel Sprouts without knowing how to make them? Well, we are web developers, and hungry ones at that. We understand HTTP request-response and can use `telnet` to add the rest of the ingredients to the page. Your job is to do the following:
 
 * Using `telnet`, issue a `POST` request to make sure all of the following ingredients are on the webpage:
 
