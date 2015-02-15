@@ -1,7 +1,7 @@
 ##OMG We have all the ingredients but they're in a `CSV` file!!!
 
 ###Instructions
-Ok, we have all the ingredients for our *amazing* Roasted Brussels Sprouts recipe, but they're in a `CSV` file! Oh no! We're going to be keeping a database of Brussels Sprout recipes, so a `CSV` is just going to be too unwieldy to deal with once we start adding more recipes and ingredients. Luckily, our friend the PostgreSQL [elephant](http://postgresapp.com/) has come to our rescue and informed us that we can store whatever we need in a PostgreSQL database and use Ruby to query it. Sounds conventient right? So let's do that! Your job is to do the following:
+Ok, we have all the ingredients for our *amazing* Roasted Brussels Sprouts recipe, but they're in a `CSV` file! Oh no! We're going to be keeping a database of Brussels Sprout recipes, so a `CSV` is just going to be too unwieldy to deal with once we start adding more recipes and ingredients. Luckily, our friend the PostgreSQL [elephant](http://postgresapp.com/) has come to our rescue and informed us that we can store whatever we need in a PostgreSQL database and use Ruby to query it. Sounds convenient right? So let's do that! Your job is to do the following:
 
 * Create a PostgreSQL database called `ingredients`
 * Grab all the data in the `CSV` file and store it in `ingredients` using Ruby's `pg` gem.
