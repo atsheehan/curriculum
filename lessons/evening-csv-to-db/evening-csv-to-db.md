@@ -23,5 +23,5 @@ Running `code.rb` should produce the following output:
 4. 1/2 teaspoon freshly ground black pepper
 ```
 ###Tips
-* Install the PostgreSQL gem by running `gem install pg` from your command line.
+* Make sure to run `bundle` from your terminal to install all the required dependencies for this exercise. For example, you will need the PostgreSQL gem.
 * Pay attention to the data structures that are returned by different methods.
