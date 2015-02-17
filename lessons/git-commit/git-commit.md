@@ -168,7 +168,7 @@ $ git commit
 
 This will open up the previously configured editor where we can enter a commit message describing the changes being made. The commit message is very useful in documenting a project. There is a reason we're making changes to our app and the commit message is a way to succinctly express those reasons and include any additional information if necessary.
 
-The format of a commit message should adhere to the following convention (taken from [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html):
+The format of a commit message should adhere to the following convention (taken from [here](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)):
 
 ```no-highlight
 Capitalized, short (50 chars or less) summary
