@@ -1,0 +1,5 @@
+---
+title: "The Git Commit"
+type: "article"
+description: "Provides a brief overview of version control and describes how to make a commit, the fundamental unit of Git."
+tags: "git, version-control, commit"
