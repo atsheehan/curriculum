@@ -26,6 +26,8 @@ After your `telnet` magic, the website should look the following:
 
 ![alt](http://i.imgur.com/FCq35i5.png)
 
+Provide a text file with an explanation of what steps you took to accomplish this task.
+
 ###Tips
 * Run `bundle` from your terminal to have the right dependencies installed (like the `sinatra` gem, which is what your server is based on).
 * You should not be modifying the view file or `ingredients.txt` directly at all. You're an elite hacker and should only be using `telnet` to solve this problem.
