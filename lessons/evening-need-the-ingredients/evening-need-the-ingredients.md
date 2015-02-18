@@ -23,6 +23,7 @@ Our Brussels Sprouts recipe webpage only lists the first ingredient. This is a p
 
 ###Output
 After your `telnet` magic, the website should look the following:
+
 ![alt](http://i.imgur.com/FCq35i5.png)
 
 ###Tips
