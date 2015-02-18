@@ -6,7 +6,7 @@ Git is a version control system that enables us to preserve the history of our s
 * Create a new Git repository.
 * View the status of a Git repository.
 * Commit changes to a repository.
-* View the contents of a commit with `git show`.
+* View the contents of a commit.
 
 ### What is Version Control?
 
@@ -131,7 +131,7 @@ Changes to be committed:
         new file:   grocery_list
 ```
 
-Checking the status again we'll see that our new *grocery_list* file is staged to be committed. This is what we want, but one last thing to do is review the contents of the file that are about to be committed. We can view the changes being saved by running `git diff --staged`:
+Checking the status again we'll see that our new *grocery_list* file is staged to be committed. This is what we want, but one last thing to do is review the contents of the file that are about to be committed. This lets us check if we made any unintentional changes before we finalize the commit (e.g. forgetting to remove debugging code, including sensitive information such as passwords or API keys, etc.). We can view the changes being saved by running `git diff --staged`:
 
 ```no-highlight
 $ git diff --staged
@@ -197,7 +197,7 @@ Brussel sprouts and cat food go really well together.
 
 The first line briefly summarizes the changes in this commit (adding the grocery list) and then the body explains why certain items were included.
 
-To complete the commit we need to shut down the editor window. For Atom, pressing `Ctrl` + `Shift` + `W` (`Cmd` + `Shift` + `W` for Mac) will close the open window and return control back to Git. For Sublime the shortcut is `Ctrl` + `W` (`Cmd` + `W` for Mac). At this point we should see a message indicating that our commit was completed:
+To complete the commit we need to close the file within the editor. For Atom, pressing `Ctrl` + `Shift` + `W` (`Cmd` + `Shift` + `W` for Mac) will close the open file and return control back to Git. For Sublime the shortcut is `Ctrl` + `W` (`Cmd` + `W` for Mac). If you haven't configured your editor you may end up in Vim, at which point you can restart your computer to exit out (or type `:q!` and press Enter, whichever is easier). We should see something like the following message indicating that our commit was completed:
 
 ```no-highlight
 ".git/COMMIT_EDITMSG" 12L, 316C written
@@ -208,7 +208,7 @@ To complete the commit we need to shut down the editor window. For Atom, pressin
 
 ### Viewing the History
 
-Congratulations, we've committed our code! Now if we check that status of our repository we should have a clean working directory:
+Congratulations, we've committed our code! Now if we check the status of our repository we should have a clean working directory:
 
 ```no-highlight
 $ git status
@@ -279,9 +279,7 @@ index 0000000..7950c57
 
 ### In Summary
 
-Git is a powerful tool for managing and documenting the history of our projects.
-
-Each project should have its own **Git repository** that stores the revision history of the files specific to that project. The `git init` command is a way to create a new repository in the current directory.
+Git is a powerful tool for managing and documenting the history of our projects. Each project should have its own **Git repository** that stores the revision history of the files specific to that project. The `git init` command is a way to create a new repository in the current directory.
 
 Any modifications to the files in the repository are stored as a series of **commits**. A commit contains the changes to a file as well as when the changes were made and who made them. A file must be **staged** before it will be included in a commit using the `git add` command.
 
