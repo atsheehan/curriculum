@@ -1,0 +1,7 @@
+---
+title: "News Aggregator - PostgreSQL Style"
+type: "challenge"
+description: "Persist user-submitted data to a PostgreSQL database."
+depends: "news-aggregator"
+ignore:
+- "news-aggregator-postgresql.md"
