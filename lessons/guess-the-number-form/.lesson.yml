@@ -1,0 +1,7 @@
+---
+title: "Guess the Number (with Forms)"
+type: "challenge"
+description: "Create an unforgettable, mind-bending puzzle game in the browser."
+depends: "guess-the-number"
+ignore:
+- "guess-the-number-form.md"
