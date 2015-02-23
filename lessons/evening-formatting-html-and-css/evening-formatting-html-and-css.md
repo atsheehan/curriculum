@@ -1,5 +1,3 @@
-##Brussels Sprouts Recipes Deserve Nice Websites
-
 ###Instructions
 Look at our basic website:
 
