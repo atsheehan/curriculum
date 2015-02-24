@@ -1,7 +1,7 @@
 ---
 title: "Random Brussels Sprouts with Ajax"
 type: "challenge"
-description: "Using Ajax to Generate Random Brussels Sprouts Recipes"
+description: "Using Ajax to generate random brussels sprouts recipes"
 depends: "rock-paper-scissors"
 ignore:
 - "evening-ajax-brussels-sprouts.md"
