@@ -1,0 +1,8 @@
+---
+title: "Grocery List 2"
+type: "challenge"
+description: "Display and append to a list of groceries via a web application."
+depends: "news-aggregator"
+visibility: "assign"
+ignore:
+- "grocery-list-2.md"
