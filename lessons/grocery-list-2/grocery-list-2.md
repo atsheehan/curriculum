@@ -18,7 +18,7 @@ Create a database called `grocery_list`. Once your database is created, use the
 `schema.sql` file to create your table. Remember, you can execute your SQL statements
 in the database using the following command:
 ```
-$ psql news_aggregator_development < schema.sql
+$ psql grocery_list < schema.sql
 ```
 
 ### Learning Goals
