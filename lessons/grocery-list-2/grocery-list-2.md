@@ -1,6 +1,6 @@
 ### Instructions
 
-Update your [grocery list app](https://horizon.launchacademy.com/lessons/grocery-list)
+Update your [grocery list app](/lessons/grocery-list)
 to read and write information to a PostgreSQL database instead of a CSV. Also,
 use Javascript to create an alert box if someone tries to submit a blank entry
 via your form.
