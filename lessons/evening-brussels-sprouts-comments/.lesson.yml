@@ -1,0 +1,7 @@
+---
+title: "Brussels Sprouts Recipe Comments"
+type: "challenge"
+description: "Implement primary and foreign keys to create associations between two tables"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-brussels-sprouts-comments.md"
