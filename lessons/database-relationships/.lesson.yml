@@ -1,0 +1,6 @@
+---
+title: "Database Relationships"
+type: "article"
+description: "Describes how relationships between information can be structured in a relational database."
+depends: "database-persistence"
+tags: "databases, normalization, one-to-many, many-to-many, sql, postgresql"
