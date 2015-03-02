@@ -5,9 +5,13 @@
 * Filter on values found in different tables
 * Understand how an `INNER JOIN` differs from an `OUTER JOIN`
 
+### Goin' Back to the Movies
+
 In a previous assignment we discussed some basic querying and filtering techniques to retrieve rows from a table in the database. The queries in that assignment were limited to pulling rows from a single table at a time.
 
 If we restricted our queries to a single table we lose a lot of the flexibility that SQL provides. Going back to the `movies` database, what if we wanted to find all movies from a specific genre? We have both a `movies` table and a `genres` table but we need some way to combine this information into a single query. This is where the `JOIN` operation comes into play.
+
+### Understanding Relational Data
 
 Before we talk about how to use a `JOIN` we need to figure out how rows from two separate tables are related. If we take a look at the structure of the `movies` table (using `\d movies`) we might notice that it contains a column named `genre_id`:
 
@@ -73,6 +77,8 @@ Going back to the `movies` table, when we looked for the genre we came up with a
 ------------------+-----------------+-----------+-------------
  The Big Lebowski |        3        |     3     |   Comedy
 ```
+
+### Joining Up
 
 By combining some of the columns from `movies` and `genres` we can see that the foreign key `movies.genre_id` matches up with the primary key `genres.id`.
 
@@ -154,7 +160,7 @@ FROM movies JOIN genres ON movies.genre_id = genres.id LIMIT 10;
 
 Now we're relabeling the `title` and `name` columns to `movie` and `genre` using the `original_column AS alias` operator. When dealing with columns from multiple tables the names can sometimes become ambiguous so it can be helpful to assign more meaningful names as we did here.
 
-#### Filtering on JOIN tables
+### Filtering on JOIN tables
 
 Now that we've joined two tables together we can use the columns from either table to filter some of our rows. For example, if we wanted to only show Horror movies we can filter our results by a value on the `genres` table:
 
@@ -206,9 +212,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-Here we're querying from three tables by using two `JOIN` operations. We could continue joining as many tables as needed to get the results we want. Remember that we need to use the fully qualified names of the columns to differentiate between columns in multiple tables (e.g. `genres.name` and `studios.name`).
+Here, we're querying from three tables by using two `JOIN` operations. We could continue joining as many tables as needed to get the results we want. Remember that we need to use the fully qualified names of the columns to differentiate between columns in multiple tables (e.g. `genres.name` and `studios.name`).
 
-#### NULL Foreign Keys
+### NULL Foreign Keys
 
 If we look at the structure of our `movies` table again (`\d movies`) we might notice that we have another row that looks like a foreign key:
 
@@ -228,7 +234,7 @@ Indexes:
     "movies_pkey" PRIMARY KEY, btree (id)
 ```
 
-In addition to `genre_id` we also have the `studio_id`. Notice that under the `Modifiers` column that `genre_id` has the `not null` constraint: every row _must_ contain a reference to a genre (i.e. it cannot contain `NULL`). But for `studio_id` we don't have such a constraint. This means that we could have a movie that does not have an associated studio. We can check to see if this is the case with a query checking for `NULL` on the `studio_id` column:
+In addition to `genre_id`, we also have the `studio_id`. Notice that under the `Modifiers` column that `genre_id` has the `not null` constraint: every row _must_ contain a reference to a genre (i.e. it cannot contain `NULL`). But for `studio_id` we don't have such a constraint. This means that we could have a movie that does not have an associated studio. We can check to see if this is the case with a query checking for `NULL` on the `studio_id` column:
 
 ```SQL
 SELECT title, studio_id FROM movies WHERE studio_id IS NULL;
@@ -282,9 +288,9 @@ We now have our studio names, but what happened to Rocky V? Remember that Rocky 
  Rocky V      |             NULL |        ??? | ???
 ```
 
-In this case Rocky V was kicked out of the result set because it did not belong to a studio. This behavior is known as an `INNER JOIN` and is the default when we don't specify otherwise.
+In this case, Rocky V was kicked out of the result set because it did not belong to a studio. This behavior is known as an `INNER JOIN` and is the default when we don't specify otherwise.
 
-If we did want to include Rocky V we need to specify that we want to include _all_ rows in the table on the left regardless of whether they have a match or not (the left and right table refers to the order in which we join them: in `FROM movies JOIN studios`, the left table will be `movies` and the right table `studios`). We can change the behavior of `JOIN` by using a `LEFT OUTER JOIN`:
+If we did want to include Rocky V, we need to specify that we want to include _all_ rows in the table on the left regardless of whether they have a match or not (the left and right table refers to the order in which we join them: in `FROM movies JOIN studios`, the left table will be `movies` and the right table `studios`). We can change the behavior of `JOIN` by using a `LEFT OUTER JOIN`:
 
 ```SQL
 SELECT movies.title, movies.studio_id, studios.id, studios.name
@@ -302,13 +308,13 @@ WHERE movies.title LIKE 'Rocky%';
 (6 rows)
 ```
 
-Now we include Rocky V even though it doesn't have a studio value. The `LEFT OUTER JOIN` indicates that we should include all of the rows from `movies` regardless of whether they have a matching studio (although the `WHERE movies.title LIKE 'Rocky%'` conditional still applies).
+Now, we include Rocky V even though it doesn't have a studio value. The `LEFT OUTER JOIN` indicates that we should include all of the rows from `movies` regardless of whether they have a matching studio (although the `WHERE movies.title LIKE 'Rocky%'` conditional still applies).
 
 ### Rules to Follow
 
 #### Always Include A Primary Key
 
-When referencing other tables it is important to have a primary key available. You can join on any column but the primary key should be a column or combination of columns that uniquely identifies a row. Consider the storing a list of people by first name and last name:
+When referencing other tables, it is important to have a primary key available. You can join on any column but the primary key should be a column or combination of columns that uniquely identifies a row. Consider the storing a list of people by first name and last name:
 
 ```no-highlight
  first_name | last_name
@@ -342,11 +348,11 @@ How would we differentiate the first Bob from the second one? They are two separ
 
 Now we have the `id` column that we can join on which ensures that we'll retrieve the right Bob. Bob with an `id = 1` is a different person from Bob with an `id = 4`.
 
-#### INNER JOIN or OUTER JOIN?
+### INNER JOIN or OUTER JOIN?
 
 The only time we'll need to consider whether to use an `INNER JOIN` or `OUTER JOIN` is when the foreign key may contain `NULL` values. Always default to an `INNER JOIN` (or just `JOIN`) unless we know that there may be `NULL` values.
 
-#### Use Fully Qualified Column Names
+### Use Fully Qualified Column Names
 
 Although not always required, use the fully qualified column names. A fully qualified name will include both the name of the table and the name of the column (e.g. `movies.title` rather than just `title`). This helps avoid issues that arise when joining on multiple tables that have the same column name:
 
