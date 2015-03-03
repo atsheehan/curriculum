@@ -1,3 +1,5 @@
+Sometimes the information we need from a relational database lives in more than one location. In this article we'll talk about how we can combine data from several tables in a single query using the SQL `JOIN` clause.
+
 ### Learning Goals
 
 * Understand what primary keys and foreign keys are
@@ -5,15 +7,48 @@
 * Filter on values found in different tables
 * Understand how an `INNER JOIN` differs from an `OUTER JOIN`
 
-### Goin' Back to the Movies
+### Setup
 
-In a previous assignment we discussed some basic querying and filtering techniques to retrieve rows from a table in the database. The queries in that assignment were limited to pulling rows from a single table at a time.
+For this article we'll be using a database containing information about movies. The setup is discussed in more detail in the [Database Relationships](/lessons/database-relationships) article but here's a quick recap of the commands. If you already have the `movies` database populated on your machine, skip the remaining steps in this section.
+
+To download the database snapshot and save it to a temporary file, run the following commands:
+
+```no-highlight
+$ curl -o /tmp/movie_database.sql.gz https://s3.amazonaws.com/launchacademy-downloads/movie_database.sql.gz
+$ gunzip /tmp/movie_database.sql.gz
+```
+
+This will save the database snapshot in `/tmp/movie_database.sql`. Then create the database with `createdb` and import the script using `psql`:
+
+```no-highlight
+$ createdb movies
+$ psql movies < /tmp/movie_database.sql
+```
+
+After this command has finished, we can then open up a connection to the database to verify that we have some tables and data:
+
+```no-highlight
+$ psql movies
+
+psql (9.3.1)
+Type "help" for help.
+
+movies=# SELECT count(*) FROM movies;
+ count
+-------
+  3546
+(1 row)
+```
+
+This is the PostgreSQL command prompt where we can write our SQL queries. If you ever need to exit out of the prompt, type `\q` or press `Ctrl` + `D`.
+
+### Querying Multiple Tables
+
+In the [SQL Queries article](/lessons/sql-queries) we discussed some basic querying and filtering techniques to retrieve rows from a table in the database. The queries in that article were limited to pulling rows from a single table at a time.
 
 If we restricted our queries to a single table we lose a lot of the flexibility that SQL provides. Going back to the `movies` database, what if we wanted to find all movies from a specific genre? We have both a `movies` table and a `genres` table but we need some way to combine this information into a single query. This is where the `JOIN` operation comes into play.
 
-### Understanding Relational Data
-
-Before we talk about how to use a `JOIN` we need to figure out how rows from two separate tables are related. If we take a look at the structure of the `movies` table (using `\d movies`) we might notice that it contains a column named `genre_id`:
+Before we talk about how to use a `JOIN` we need to figure out how rows from two separate tables are related. Let's review the structure of the `movies` table by running `\d movies`. We might notice that it contains a column named `genre_id`:
 
 ```no-highlight
    Column   |            Type             |                      Modifiers
@@ -68,7 +103,7 @@ SELECT * FROM genres WHERE id = 3;
 (1 row)
 ```
 
-We can see that this row represents the Comedy genre but that it also has an identifier with a value of 3. This identifier can be used to uniquely target this row in the `genres` table and is referred to as a **primary key**. Whenever we need to reference a genre somewhere else in the database we can just use the `id` value rather than having to copy the string `'Comedy'` everywhere. Primary keys do not always need to be integers but they do need to be unique within a table. The convention for Rails applications is to assign an integer column named `id` to every table to act as the primary key.
+We can see that this row represents the Comedy genre but that it also has an identifier with a value of 3. This identifier can be used to uniquely target this row in the `genres` table and is referred to as a **primary key**. Whenever we need to reference a genre somewhere else in the database we can just use the `id` value rather than having to copy the string `'Comedy'` everywhere. Primary keys do not always need to be integers but they do need to be unique within a table. One possible convention used is to assign an integer column named `id` to every table to act as the primary key.
 
 Going back to the `movies` table, when we looked for the genre we came up with a `genre_id` set to the value of `3`. Then we we looked at the `genres` table we found that the Comedy genre had an `id = 3`. This is how we link a genre to a movie. The `genre_id` on `movies` is referred to as a **foreign key** to the `genres` table. If we were to compare the values from both tables side-by-side, it might look something like:
 
@@ -78,7 +113,7 @@ Going back to the `movies` table, when we looked for the genre we came up with a
  The Big Lebowski |        3        |     3     |   Comedy
 ```
 
-### Joining Up
+### SQL JOIN
 
 By combining some of the columns from `movies` and `genres` we can see that the foreign key `movies.genre_id` matches up with the primary key `genres.id`.
 
@@ -160,7 +195,25 @@ FROM movies JOIN genres ON movies.genre_id = genres.id LIMIT 10;
 
 Now we're relabeling the `title` and `name` columns to `movie` and `genre` using the `original_column AS alias` operator. When dealing with columns from multiple tables the names can sometimes become ambiguous so it can be helpful to assign more meaningful names as we did here.
 
-### Filtering on JOIN tables
+Although not always required, it is helpful to use the fully qualified column names when joining tables. A fully qualified name will include both the name of the table and the name of the column (e.g. `movies.title` rather than just `title`). This helps avoid issues that arise when joining on multiple tables that have the same column name:
+
+```SQL
+SELECT title, name FROM movies
+  JOIN genres ON movies.genre_id = genres.id
+  JOIN studios ON movies.studio_id = studios.id;
+
+ERROR:  column reference "name" is ambiguous
+```
+
+In the above statement we're joining both the `genres` table and the `studios` table to the `movies` table. Both `genres` and `studios` have the `name` column so when we include `SELECT title, name` the database engine does not known which table we want to reference. Instead we could write our query as:
+
+```SQL
+SELECT movies.title, genres.name, studios.name FROM movies
+  JOIN genres ON movies.genre_id = genres.id
+  JOIN studios ON movies.studio_id = studios.id;
+```
+
+### Filtering on Joined Tables
 
 Now that we've joined two tables together we can use the columns from either table to filter some of our rows. For example, if we wanted to only show Horror movies we can filter our results by a value on the `genres` table:
 
@@ -186,7 +239,7 @@ WHERE genres.name = 'Horror' LIMIT 10;
 
 Whenever we are working with multiple tables via a `JOIN` we can access columns on either table using the format `table_name.column_name`. Here we are using `genres.name` in our `WHERE` clause to only include movies that have a genre named `'Horror'`.
 
-#### Joining More Than Two Tables
+### Joining More Than Two Tables
 
 We're not limited to joining on just two tables. Consider the following query where we include both the genre and studio with the name of the movie:
 
@@ -310,9 +363,7 @@ WHERE movies.title LIKE 'Rocky%';
 
 Now, we include Rocky V even though it doesn't have a studio value. The `LEFT OUTER JOIN` indicates that we should include all of the rows from `movies` regardless of whether they have a matching studio (although the `WHERE movies.title LIKE 'Rocky%'` conditional still applies).
 
-### Rules to Follow
-
-#### Always Include A Primary Key
+### Always Include A Primary Key
 
 When referencing other tables, it is important to have a primary key available. You can join on any column but the primary key should be a column or combination of columns that uniquely identifies a row. Consider the storing a list of people by first name and last name:
 
@@ -348,36 +399,14 @@ How would we differentiate the first Bob from the second one? They are two separ
 
 Now we have the `id` column that we can join on which ensures that we'll retrieve the right Bob. Bob with an `id = 1` is a different person from Bob with an `id = 4`.
 
-### INNER JOIN or OUTER JOIN?
+Note that we don't necessarily need to use a numeric primary key. For example, it might make sense to use an e-mail address as a primary key for the users table. Since each user should have their own e-mail address to register, we're guaranteed that they'll be unique per user.
 
-The only time we'll need to consider whether to use an `INNER JOIN` or `OUTER JOIN` is when the foreign key may contain `NULL` values. Always default to an `INNER JOIN` (or just `JOIN`) unless we know that there may be `NULL` values.
+### In Summary
 
-### Use Fully Qualified Column Names
+Querying from multiple tables is often necessary to retrieve the information we want. We can query from from two or more tables by joining them together with the `JOIN` operator.
 
-Although not always required, use the fully qualified column names. A fully qualified name will include both the name of the table and the name of the column (e.g. `movies.title` rather than just `title`). This helps avoid issues that arise when joining on multiple tables that have the same column name:
+When joining two tables we end up combining the columns from both to form a new table. To line up the rows from the two source tables we need to specify what columns to join on. We typically join a **foreign key** one on table to the **primary key** on another.
 
-```SQL
-SELECT title, name FROM movies
-  JOIN genres ON movies.genre_id = genres.id
-  JOIN studios ON movies.studio_id = studios.id;
+Once two or more tables are joined we can treat the resulting set as one large table. This means we can use other SQL operations such as filtering and sorting on the combined table using the `WHERE` and `ORDER BY` clauses.
 
-ERROR:  column reference "name" is ambiguous
-```
-
-In the above statement we're joining both the `genres` table and the `studios` table to the `movies` table. Both `genres` and `studios` have the `name` column so when we include `SELECT title, name` the database engine does not known which table we want to reference. Instead we could write our query as:
-
-```SQL
-SELECT movies.title, genres.name, studios.name FROM movies
-  JOIN genres ON movies.genre_id = genres.id
-  JOIN studios ON movies.studio_id = studios.id;
-```
-
-### Resources
-
-* [Visual Explanation of A SQL JOIN][coding_horror_joins]
-
-### Why This Is Important
-
-Querying from multiple tables is often necessary to retrieve the information we want. By aggregating information from multiple sources we can build more complex queries that can give us interesting insights into our data.
-
-[coding_horror_joins]: http://www.codinghorror.com/blog/2007/10/a-visual-explanation-of-sql-joins.html
+Sometimes we need to include all rows from one table even if there are no corresponding rows to join to in the other table. For this we can use an **OUTER JOIN** and specify **LEFT** or **RIGHT** to decide which table to include all rows for. If we don't specify an outer join then it will default to an **INNER JOIN** and discard rows with no matches.
