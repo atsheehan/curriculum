@@ -18,7 +18,7 @@ This type of relationship often comes up in our data as well. A blog has one or 
 
 #### Enter the Blogosphere
 
-Let's create a new Sinatra app. You can use the [Sinatra Active Record Starter Kit](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit) as a base for your app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling your app "blog".
+Let's create a new Sinatra app. You can use the [Sinatra ActiveRecord Starter Kit](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit) as a base for your app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling your app "blog".
 
 **Hint: Don't forget to create your database with `rake db:create` after configuring your database.**
 
@@ -100,7 +100,7 @@ Run the following commands in your irb session:
 
 ```ruby
 cat_article = Article.create(subject: "Some thoughts about cats", story: "They're OK.")
-ruby_Article = Article.create(subject: 'Ruby vs. Python', story: 'Ruby wins cause I said so.')
+ruby_article = Article.create(subject: 'Ruby vs. Python', story: 'Ruby wins cause I said so.')
 
 Comment.create(body: 'LOL', article_id: cat_article.id)
 Comment.create(body: 'click here for a free iPad!', article_id: cat_article.id)
@@ -124,19 +124,17 @@ comments = Comment.where(article_id: article.id)
 
 We first retrieve the article based on the subject using our `where(subject: 'Some thoughts about cats').first` method and then we query for comments using `where(article_id: article.id)`. We're first finding the **primary key** of the article and then matching that to the **foreign key** on the comments table.
 
-{% quick_challenge %}
 **Quick challenge:** Retrieve the article associated with the comment "i like ice cream".
-{% endquick_challenge %}
 
-This is a very common operation in Rails: starting with some record, list all of its associated records (e.g. find a user and list all of their friends, find a movie and list all of the cast, etc.). We can use [Active Record Associations][railsguides-associations] to make this process much easier.
+This is a very common operation in Rails: starting with some record, list all of its associated records (e.g. find a user and list all of their friends, find a movie and list all of the cast, etc.). We can use [ActiveRecord Associations][railsguides-associations] to make this process much easier.
 
 #### Using ActiveRecord associations
 
-Active Record provides a number of different types of associations. Here, we'll look at two associations that are used to establish a one-to-many relationship: [has_many](railsguides-has_many) and [belongs_to](railsguides-belongs_to).
+ActiveRecord provides a number of different types of associations. Here, we'll look at two associations that are used to establish a one-to-many relationship: [has_many](railsguides-has_many) and [belongs_to](railsguides-belongs_to).
 
 ##### has_many
 
-In our `Article` model, we can let Active Record know about the one-to-many relationship:
+In our `Article` model, we can let ActiveRecord know about the one-to-many relationship:
 
 ```ruby
 class Article < ActiveRecord::Base
@@ -164,7 +162,7 @@ comment = Comment.first
 article = Article.where(id: comment.article_id).first
 ```
 
-With Active Record, we can define this relationship to make querying for the
+With ActiveRecord, we can define this relationship to make querying for the
 `article` a bit easier.
 
 ```ruby
@@ -180,7 +178,7 @@ comment = Comment.first
 comment.article
 ```
 
-This returns the same record as `Article.where(id: comment.article_id).first` did except we have to use far less syntax. Active Record makes manipulating our records much simpler to the point where we don't have to deal with SQL on a regular basis and can instead focus on using our objects and the relationships between them.
+This returns the same record as `Article.where(id: comment.article_id).first` did except we have to use far less syntax. ActiveRecord makes manipulating our records much simpler to the point where we don't have to deal with SQL on a regular basis and can instead focus on using our objects and the relationships between them.
 
 ### Rules to Follow
 
