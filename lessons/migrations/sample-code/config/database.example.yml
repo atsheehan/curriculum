@@ -1,0 +1,8 @@
+# Configure the database used when in the development environment
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: <YOUR_DATABASE_NAME>
+  pool: 5
+  username:
+  password:
