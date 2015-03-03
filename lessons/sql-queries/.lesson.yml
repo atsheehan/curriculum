@@ -1,0 +1,6 @@
+---
+title: "SQL Queries"
+type: "article"
+description: "Describes several ways to query information from a table in SQL using the SELECT statement."
+depends: "database-relationships"
+tags: "databases, sql, postgresql"
