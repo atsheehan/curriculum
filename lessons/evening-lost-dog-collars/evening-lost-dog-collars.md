@@ -17,29 +17,13 @@ Larry, the developer on the the Lost and Found team, is going to open up Postgre
 
 This table contains the names of people and their dog, as contained in the sign in sheet at the front desk.
 
-| id |  name   | dog_name
-|----|---------|----------
-|  1 | Omid    | Bronson
-|  2 | Evan    | Boogie
-|  3 | Whitney | Gilly
-|  4 | Spencer | Lilly
-|  5 | Dan     | Apple
-|  6 | Dan     | Linux
+![alt](http://i.imgur.com/fRdwPhZ.png)
 
 ### Found Dog Collars Table
 
 This table contains the names of dogs found on collars in the Lost and Found office.
 
-| id | dog_name  
-|----|----------  
-|  1 | Boogie  
-|  2 | Lassie  
-|  3 | Gilly  
-|  4 | Lilly  
-|  5 | Fido  
-|  6 | Linux  
-|  7 | Bronson  
-|  8 | Goose  
+![alt](http://i.imgur.com/oD6NeZz.png)
 
 ### Where do we start?
 
@@ -54,13 +38,7 @@ SELECT dog_owners.name, lost_dog_collars.dog_name
 
 Here is what he got:
 
-|  name   | dog_name
-|---------|----------
-| Evan    | Boogie
-| Whitney | Gilly
-| Spencer | Lilly
-| Dan     | Linux
-| Omid    | Bronson
+![alt](http://i.imgur.com/v1xUxzn.png)
 
 What does this query tell us? Larry has hired you as an outside consultant to do him a solid and help him answer some concrete questions. To help him, you need to see a list of join types and also see a list of questions that can be answered using those joins.
 
