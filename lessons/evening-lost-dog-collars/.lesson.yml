@@ -1,0 +1,7 @@
+---
+title: "Lost Dog Collars"
+type: "challenge"
+description: "Write SQL Joins that satisfy requirements."
+depends: "rock-paper-scissors"
+ignore:
+- "evening-lost-dog-collars.md"
