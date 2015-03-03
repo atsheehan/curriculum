@@ -1,0 +1,5 @@
+---
+title: "Associations"
+type: "article"
+description: ""
+tags: "normalization, associations, activerecord, has_many, belongs_to"
