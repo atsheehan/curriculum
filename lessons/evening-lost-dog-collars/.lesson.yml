@@ -4,4 +4,4 @@ type: "challenge"
 description: "Write SQL Joins that satisfy requirements."
 depends: "rock-paper-scissors"
 ignore:
-- "evening-exercise-joins.md"
+- "evening-lost-dog-collars.md"
