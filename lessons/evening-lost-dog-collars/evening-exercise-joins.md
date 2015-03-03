@@ -2,6 +2,15 @@
 
 OMG Our dogs are having so much fun playing at the dog park that they're losing their collars. After a busy weekend at the dog park, the staff at the Lost and Found counter are determined to empty their storage of these crucial bits of lost property. Collars with ID contain valuable information, such as the details to find the loving owner of a pup and the vaccinations required to be displayed in public. We have a mission.
 
+###Learning Goals
+* Learn different SQL Joins
+* Have conceptual understanding of how SQL Joins relate the data you want
+
+###Instructions
+
+* Generate a database called `dog_park` in your terminal.
+* Use the provided `schema.sql` file to import required data. 
+
 Larry, the developer on the the Lost and Found team, is going to open up PostgreSQL and start reconnecting dog owners with dog collars. He will find two tables already in our database:
 
 ### Dog Owners Table
@@ -70,9 +79,14 @@ RIGHT OUTER JOIN
 
 ### What Larry needs to know
 
+Help Larry by answering the following questions:
+
 1. For which collars can we identify an owner?
 2. For which collars is there no known owner?
 3. We need to see all collars, with an owner, if one matches.
 4. We need to see all owners, with collars in the Lost and Found, if one matches.
+
+### Output
+* Use the file `joins.sql` to store the successful queries.
 
 Good luck!
