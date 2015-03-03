@@ -1,0 +1,6 @@
+---
+title: "Lost Dog Collars"
+type: "challenge"
+description: "Write SQL Joins that satisfy requirements."
+ignore:
+- "joins_kata.md"
