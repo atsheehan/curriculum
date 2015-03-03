@@ -16,9 +16,9 @@ createdb songs_db
 psql songs_db
 ```
 
-Pay attention to the output of these commands. Silence is golden.
+Pay attention to the output of the `createdb` command. Silence is golden.
 
-Now type:
+Now type the following into `psql`:
 
 ```sql
 CREATE TABLE songs(id SERIAL PRIMARY KEY, name TEXT, album TEXT, artist TEXT);
@@ -152,7 +152,7 @@ While migration files can seem mystifying, this demonstration should show you th
 
 #### Informative Tanget
 
-When we use ActiveRecord Migrations, a table called `schema_migrations` is created. This table keeps track of which migrations have been run by recording the timestamp of the migration. This allows many developers to create migrations that will be run on the same database (assuming that no two migrations were created at exactly the same second). After running the `rake db:migrate` command, the schema_migrations table is checked against the files in `db/migrate`. If the timestamp of the file does not exist in the `schema_migrations` table, the migration is executed, and its timestamp is added. If the timestamp already exists in the table, that migration is skipped.
+When we use ActiveRecord Migrations, a table called `schema_migrations` is created. Open up your database with the `psql` command and use `\d` to list all tables. This particular table keeps track of which migrations have been run by recording the timestamp of the migration. This allows many developers to create migrations that will be run on the same database (assuming that no two migrations were created at exactly the same second). After running the `rake db:migrate` command, the schema_migrations table is checked against the files in `db/migrate`. If the timestamp of the file does not exist in the `schema_migrations` table, the migration is executed, and its timestamp is added. If the timestamp already exists in the table, that migration is skipped.
 
 It is incredibly important that past migrations are not altered after sharing them with other developers. Once the change has been pushed to Bitbucket or GitHub, consider it permanent! Luckily we can write migrations to change and alter tables.
 
@@ -191,7 +191,7 @@ If we include a  `change` method in our migration instead of separate `up` and `
 This is great most of the time, but sometimes we need to use separate `up` and `down` methods. Think about what would happen if, after running the migration below, we tried to roll-back:
 
 ```ruby
-class RemoveArtist < ActiveRecord::Migration
+class RemoveArtistFromSongs < ActiveRecord::Migration
   def change
     remove_column :songs, :artist
   end
@@ -208,7 +208,7 @@ Migrations are a sufficiently large topic. Since they can execute any arbitrary 
 
 ### Using Migrations
 
-In the preceding units, and in this one, the interchangeability of SQL commands and ActiveRecord methods has been emphasized. Using SQL effectively is an important tool, and one that is frequently useful in development, independently of ActiveRecord development.
+We have explored the idea of using SQL and ActiveRecord, interchangeably. Using SQL effectively is an important tool, and one that is frequently useful in development, independently of ActiveRecord development.
 
 However, you should carefully consider that the migration mechanism in ActiveRecord generates DDL that modifies structure rather than data. Because migrations expect a symmetry between `up` and `down` methods, creating or destroying structural elements can quickly create conflicts with the migrations in the app.
 
