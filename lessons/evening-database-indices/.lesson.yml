@@ -1,0 +1,7 @@
+---
+title: "Database Indices"
+type: "challenge"
+description: "Use database indices to speed up SQL queries"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-database-indices.md"
