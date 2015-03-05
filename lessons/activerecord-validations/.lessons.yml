@@ -1,5 +1,5 @@
 ---
 title: "ActiveRecord Validations"
 type: "article"
-description: ""
-tags: ""
+description: "Expore ActiveRecord Validations in the context of a Sinatra Appliction."
+tags: "activerecord, validations, sinatra"

@@ -10,7 +10,7 @@ class CreateSongs < ActiveRecord::Migration
       t.integer :length_in_seconds
       t.string :image
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

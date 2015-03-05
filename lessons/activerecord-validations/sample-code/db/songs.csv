@@ -1,4 +1,4 @@
-title,artist,album,year,track,genre,length,image
+title,artist,album,year,track_number,genre,length_in_seconds,image
 4,aphex twin,richard d. james album,1997,1,,216,http://userserve-ak.last.fm/serve/300x300/92306027.png
 cornish acid,aphex twin,richard d. james album,1997,2,,134,http://userserve-ak.last.fm/serve/300x300/92306027.png
 peek 824545201,aphex twin,richard d. james album,1997,3,,185,http://userserve-ak.last.fm/serve/300x300/92306027.png

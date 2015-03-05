@@ -1,8 +1,0 @@
-# Configure the database used when in the development environment
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: music_development
-  pool: 5
-  username:
-  password:
