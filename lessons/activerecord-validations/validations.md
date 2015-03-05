@@ -44,7 +44,7 @@ class CreateGenres < ActiveRecord::Migration
     create_table :genres do |t|
       t.string :name, null: false # add null: false constraint
 
-      t.timestamps
+      t.timestamps null: false
     end
 
     add_index :genres, :name, unique: true # add uniqueness constraint
@@ -148,7 +148,7 @@ class Song < ActiveRecord::Base
 end
 ```
 
-Once this is done, open up the `rails console` and try the following:
+Once this is done, open up this app in the console by typing `pry -r './server.rb'` at the terminal, and try the following:
 
 ```ruby
 s = Song.last
@@ -167,9 +167,9 @@ You should have seen something like the following when you called `s.save`:
 ActiveRecord encountered your validation and refused to save the change you made that set `year` equal to `nil`. When you now retrieve the year from the last song, you should see that it is unchanged:
 
 ```ruby
-2.0.0-p353 :005 > Song.last.year
-  Song Load (0.3ms)  SELECT "songs".* FROM "songs" ORDER BY "songs"."id" DESC LIMIT 1
- => 1953
+[1] pry(main)> Song.last.year
+D, [2015-03-05T16:40:12.485423 #15836] DEBUG -- :   Song Load (1.4ms)  SELECT  "songs".* FROM "songs"  ORDER BY "songs"."id" DESC LIMIT 1
+=> 2011
  ```
 
 **Note**: The pry console requires a restart to register changes to model classes' validations. If you made another change to the validations in your `Song` class, you'd need to restart the pry console to see them take effect. You can also try to use `reload!`.
