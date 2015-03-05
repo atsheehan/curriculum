@@ -1,16 +1,3 @@
----
-title: Introduction to Rails Validations
-author: dpickett
-complexity_score: 2
-scope: core
-type: project
-group_type: individual
-time_estimate: 180
-tags: rails, validations
----
-
-### Contents
-
 In this assignment, you'll use **validations** as a way to ensure that only valid data makes its way into our database.
 
 ### Learning Goals
@@ -20,58 +7,59 @@ In this assignment, you'll use **validations** as a way to ensure that only vali
 
 ### Resources
 
-* [Rails Guides Covering Validation](http://guides.rubyonrails.org/active_record_validations.html)
+* [ActiveRecord Validations - RailsGuides](http://guides.rubyonrails.org/active_record_validations.html)
 * [Rails Documentation on Validations](http://api.rubyonrails.org/classes/ActiveModel/Validations.html)
 
 ### Implementation Notes
 
 #### Getting Started
 
-We'll be returning to our music app that we've used in previous assignments. If you don't yet have the app locally, you can set it up by running:
+In the `sample-code` folder, we have a Sinatra app that includes the Sinatra ActiveRecord Extension gem. We have included a `Song` model, along with a seed script to add songs to the database. Run the following commands to get started:
 
-```bash
-git clone https://github.com/LaunchAcademy/music.git
+```ruby
+# download this assignment, if you haven't already
+et get activerecord-validations
 
-# navigate to the "rails root"
-cd music
+# navigate into the sample-code folder
+cd activerecord-validation/sample-code
 
 # install dependencies
 bundle
 
-# create the schema
+# create the database, create the schema, and seed the database
+rake db:create
 rake db:migrate
-
-# build sample data set
 rake db:seed
 ```
 
 #### What are validations?
 
-**Validations** are checks that we put in place in our Rails applications to make sure that only valid data is saved to our database.
+**Validations** are checks that we put in place in our applications to make sure that only valid data is saved to our database.
 
 Validations happen at two levels: the database level and the model level. **Database-level validations** are added in our migrations. For example, we might add `null: false` or uniqueness constraints to particular fields:
 
 ```ruby
-class CreateCategories < ActiveRecord::Migration
+class CreateGenres < ActiveRecord::Migration
   def change
-    create_table :categories do |t|
+    create_table :genres do |t|
       t.string :name, null: false # add null: false constraint
 
       t.timestamps
     end
 
-    add_index :categories, :name, unique: true # add uniqueness constraint
+    add_index :genres, :name, unique: true # add uniqueness constraint
   end
 end
 ```
 
 Database-level validations are generally sufficient to prevent bad data from making its way into our database. However, they don't provide feeback to users on whether or not the data they've provided (in a form, for example), is valid.
 
-We use **model-level validations** in part so that we can provide error messages to the user. Rails provides [validation helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to let us easily add validations to our models. To add `null: false` and uniqueness constraints to our `Category` model, we could write the following:
+We use **model-level validations** in part so that we can provide error messages to the user. ActiveRecord provides [validation helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to let us easily add validations to our models. To add `null: false` and uniqueness constraints to our `Category` model, we could write the following:
 
 ```ruby
-class Category < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true
+class Genre < ActiveRecord::Base
+  validates :name, presence: true
+  validates :name, uniqueness: true
 end
 ```
 
@@ -79,7 +67,7 @@ In most contexts, and for the remainder of this assignment, we'll use **validati
 
 #### Validation helpers
 
-Validation helpers provide a powerful way for Rails models to ensure that various requirements for data are met. Commonly-used validation helpers include:
+Validation helpers provide a powerful way for ActiveRecord models to ensure that various requirements for data are met. Commonly-used validation helpers include:
 
 * **presence** - disallows null values or empty strings for a given attribute
 * **uniqueness** - ensures that only unique values are allowed for a given attribute
@@ -91,51 +79,54 @@ Validation helpers provide a powerful way for Rails models to ensure that variou
 validates :day, inclusion: { in: ["Sun", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri.", "Sat."] }
 ```
 
-To learn more about validation helpers and their syntax, check out the Rails guides [here](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers).
+To learn more about validation helpers and their syntax, check out the ActiveRecord documentation [here](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers).
 
 
 #### When do validations take place?
 
-Any time you call one of the following ActiveRecord methods on an object, Rails will run any validations that you may have against the object.
+Any time you call one of the following ActiveRecord methods on an object, validations will be checked for that object.
 
 * `create`
 * `save`
 * `update`
 * `update_attributes`
 
-Under the hood Rails will call the `valid?` method on the object and will return true or false based on whether the object is valid or not. If it returns true, all is right with the world and Rails will attempt to save your object to the database.
+Under the hood, ActiveRecord will call the `valid?` method on the object and will return true or false based on whether the object is valid or not. If it returns true, all is right with the world and ActiveRecord will attempt to save your object to the database.
 
-**Note:** If you call `valid?` directly on an object, Rails will not try to save it to the database but will instead return true or false based on the result of running the validations against the object. This comes in handy if you're trying to create objects in the `rails console`.
+**Note:** If you call `valid?` directly on an object, ActiveRecord will not try to save it to the database but will instead return true or false based on the result of running the validations against the object. This comes in handy if you're trying to create objects in the `pry` or `irb` console.
 
-There are some methods that can be called on an object that will cause it to skip over the validations and save it to the database directly but these should be avoided at all costs and on pain of death.
+There are some methods that can be called on an object that will cause it to skip over the validations and save it to the database directly but these should be avoided at all costs!
 
-**A cautionary note on validations:** Just because Rails reports that an object is valid is no guarantee that it will successfully save to the database. If you have database constraints that aren't met by the object you are attempting to save then the database will raise an error.
+**A cautionary note on validations:** Just because ActiveRecord reports that an object is valid, it is not guaranteed that it will successfully save to the database. If you have database constraints that aren't met by the object you are attempting to save then the database will raise an error.
 
-This is an important concept that can be confusing: **Validations take place at both the Rails application level and at the database level.** The validations you set in your models - using `validates :field_name, presence: true` and the like - take place at the Rails application level. Validations or constraints that you set in your migrations - `null: false` or `unique: true`, for example - take place at the database level. Normally your model validations will mirror your database constraints (you'll have both a `NOT NULL` constraint and a presence validation, for instance), but it's important to understand that there are two separate validation processes going on and occasionally one may succeed while the other fails.
+This is an important concept that can be confusing: **Validations take place at both the application level and at the database level.** The validations you set in your models - using `validates :field_name, presence: true` and the like - take place at the application level. Validations or constraints that you set in your migrations - `null: false` or `unique: true`, for example - take place at the database level. Normally your model validations will mirror your database constraints (you'll have both a `NOT NULL` constraint and a presence validation, for instance), but it's important to understand that there are two separate validation processes going on and occasionally one may succeed while the other fails.
 
 One other thing to note about validations. It's possible to have validations that are run only against certain actions. For instance, if we only wanted to validate the presence of something on its creation we could do something like:
 
 ```ruby
-validates :awesomeness, presence: true, on: :create
+validates :genre, presence: true, on: :create
 ```
 
 #### Uniqueness Validations and Race Conditions
 
-We sometime want a field in our database to be unique. Say, for example, we have an application where we let a user add coffee to our infamous cash register. We would want each SKU to be unique, so that no two products can have the same SKU. This would best be accomplished with a uniqueness validation. An example of this for our `Coffee` would look like this:
+We sometime want a field in our database to be unique. Say, for example, we let a user add a new album to our application. We would want each album SKU to be unique, so that no two albums can have the same SKU. This would best be accomplished with a uniqueness validation. An example of this for our `Albums` model, would look like this:
 
 ```ruby
-class Coffee < ActiveRecord::Base
+class Albums < ActiveRecord::Base
   validates :sku, uniqueness: true
 end
 ```
-This will ensure that rails will only allow a SKU to be assigned to a single coffee in the database. However, this does not validate uniqueness at the database layer, so a race condition can result in identical SKUs being saved to the database. A race condition could occur if two processes are simultaneously trying to write to the database, and they both complete their uniqueness check before either record gets saved to the database. A great example of race conditions as it applies to uniqueness is supplied [here](http://robots.thoughtbot.com/the-perils-of-uniqueness-validations).
 
-To prevent a race condition from occurring, we would add an index to our database to ensure uniqueness. In the case of our Coffee class we would add an index with the following migration:
+**Note:** You should not implement this example. We have not provided any SKUs in the seed file.
+
+This uniqueness validation will ensure that ActiveRecord will only allow a SKU to be assigned to a single album in the database. However, this does not validate uniqueness at the database layer, so a race condition can result in identical SKUs being saved to the database. A race condition could occur if two processes are simultaneously trying to write to the database, and they both complete their uniqueness check before either record gets saved to the database. A great example of race conditions as it applies to uniqueness is supplied [here](http://robots.thoughtbot.com/the-perils-of-uniqueness-validations).
+
+To prevent a race condition from occurring, we would add an index to our database to ensure uniqueness. In the case of our Album class we would add an index with the following migration:
 
 ```ruby
-class AddSKUIndexToCoffee
+class AddSKUIndexToAlbum < ActiveRecord::Migration
   def change
-    add_index :coffee, :sku, unique: true
+    add_index :albums, :sku, unique: true
   end
 end
 ```
@@ -173,7 +164,7 @@ You should have seen something like the following when you called `s.save`:
 => false
 ```
 
-Rails encountered your validation and refused to save the change you made that set `year` equal to `nil`. When you now retrieve the year from the last song, you should see that it is unchanged:
+ActiveRecord encountered your validation and refused to save the change you made that set `year` equal to `nil`. When you now retrieve the year from the last song, you should see that it is unchanged:
 
 ```ruby
 2.0.0-p353 :005 > Song.last.year
@@ -181,7 +172,7 @@ Rails encountered your validation and refused to save the change you made that s
  => 1953
  ```
 
-**Note**: The rails console requires a restart to register changes to model classes' validations. If you made another change to the validations in your `Song` class, you'd need to restart the rails console to see them take effect. You can also try to use `reload!`.
+**Note**: The pry console requires a restart to register changes to model classes' validations. If you made another change to the validations in your `Song` class, you'd need to restart the pry console to see them take effect. You can also try to use `reload!`.
 
 Provide a value for the year column and try to save the song. Test what happens with values that are strings. What about the integer zero?
 
@@ -201,9 +192,7 @@ Restart the console and test again. What do you find with short year formats?
 
 This demonstrates that validations can have multiple conditions that must be met for the record to be valid. At times, we may not be certain that we've met those conditions prior to trying to save. To check, we can call `valid?` on an object before saving. We can also call the `errors` method on a record prior to saving to list any errors raised by our validations.
 
-{% quick_challenge %}
 **Quick Challenge:** With a new song, using `new`, not `create`, set a value for the year that is invalid. Prior to saving, call the `valid?` method on your song. What do you learn? How might this be useful?
-{% endquick_challenge %}
 
 **Note**: Validations can become quite complex. At times, including `valid?` checks on your new objects can be a useful way to branch to code that deals with this condition.
 
@@ -211,17 +200,13 @@ This demonstrates that validations can have multiple conditions that must be met
 
 In our example above, we focused on the length of a year. This is a well-defined condition: in normal use we can be pretty certain that we won't encounter years that are 5 digits long and it's standard to require 4-digit years. In a recorded songs database these conditions are pretty much certain to be true.
 
-{% quick_challenge %}
-**Quick Challenge:** Rails' ActiveModel class provides validation helpers. Can you find a way to refactor our `:minimum => nn, :maximum => nn` syntax to something more terse? Refer to the documentation for ActiveModel's validation helpers.
-{% endquick_challenge %}
+**Quick Challenge:** The ActiveModel class provides validation helpers. Can you find a way to refactor our `minimum: x, maximum: y` syntax to something more terse? Refer to the documentation for ActiveModel's validation helpers.
 
 ---
 
-{% quick_challenge %}
-**Quick Challenge:** Rewrite the song model class to include validations for all of the fields that you have included (i.e., not the columns that Rails provided on its own such as timestamps). Use the example of the `year` column as a starting point. For the 3 string fields, set limits on minimum and maximum length that you think will be reasonable. Ensure that the value given for years is a number. Consider what you might do if a user tries to add a record without knowing some information, e.g. the label of the album.
-{% endquick_challenge %}
+**Quick Challenge:** Rewrite the `song` model to include validations for all of the fields that you have included (i.e., not the columns that ActiveRecord provided on its own such as timestamps). Use the example of the `year` column as a starting point. For the string fields, set limits on minimum and maximum length that you think will be reasonable. Ensure that the value given for years is a number. Consider what you might do if a user tries to add a record without knowing some information, e.g. the label of the album.
 
-**Hint**: You cannot complete this without reference to the appropriate documentation for Rails.
+**Hint**: You cannot complete this without reference to the appropriate documentation for ActiveRecord.
 
 ### Rules to Follow
 
@@ -237,4 +222,4 @@ Incorporating validations at both levels allows us to test whether a record is v
 
 #### Enforcing Datatypes is important to consistent applications.
 
-The Rails validation process and the accompanying validation helpers are the primary way to ensure that your data maintains integrity. Consistent data across many records allows simpler, easier to maintain code. Uniqueness validations are an important edge case to be mindful of, and creating indexes helps enforce data consistency.
+The ActiveRecord validation process and the accompanying validation helpers are the primary way to ensure that your data maintains integrity. Consistent data across many records allows simpler, easier to maintain code. Uniqueness validations are an important edge case to be mindful of, and creating indexes helps enforce data consistency.
