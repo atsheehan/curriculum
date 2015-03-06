@@ -1,0 +1,7 @@
+---
+title: "Objectify Those Brussels Sprouts"
+type: "challenge"
+description: "Learn the basics of Object Orientation through our favorite recipe ingredient."
+depends: "rock-paper-scissors"
+ignore:
+- "evening-oo-brussels-sprouts.md"
