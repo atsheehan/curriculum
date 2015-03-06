@@ -1,5 +1,3 @@
-##Objectify Those Brussels Sprouts Recipes!
-
 ###Learning Goals
 * Create classes that have constructors
 * Instantiate custom objects
