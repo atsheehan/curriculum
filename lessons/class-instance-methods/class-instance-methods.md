@@ -8,7 +8,7 @@ With object-oriented programming we can create instances of classes that combine
 
 ### Instance Methods
 
-Dealing with dates and times is a requirement for many applications. Let's consider a class to model calendar dates so that it becomes easier to work with them. Here is an example of how we might instantiate a new date object and some methods that we may want to define:
+Dealing with dates and times is a requirement for many applications. Let's consider how we can design a Date class to model calendar dates so that it becomes easier to work with them (note that this class already exists in the [Ruby standard library](http://ruby-doc.org/stdlib-2.2.0/libdoc/date/rdoc/Date.html). Here is an example of how we might instantiate a new date object and call some methods on it:
 
 ```ruby
 date = Date.new(2015, 3, 9)
@@ -23,7 +23,7 @@ date.to_s
 # => "March 3, 2015"
 ```
 
-To create a new date object we must supply the year, month, and day as integers. Once we have our date object we can ask if it represents a leap year, what the full name of the month is, or to print out the string representation for display purposes.
+To create the date object we must supply the year, month, and day as integers. Once it is instantiated we can ask if it represents a leap year, what the full name of the month is, or to print out the string representation for display purposes.
 
 This class can be implemented with the following definition:
 
@@ -156,9 +156,9 @@ end
 
 To define a class method we prefix the name of the method with `self`. In this case we have `def self.parse` which defines the `parse` method on the Date object, enabling us to call `Date.parse` rather than having to call it on an instance of Date. Because a class method is not being called on an instance, it **does not** have access to instance data (i.e. you cannot reference instance variables within the class method).
 
-So we've seen how to define class methods, but when should they be used? There are two primary use cases where class methods come in handy:
+When should class methods be used? There are two primary use cases where they come in handy:
 
-**Alternate constructors**: In Ruby we can only have a single constructor for a class (i.e. only one implementation of `def initialize`) but in some cases we want to have multiple ways to construct an object. In the example above we needed two ways to construct a date: passing in distinct year, month, and day values or by passing in an ISO 8601 string. The `Date.parse` class method exists as an alternative to `Date.new` and allows us to provide other means for initializing an object (even though `Date.parse` utilizes `Date.new` internally).
+**Alternate constructors**: In Ruby we can only have a single constructor for a class (i.e. only one implementation of `def initialize`). In some cases it is useful to be able to construct an object multiple ways depending on different types of input. In the example above we needed two ways to construct a date: passing in distinct year, month, and day values or by passing in an ISO 8601 string. The `Date.parse` class method exists as an alternative to `Date.new` and allows us to provide other means for initializing an object (even though `Date.parse` utilizes `Date.new` internally).
 
 **Utility methods**: If a method does not depend on the existence of an instance of that class it may be more useful to include it as a class method. For example, we may have a `Recipe` class that defines a method to convert ounces to grams:
 
