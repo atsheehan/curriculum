@@ -1,0 +1,7 @@
+---
+title: "Brussels Sprouts & Class Methods"
+type: "challenge"
+description: "Validate some inputs with class methods"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-oo-brussels-sprouts-validator.md"
