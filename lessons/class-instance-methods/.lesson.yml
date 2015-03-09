@@ -1,0 +1,5 @@
+---
+title: "Class Methods vs. Instance Methods"
+type: "article"
+description: "Describes how to define methods that do not depend on an instance of a class."
+tags: "objects, classes, class-methods, instance-methods, methods"
