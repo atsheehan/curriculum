@@ -22,7 +22,7 @@ wine
 whiskey
 ```
 
-If a recipe contains any of these, your client will have to be sent to the hospital. That would be bad, both for your client and for your career as a developer. So what can you do?
+If a recipe contains any ingredients other than these, your client will have to be sent to the hospital. That would be bad, both for your client and for your career as a developer. So what can you do?
 
 Update your code from last evening to include class methods that check for the following:
 
