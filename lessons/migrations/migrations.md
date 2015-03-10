@@ -1,6 +1,6 @@
-In this assignment, you'll work with SQL statements to create databases and define columns, and use ActiveRecord migrations to do the same.
+At this point in our studies, we are quite familiar with creating databases and defining the schema of our database with the SQL language. We have also studied the basics of Object Oriented Programming (OOP). ActiveRecord is a component of the Rails framework that combines Relational Databases and OOP in what is called a Object-Relational Mapping. In other words, ActiveRecord maps the state (data) and behavior (methods) of our objects to SQL statements.
 
-We use [Data Definition Language](https://en.wikipedia.org/wiki/Data_definition_language), or DDL for short, to define schema. It has many variants around a common core of commands that are found in databases like SQLite, Berkeley DB, MySQL and PostgreSQL among the free or open source variants. SQL is also used in many proprietary database management systems, including products by Oracle and Microsoft. Other database systems like MongoDB, Redis, CouchDB and others do not use SQL.
+In this assignment, we will teach you how to wield the power of ActiveRecord migrations. we will work with SQL statements to create databases and define columns, and show you the equivalent ActiveRecord methods.
 
 ### Learning Goals
 
@@ -28,7 +28,7 @@ CREATE TABLE songs(id SERIAL PRIMARY KEY, name TEXT, album TEXT, artist TEXT);
 
 If everything goes well, you will see a new table. Creating a database and a new table in SQL is rather straightforward.
 
-We can perform these same tasks by utilizing Ruby libraries. [ActiveRecord](https://github.com/rails/rails/tree/master/activerecord) and the [Sinatra ActiveRecord Extension](https://github.com/janko-m/sinatra-activerecord) provide us with commands we can use to create a database and create tables in our database.
+Similiarly, we can perform the tasks of database and schema creation by utilizing Ruby libraries. [ActiveRecord](https://github.com/rails/rails/tree/master/activerecord) and the [Sinatra ActiveRecord Extension](https://github.com/janko-m/sinatra-activerecord) provide us with commands we can use to create a database and create tables in our database.
 
 First, let's exit out of `psql`, wipe out the database we created earlier, and move into the `sample-code` directory:
 
@@ -38,7 +38,7 @@ dropdb songs_db
 cd sample-code
 ```
 
-Copy the `config/database.example.yml` file to `config/database.yml` and change the name of the database. Your `config/database.yml` file should look like this:
+Take a look at the `config/database.yml` file. This configuration file defines how ActiveRecord will connect to your database. Here is where we define the type of database we will be communicating with (postgresql), the name of the database (songs_db), and other settings. The file should look like this:
 
 ```no-highlight
 # Configure the database used when in the development environment
@@ -50,6 +50,8 @@ development:
   username:
   password:
 ```
+
+**Note:** The username and password are intentionally left blank. You should not have to fill in these fields for local development.
 
 Now, from the `sample-code` folder, run the following commands:
 
@@ -91,7 +93,7 @@ We have just created a songs table using Ruby! We didn't have to specify an prim
 
 ---
 
-Just like ActiveRelation and ActiveRecord provide us with means to generate SQL for CRUD operations, the ActiveRecord migration system provides us with means to generate DDL that can affect changes on our schema.
+Just like ActiveRelation and ActiveRecord provide us with means to generate SQL for CRUD operations, the ActiveRecord migration system provides us with means to generate code that will change our database schema.
 
 Let's add another table to our application:
 
@@ -134,7 +136,7 @@ class CreateGenres < ActiveRecord::Migration
   end
 
   def down
-    puts "Abort! Rolling Back!"
+    puts "Abort! Roll back those changes!"
   end
 end
 ```
@@ -146,11 +148,11 @@ rake db:migrate
 rake db:rollback
 ```
 
-While migration files can seem mystifying, this demonstration should show you that there's nothing too magic going on. When `rake db:migrate` is called, ActiveRecord figures out what un-run migrations exist, and calls the `up` method of each of them, in sequence. When `rake db:rollback` is called, it runs the `down` method of the last migration.
+While migration files can seem mystifying, this demonstration should show you that there's nothing too magical going on. When `rake db:migrate` is called, ActiveRecord figures out what un-run migrations exist, and calls the `up` method of each of them, in sequence. When `rake db:rollback` is called, it runs the `down` method of the last migration.
 
 ---
 
-#### Informative Tanget
+#### How does ActiveRecord know which migrations to run?
 
 When we use ActiveRecord Migrations, a table called `schema_migrations` is created. Open up your database with the `psql` command and use `\d` to list all tables. This particular table keeps track of which migrations have been run by recording the timestamp of the migration. This allows many developers to create migrations that will be run on the same database (assuming that no two migrations were created at exactly the same second). After running the `rake db:migrate` command, the schema_migrations table is checked against the files in `db/migrate`. If the timestamp of the file does not exist in the `schema_migrations` table, the migration is executed, and its timestamp is added. If the timestamp already exists in the table, that migration is skipped.
 
@@ -175,10 +177,12 @@ That's fine in itself. the problem would be that if we were to migrate, then rol
 ```ruby
 def up
   add_column :songs, :genre, :text
+  # SQL: ALTER TABLE songs ADD COLUMN genre TEXT;
 end
 
 def down
   remove_column :songs, :genre
+  # SQL: ALTER TABLE songs DROP COLUMN genre;
 end
 ```
 
@@ -210,7 +214,7 @@ Migrations are a sufficiently large topic. Since they can execute any arbitrary 
 
 We have explored the idea of using SQL and ActiveRecord, interchangeably. Using SQL effectively is an important tool, and one that is frequently useful in development, independently of ActiveRecord development.
 
-However, you should carefully consider that the migration mechanism in ActiveRecord generates DDL that modifies structure rather than data. Because migrations expect a symmetry between `up` and `down` methods, creating or destroying structural elements can quickly create conflicts with the migrations in the app.
+However, you should carefully consider that the migration mechanism in ActiveRecord generates [Data Description Language](https://en.wikipedia.org/wiki/Data_definition_language) that modifies structure rather than data. Because migrations expect a symmetry between `up` and `down` methods, creating or destroying structural elements can quickly create conflicts with the migrations in the app.
 
 When a database is tied to an app, and expected to be managed by the app, you should use well-structured migrations to make structural changes.
 
