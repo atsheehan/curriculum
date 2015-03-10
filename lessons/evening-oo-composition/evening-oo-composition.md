@@ -10,12 +10,6 @@ Luckily, we have contacts in Belgium that can send us an emergency shipments of 
 
 ###Instructions
 
-Write `Airplane`, `Container` and `Ingredient` classes to help answer the following questions:
-
-* How many total Brussels sprouts can be carried in a Concorde based on the following requirements? How many Brussels Sprouts containers are needed for that?:
-  * 5,000 lbs of Cheesy Poofs must be delivered
-  * 1,000 lbs of Cheesy Poofs must be delivered
-
 Here are your assumptions:
 * The Concorde has a maximum carrying capacity (max cargo weight) of 20,000 lbs.
 * We have to share our cargo with someone else who wants [Cheesy Poofs](https://www.youtube.com/watch?v=-XlYj1iyAlk).
@@ -29,6 +23,15 @@ Here are your assumptions:
 
 * Do not worry about dimensions of the plane and whether or not containers would physically fit. Just assume that they will.
 * Do not worry about fuel.
+
+Write `Airplane`, `Container` and `Ingredient` classes to help answer the following questions:
+
+* How many total Brussels sprouts can be carried in a Concorde based on the following requirements? How many Brussels Sprouts containers are needed for that?:
+  * 5,000 lbs of Cheesy Poofs must be delivered
+  * 1,000 lbs of Cheesy Poofs must be delivered
+
+Non-core
+* How would you optimize 
 
 ###Output
 Submit your updated code in `code.rb` and include some example cases. Adjust some of the assumptions and show us how the answers to the above questions change (i.e., what if we decide to send a 747 or a 787, instead).
