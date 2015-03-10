@@ -1,0 +1,5 @@
+---
+title: "Building an Object-Oriented Card Deck"
+type: "tutorial"
+description: "Demonstrates how we can build new objects from combining existing objects together."
+tags: "objects, classes, object-composition"
