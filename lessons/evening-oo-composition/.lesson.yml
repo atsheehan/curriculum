@@ -1,0 +1,7 @@
+---
+title: "Emergency Brussels Sprouts"
+type: "challenge"
+description: "Implementing classes with composition"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-oo-composition.md"
