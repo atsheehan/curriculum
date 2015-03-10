@@ -115,9 +115,3 @@ Next, use a tool like [draw.io](https://www.draw.io/) to create an ER diagram fo
 When your ER diagram is finished, create the migrations required to set up your database! Make sure to try rolling back each migration (`rake db:rollback`) to make sure that works, before you consider it finished.
 
 When you finish these steps, start setting yourself up for future work on the above user stories. Don't worry yet about retrieving information from the database - that'll happen tomorrow - but you can get ready for that step by setting up the pages you'll need, and your paths in `app.rb`.
-
-### Tips
-
-1. **Before you start writing any code**, take some time to think about what your database should look like and draw an ER diagram.
-2. Work on completing one user story at a time.
-3. You will need to use a [has_many :through association][has-many-through].
