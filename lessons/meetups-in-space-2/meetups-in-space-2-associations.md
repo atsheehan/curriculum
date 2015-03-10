@@ -5,9 +5,9 @@
 
 ### Instructions
 
-- Create ActiveRecord models for each table in your database. They should be saved under `app/models`.
-- Set up your models to use ActiveRecord associations. (This may involve making changes to your original plan for your schema - if that is the case, change your schema by adding new migrations, and be sure to update your ER diagram accordingly!)
-- Once both of these steps are done, continue to fulfill the [user stories](meetups-in-space-1) specified yesterday by using ActiveRecord to query your database and displaying that information on your erb pages.
+* Create ActiveRecord models for each table in your database. They should be saved under `app/models`.
+* Set up your models to use ActiveRecord associations. (This may involve making changes to your original plan for your schema - if that is the case, change your schema by adding new migrations, and be sure to update your ER diagram accordingly!)
+* Once both of these steps are done, continue to fulfill the [user stories](meetups-in-space-1) specified yesterday by using ActiveRecord to query your database and displaying that information on your erb pages.
 
 ### Tips
 

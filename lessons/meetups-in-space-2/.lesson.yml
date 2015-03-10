@@ -5,5 +5,5 @@ description: "Build a web app with Sinatra and Active Record to find places to h
 tags: "sinatra, active-record, activerecord, databases, migrations, associations"
 depends: "meetups-in-space-1"
 ignore:
-- "meetups-in-space-2.md"
+- "meetups-in-space-2-associations.md"
 - ".env"
