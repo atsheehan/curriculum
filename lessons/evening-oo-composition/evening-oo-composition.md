@@ -16,7 +16,6 @@ Write `Airplane`, `Container` and `Ingredient` classes to help answer the follow
   * 5,000 lbs of Cheesy Poofs must be delivered
   * 1,000 lbs of Cheesy Poofs must be delivered
 
-
 Here are your assumptions:
 * The Concorde has a maximum carrying capacity (max cargo weight) of 20,000 lbs.
 * We have to share our cargo with someone else who wants [Cheesy Poofs](https://www.youtube.com/watch?v=-XlYj1iyAlk).
