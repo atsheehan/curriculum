@@ -2,7 +2,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: <YOUR_DATABASE_NAME>
+  database: songs_db
   pool: 5
   username:
   password:
