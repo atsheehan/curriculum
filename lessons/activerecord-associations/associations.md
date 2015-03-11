@@ -33,7 +33,11 @@ class Article < ActiveRecord::Base
 end
 ```
 
-And then we'll create a migration to handle creating the corresponding `articles` table in the database with `rake db:create_migration NAME=create_articles`.
+Notice that the `Article` class inherits from `ActiveRecord::Base`. By inheriting from this class, we gain access to the methods defined in `ActiveRecord::Base`, which will allow us to create, update, read, and delete object data in our database. `ActiveRecord` and Postgres provide us with a layer of persistence for our objects, so that the data associated with our objects is saved, even when our application isn't running.
+
+The `Article` class is saved under the `app/models` folder. This corresponds to the `M` in the MVC design pattern.
+
+For every model in our `app/models` folder, we need an associated table in our database. Let's create a migration to handle creating the corresponding `articles` table with `rake db:create_migration NAME=create_articles`.
 
 Inside the generated `db/migrate/xxxxx_create_articles.rb`:
 
@@ -53,6 +57,8 @@ end
 ```
 
 After creating our database and running `rake db:migrate`, we should have our `articles` table.
+
+Notice the naming conventions here. The `Article` model is singular, while the `articles` table is plural. Adhering to this naming convention is important, since `ActiveRecord` uses the plural form of the model name to find the associated table in the database. The [`ActiveSupport::Inflector`](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html) class handles the singularization or plurilazation of words. Check out the [ActiveRecord Naming Challenge](http://ar-naming.herokuapp.com/) if you would like to practice your ability to adhere to `ActiveRecord` naming conventions.
 
 #### Creating Comments
 
@@ -110,12 +116,11 @@ Comment.create(body: 'ruby is so 2010, Go is the future', article_id: ruby_artic
 Comment.create(body: 'i like ice cream', article_id: ruby_article.id)
 ```
 
-Here we created two separate articles with two and three comments, respectively. Notice that when we created the comment, all we had to do was give it the ID of the article that it belonged to so that the foreign key was setup correctly.
+Here we created two separate articles with two and three comments, respectively. The `create` method is something we gained by inheriting from `ActiveRecord::Base`. This method saves a record to the database. We could achieve the same result by using the `new` method to initialize a new `ActiveRecord` object, passing in the attributes we want to set, and then calling the `save` method on the object. Notice that when we created the comment, all we had to do was give it the ID of the article that it belonged to so that the foreign key was setup correctly.
 
 #### Retrieving associated records using ActiveRecord queries
 
-Now that we have our data, how can we retrieve it? Let's pull all of the
-comments for our article about cats:
+Now that we have our data, how can we retrieve it? Let's pull all of the comments for our article about cats:
 
 ```ruby
 article = Article.where(subject: 'Some thoughts about cats').first
@@ -147,8 +152,8 @@ The `has_many` method will set up our association between the `Article` and the 
 We can test our new association by loading up our app in an irb session and running the following command:
 
 ```ruby
-Article = Article.first
-Article.comments
+article = Article.first
+article.comments
 ```
 
 The line `article.comments` will return the same records that `Comment.where(article_id: article.id)` returns. By following conventions (i.e. naming our foreign key `article_id` after the model name), we can benefit from these shortcuts that Rails provides.
@@ -181,6 +186,10 @@ comment.article
 This returns the same record as `Article.where(id: comment.article_id).first` did except we have to use far less syntax. ActiveRecord makes manipulating our records much simpler to the point where we don't have to deal with SQL on a regular basis and can instead focus on using our objects and the relationships between them.
 
 ### Rules to Follow
+
+#### Use `has_many` and `belongs_to`, together
+
+If an article has many comments, it follows that a comment belongs to an article. We should define the association `has_many :comments` in the `Article` model, __and__ define the `belongs_to :article` association in the `Comment` model. You should not declare one without the other.
 
 #### (Almost) Always Use IDs For Foreign Keys
 
