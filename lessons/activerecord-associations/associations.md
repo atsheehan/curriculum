@@ -18,7 +18,7 @@ This type of relationship often comes up in our data as well. A blog has one or 
 
 #### Enter the Blogosphere
 
-Let's create a new Sinatra app. You can use the [Sinatra ActiveRecord Starter Kit](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit) as a base for your app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling your app "blog".
+Let's create a new Sinatra app. You can use the [Sinatra ActiveRecord Starter Kit](sinatra-starter) as a base for your app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling your app "blog".
 
 **Hint: Don't forget to create your database with `rake db:create` after configuring your database.**
 
@@ -58,7 +58,7 @@ end
 
 After creating our database and running `rake db:migrate`, we should have our `articles` table.
 
-Notice the naming conventions here. The `Article` model is singular, while the `articles` table is plural. Adhering to this naming convention is important, since `ActiveRecord` uses the plural form of the model name to find the associated table in the database. The [`ActiveSupport::Inflector`](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html) class handles the singularization or plurilazation of words. Check out the [ActiveRecord Naming Challenge](http://ar-naming.herokuapp.com/) if you would like to practice your ability to adhere to `ActiveRecord` naming conventions.
+Notice the naming conventions here. The `Article` model is singular, while the `articles` table is plural. Adhering to this naming convention is important, since `ActiveRecord` uses the plural form of the model name to find the associated table in the database. The [`ActiveSupport::Inflector`](activesupport-inflector) class handles the singularization or plurilazation of words. Check out the [ActiveRecord Naming Challenge](activerecord-challenge) if you would like to practice your ability to adhere to `ActiveRecord` naming conventions.
 
 #### Creating Comments
 
@@ -201,6 +201,9 @@ SQL doesn't actually require that we use numeric integers for foreign keys but f
 
 The most striking thing about associations is how readable they make relationships between objects. Once you become acclimated to their use, you'll start to examine models by looking at how their declared associations work, their relations to dependents, as well as their validations and scopes. A single line of code in a model can tell you an enormous amount about a database relationship.
 
+[activesupport-inflector]: http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html
+[activerecord-challenge]: http://ar-naming.herokuapp.com/
 [railsguides-associations]: http://guides.rubyonrails.org/association_basics.html
 [railsguides-has_many]: http://guides.rubyonrails.org/association_basics.html#the-has-many-association
 [railsguides-belongs_to]: http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association
+[sinatra-starter]: https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit
