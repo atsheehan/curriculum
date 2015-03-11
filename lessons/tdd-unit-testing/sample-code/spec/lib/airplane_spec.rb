@@ -1,4 +1,4 @@
-require 'spec_helper'
+require_relative "../../lib/airplane"
 
 describe Airplane do
   describe '#flying?' do
