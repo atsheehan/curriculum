@@ -1,5 +1,5 @@
 ---
 title: "Acceptance Testing"
 type: "article"
-description: "Start writing Acceptance Tests to ensure your application behaves the way your users expect it to"
+description: "Start writing Acceptance Tests to ensure your application behaves the way your users expect it to."
 tags: "capybara, acceptance testing, testing, TDD"
