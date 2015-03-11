@@ -1,0 +1,7 @@
+---
+title: "Test Flight"
+type: "challenge"
+description: "Test-drive the implementation of an Airplane class."
+tags: "tdd, unit-tests, rspec"
+ignore:
+- "test-flight.md"
