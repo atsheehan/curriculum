@@ -26,8 +26,8 @@ If a recipe contains any ingredients other than these, your client will have to 
 
 Update your code from last evening to include class methods that check for the following:
 
-* Implement an instance method in your `Ingredient` class that helps check whether an ingredient is valid (i.e., contains only one of the above ingredient names)?
-* Write an `Recipe` instance method that returns `true` or `false` dependent on whether or not your client can have that particular dish.
+* Implement an instance method in your `Ingredient` class that helps check whether an ingredient is valid (i.e., contains only the ingredient names above)?
+* Write a `Recipe` instance method that returns `true` or `false` dependent on whether or not your client can have that particular dish.
 * What if your input to your `Ingredient` class comes in a different format? Write an `Ingredient` class method called `parse` which takes in a string that will look like `47 lb(s) Brussels sprouts` or `5 tspn(s) milk` and generates a variable of the `Ingredient` class in the right format.
 
 ###Output
