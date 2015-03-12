@@ -1,0 +1,6 @@
+---
+title: "Linked List Challenge"
+type: "challenge"
+description: "Use Ruby classes to create a Linked List implementation"
+ignore:
+- "linked-list-challenge.md"
