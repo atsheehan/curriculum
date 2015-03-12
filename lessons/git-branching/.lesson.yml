@@ -1,0 +1,5 @@
+---
+title: "Git Branching"
+type: "article"
+description: "Describes how to use branches in Git to work on multiple copies of a repository simultaneously and then merge them together."
+tags: "git, version-control, branching, merging, merge-conflicts"
