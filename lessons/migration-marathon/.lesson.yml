@@ -1,0 +1,6 @@
+---
+title: "Migration Marathon"
+type: "tutorial"
+description: "Practice your skills in constructing and utilizing migrations."
+depends: "rock-paper-scissors"
+tags: "sinatra, active-record, tdd, testing"
