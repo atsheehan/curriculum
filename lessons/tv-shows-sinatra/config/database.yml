@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tv_shows_development
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tv_shows_test

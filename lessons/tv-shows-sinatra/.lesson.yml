@@ -1,0 +1,7 @@
+---
+title: "TV Shows - Sinatra"
+type: "challenge"
+description: "Add acceptance tests to an existing Sinatra application."
+tags: "capybara, acceptance-testing, testing, tdd, active-record, validations"
+ignore:
+- "tv-shows-sinatra.md"

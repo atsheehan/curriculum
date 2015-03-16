@@ -1,0 +1,45 @@
+<h1>Add Show</h1>
+
+<form action="/television_shows" method="post">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="television_show[title]" value="<%= show.title %>">
+  </div>
+
+  <div>
+    <label for="network">Network:</label>
+    <input type="text" id="network" name="television_show[network]" value="<%= show.network %>">
+  </div>
+
+  <div>
+    <label for="starting_year">Starting Year:</label>
+    <input type="number" id="starting_year" name="television_show[starting_year]" value="<%= show.starting_year %>">
+  </div>
+
+  <div>
+    <label for="ending_year">Ending Year:</label>
+    <input type="number" id="ending_year" name="television_show[ending_year]" value="<%= show.ending_year %>">
+  </div>
+
+  <div>
+    <label for="genre">Genre:</label>
+    <select id="genre" name="television_show[genre]">
+      <% TelevisionShow::GENRES.each do |genre| %>
+        <% if show.genre == genre %>
+          <option selected><%= genre %></option>
+        <% else %>
+          <option><%= genre %></option>
+        <% end %>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
+    <label for="synopsis">Synopsis:</label>
+    <textarea id="synopsis" name="television_show[synopsis]" value="<%= show.synopsis %>"></textarea>
+  </div>
+
+  <input type="submit" value="Add TV Show">
+</form>
+
+<a href="/television_shows">Back to all shows</a>
