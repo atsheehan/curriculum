@@ -1,0 +1,9 @@
+<h1>TV Shows</h1>
+
+<ul>
+  <% shows.each do |show| %>
+    <li><a href="/television_shows/<%= show.id %>"><%= "#{show.title} (#{show.network})" %></a></li>
+  <% end %>
+</ul>
+
+<a href="/television_shows/new">Add New Show</a>
