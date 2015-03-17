@@ -1,0 +1,9 @@
+---
+title: "Meetups in Space - Part 1"
+type: "challenge"
+description: "Build a web app with Sinatra and Active Record to find places to hang out in space."
+tags: "sinatra, active-record, activerecord, databases, migrations, er-diagrams"
+depends: "sinatra-lunar-kitchen-ii"
+ignore:
+- "meetups-in-space-1-migrations.md"
+- ".env"
