@@ -1,38 +1,31 @@
-In this assignment, you'll use **validations** as a way to ensure that only valid data makes its way into our database.
+In this assignment we'll use **validations** as a way to ensure that only valid data makes its way into our database.
 
 ### Learning Goals
 
 * Ensure that data stored in records is of valid type
 * Examine the effect that enforced datatypes has on our code
 
-### Resources
-
-* [ActiveRecord Validations - RailsGuides](http://guides.rubyonrails.org/active_record_validations.html)
-* [Rails Documentation on Validations](http://api.rubyonrails.org/classes/ActiveModel/Validations.html)
-
-### Implementation Notes
-
-#### Getting Started
+### Sample Application
 
 In the `sample-code` folder, we have a Sinatra app that includes the Sinatra ActiveRecord Extension gem. We have included a `Song` model, along with a seed script to add songs to the database. Run the following commands to get started:
 
 ```ruby
 # download this assignment, if you haven't already
-et get activerecord-validations
+$ et get activerecord-validations
 
 # navigate into the sample-code folder
-cd activerecord-validation/sample-code
+$ cd activerecord-validation/sample-code
 
 # install dependencies
-bundle
+$ bundle
 
 # create the database, create the schema, and seed the database
-rake db:create
-rake db:migrate
-rake db:seed
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
 ```
 
-#### What are validations?
+### What Are Validations?
 
 **Validations** are checks that we put in place in our applications to make sure that only valid data is saved to our database.
 
@@ -54,7 +47,7 @@ end
 
 Database-level validations are generally sufficient to prevent bad data from making its way into our database. However, they don't provide feeback to users on whether or not the data they've provided (in a form, for example), is valid.
 
-We use **model-level validations** in part so that we can provide error messages to the user. ActiveRecord provides [validation helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to let us easily add validations to our models. To add `null: false` and uniqueness constraints to our `Category` model, we could write the following:
+We use **model-level validations** in part so that we can provide error messages to the user. ActiveRecord provides [validation helpers](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers) to let us easily add validations to our models. To add constraints checking for a non-empty, unique value to our `Category` model we could write the following:
 
 ```ruby
 class Genre < ActiveRecord::Base
@@ -63,16 +56,16 @@ class Genre < ActiveRecord::Base
 end
 ```
 
-In most contexts, and for the remainder of this assignment, we'll use **validation** to refer to **model-level validations**.
+In most contexts and for the remainder of this article, we'll use **validation** to refer to **model-level validations**.
 
-#### Validation helpers
+#### Validation Helpers
 
 Validation helpers provide a powerful way for ActiveRecord models to ensure that various requirements for data are met. Commonly-used validation helpers include:
 
 * **presence** - disallows null values or empty strings for a given attribute
 * **uniqueness** - ensures that only unique values are allowed for a given attribute
 * **numericality** - ensures that values contain only the digits 0 through 9
-* **format** - checks that values conform to a particular format
+* **format** - checks that values conform to a particular format using regular expressions
 * **inclusion** - checks that the value for an attribute is included in some set of pre-determined values.  For example:
 
 ```ruby
@@ -81,8 +74,7 @@ validates :day, inclusion: { in: ["Sun", "Mon.", "Tues.", "Wed.", "Thurs.", "Fri
 
 To learn more about validation helpers and their syntax, check out the ActiveRecord documentation [here](http://guides.rubyonrails.org/active_record_validations.html#validation-helpers).
 
-
-#### When do validations take place?
+#### When Do Validations Take Place?
 
 Any time you call one of the following ActiveRecord methods on an object, validations will be checked for that object.
 
@@ -132,7 +124,7 @@ end
 ```
 This will ensure that the database performs a uniqueness check on the SKU. For a more detailed look at uniqueness validations and the options that are available to them, view the [uniqueness docs](http://edgeguides.rubyonrails.org/active_record_validations.html#uniqueness) for ActiveRecord.
 
-#### Practice Time!
+### Practice Time!
 
 Open up your `Song` model in the music project. First, let's add a validation that will prevent null values from being accepted for the `:year` attribute. Inside the class, add a line return and on the line after add this:
 
@@ -202,24 +194,15 @@ In our example above, we focused on the length of a year. This is a well-defined
 
 **Quick Challenge:** The ActiveModel class provides validation helpers. Can you find a way to refactor our `minimum: x, maximum: y` syntax to something more terse? Refer to the documentation for ActiveModel's validation helpers.
 
----
-
-**Quick Challenge:** Rewrite the `song` model to include validations for all of the fields that you have included (i.e., not the columns that ActiveRecord provided on its own such as timestamps). Use the example of the `year` column as a starting point. For the string fields, set limits on minimum and maximum length that you think will be reasonable. Ensure that the value given for years is a number. Consider what you might do if a user tries to add a record without knowing some information, e.g. the label of the album.
+**Quick Challenge:** Rewrite the `Song` model to include validations for all of the fields that you have included (i.e., not the columns that ActiveRecord provided on its own such as timestamps). Use the example of the `year` column as a starting point. For the string fields, set limits on minimum and maximum length that you think will be reasonable. Ensure that the value given for years is a number. Consider what you might do if a user tries to add a record without knowing some information, e.g. the label of the album.
 
 **Hint**: You cannot complete this without reference to the appropriate documentation for ActiveRecord.
 
-### Rules to Follow
+### Resources
 
-#### Use validations as a means to require quality data as input to your application
+* [ActiveRecord Validations - RailsGuides](http://guides.rubyonrails.org/active_record_validations.html)
+* [Rails Documentation on Validations](http://api.rubyonrails.org/classes/ActiveModel/Validations.html)
 
-Validations help to prevent the phenomenon of [garbage in garbage out](http://en.wikipedia.org/wiki/Garbage_in_garbage_out). By requiring data to adhere to certain standards before it is written to the database, we can ensure that only quality data is stored within it.
-
-#### Include validations at both the database and the model levels
-
-Incorporating validations at both levels allows us to test whether a record is valid before writing it to the database, provide useful error messages to our users, and prevent errors due to race conditions.
-
-### Why This is Important
-
-#### Enforcing Datatypes is important to consistent applications.
+### In Summary
 
 The ActiveRecord validation process and the accompanying validation helpers are the primary way to ensure that your data maintains integrity. Consistent data across many records allows simpler, easier to maintain code. Uniqueness validations are an important edge case to be mindful of, and creating indexes helps enforce data consistency.
