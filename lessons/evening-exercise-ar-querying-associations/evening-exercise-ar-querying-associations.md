@@ -1,5 +1,3 @@
-##The Brussels Sprouts Recipe Blog Needs a Makeover in ActiveRecord
-
 Our brussels sprouts recipe blog needs a major makeover. We have many recipes and each of them can have many comments. We need to model this blog with ActiveRecord.
 
 ###Learning Goals
@@ -12,7 +10,7 @@ Our brussels sprouts recipe blog needs a major makeover. We have many recipes an
 * Create a `Recipe` model and associated migration. Determine the column names as you deem necessary. You don't have to worry about ingredients here.
 * Create a `Comment` model and associated migration. Determine the column names as you deem necessary.
 * Associate the two tables so that each recipe can have multiple comments posted about it.
-* Load up your app in irb (see the reading for a description of how to do this) and allow for the following:
+* Load up your app in irb (see the reading for a description of how to do this) and follow these directions:
   * Create 5 recipes
   * Create 1-5 comments on all your recipes.
 * Answer the following questions:
