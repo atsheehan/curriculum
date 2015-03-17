@@ -9,7 +9,7 @@ In this assignment we'll use **validations** as a way to ensure that only valid 
 
 For this article we'll be using a sample Sinatra application to demonstrate model validations. To download and setup the sample application run the commands below:
 
-```ruby
+```no-highlight
 # Download the sample application
 $ git clone git@github.com:LaunchAcademy/validations-sample-code.git
 $ cd validations-sample-code
