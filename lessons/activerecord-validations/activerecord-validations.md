@@ -7,19 +7,17 @@ In this assignment we'll use **validations** as a way to ensure that only valid 
 
 ### Sample Application
 
-In the `sample-code` folder, we have a Sinatra app that includes the Sinatra ActiveRecord Extension gem. We have included a `Song` model, along with a seed script to add songs to the database. Run the following commands to get started:
+For this article we'll be using a sample Sinatra application to demonstrate model validations. To download and setup the sample application run the commands below:
 
 ```ruby
-# download this assignment, if you haven't already
-$ et get activerecord-validations
+# Download the sample application
+$ git clone git@github.com:LaunchAcademy/validations-sample-code.git
+$ cd validations-sample-code
 
-# navigate into the sample-code folder
-$ cd activerecord-validation/sample-code
-
-# install dependencies
+# Install dependencies
 $ bundle
 
-# create the database, create the schema, and seed the database
+# Create the database, create the schema, and seed the database
 $ rake db:create
 $ rake db:migrate
 $ rake db:seed
