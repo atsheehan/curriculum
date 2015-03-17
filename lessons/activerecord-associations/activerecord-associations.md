@@ -1,4 +1,4 @@
-In this unit, you'll begin to work with associations - a way of dividing data rationally among multiple tables.
+In this article we'll begin to work with associations in ActiveRecord.
 
 ### Learning Goals
 
@@ -6,23 +6,19 @@ In this unit, you'll begin to work with associations - a way of dividing data ra
 * Explore ways to associate tables
 * Use a foreign key column
 
-### Resources
-
-* [Rails Guide to ActiveRecord Associations][railsguides-associations]
-
-### Implementation Notes
+### Database Relationships
 
 In a family, a parent has zero or more children; a directory on a hard drive contains zero or more files; a house contains one or more rooms. We intuitively understand the hierarchical nature of these relationships.
 
 This type of relationship often comes up in our data as well. A blog has one or more articles; an article has zero or more comments; a user has zero or more comments. These are known as **one-to-many** relationships and in this assignment we'll begin to look at how to represent these relationships in our applications.
 
-#### Enter the Blogosphere
+### Enter the Blogosphere
 
-Let's create a new Sinatra app. You can use the [Sinatra ActiveRecord Starter Kit](sinatra-starter) as a base for your app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling your app "blog".
+Let's create a new Sinatra app. We can use the [Sinatra ActiveRecord Starter Kit](sinatra-starter) as a base for our app. Follow the instructions in the [Getting Started](https://github.com/LaunchAcademy/sinatra-activerecord-starter-kit#getting-started) section of the README, calling the app "blog".
 
 **Hint: Don't forget to create your database with `rake db:create` after configuring your database.**
 
-#### Creating Articles
+### Creating Articles
 
 To begin, we'll create an `Article` model:
 
@@ -60,7 +56,7 @@ After creating our database and running `rake db:migrate`, we should have our `a
 
 Notice the naming conventions here. The `Article` model is singular, while the `articles` table is plural. Adhering to this naming convention is important, since `ActiveRecord` uses the plural form of the model name to find the associated table in the database. The [`ActiveSupport::Inflector`](activesupport-inflector) class handles the singularization or plurilazation of words. Check out the [ActiveRecord Naming Challenge](activerecord-challenge) if you would like to practice your ability to adhere to `ActiveRecord` naming conventions.
 
-#### Creating Comments
+### Creating Comments
 
 We also want to let people comment on our articles, which we'll store in a separate `comments` table. A comment should have some text associated with it but it also needs to be associated with a article, somehow. We can accomplish this by creating a **foreign key** from our `comments` table back to our `articles` table.
 
@@ -96,7 +92,7 @@ end
 
 Notice how we included the `article_id:integer` attribute in our model. The `article_id` column on the `comments` table refers to the `id` column on the `articles` table. In this scenario, `article_id` is the _foreign key_ and `id` is the _primary key_. This enables us to have a single record in the `articles` table that corresponds to zero or more records in the comments table.
 
-#### Creating Some Records
+### Creating Some Records
 
 Let's load up our app in an irb (or pry if you want syntax highlighting!) console session and create some records in our database.
 
@@ -118,7 +114,7 @@ Comment.create(body: 'i like ice cream', article_id: ruby_article.id)
 
 Here we created two separate articles with two and three comments, respectively. The `create` method is something we gained by inheriting from `ActiveRecord::Base`. This method saves a record to the database. We could achieve the same result by using the `new` method to initialize a new `ActiveRecord` object, passing in the attributes we want to set, and then calling the `save` method on the object. Notice that when we created the comment, all we had to do was give it the ID of the article that it belonged to so that the foreign key was setup correctly.
 
-#### Retrieving associated records using ActiveRecord queries
+### Retrieving Associated Records
 
 Now that we have our data, how can we retrieve it? Let's pull all of the comments for our article about cats:
 
@@ -133,11 +129,11 @@ We first retrieve the article based on the subject using our `where(subject: 'So
 
 This is a very common operation in Rails: starting with some record, list all of its associated records (e.g. find a user and list all of their friends, find a movie and list all of the cast, etc.). We can use [ActiveRecord Associations][railsguides-associations] to make this process much easier.
 
-#### Using ActiveRecord associations
+### Using ActiveRecord associations
 
 ActiveRecord provides a number of different types of associations. Here, we'll look at two associations that are used to establish a one-to-many relationship: [has_many](railsguides-has_many) and [belongs_to](railsguides-belongs_to).
 
-##### has_many
+#### has_many
 
 In our `Article` model, we can let ActiveRecord know about the one-to-many relationship:
 
@@ -158,7 +154,7 @@ article.comments
 
 The line `article.comments` will return the same records that `Comment.where(article_id: article.id)` returns. By following conventions (i.e. naming our foreign key `article_id` after the model name), we can benefit from these shortcuts that Rails provides.
 
-##### belongs_to
+#### belongs_to
 
 In addition to a `Article` having many `Comment`s, a `Comment` also has the inverse relationship with its `Article`. Given a `Comment`, we can find the `Article` that it belongs to using the following:
 
@@ -185,19 +181,17 @@ comment.article
 
 This returns the same record as `Article.where(id: comment.article_id).first` did except we have to use far less syntax. ActiveRecord makes manipulating our records much simpler to the point where we don't have to deal with SQL on a regular basis and can instead focus on using our objects and the relationships between them.
 
-### Rules to Follow
+Whenever we define a `has_many` association, there should be a corresponding `belongs_to` assocation. If an article has many comments, it follows that a comment belongs to an article. We should define the association `has_many :comments` in the `Article` model **and** define the `belongs_to :article` association in the `Comment` model. You should not declare one without the other.
 
-#### Use `has_many` and `belongs_to`, together
-
-If an article has many comments, it follows that a comment belongs to an article. We should define the association `has_many :comments` in the `Article` model, __and__ define the `belongs_to :article` association in the `Comment` model. You should not declare one without the other.
-
-#### (Almost) Always Use IDs For Foreign Keys
+### Primary & Foreign Keys
 
 SQL doesn't actually require that we use numeric integers for foreign keys but for our applications it is usually the preferred method. We could have also linked our comments to the articles via the subject line if we wanted to: instead of `article_id` we could have used `article_subject` where we stored the subject of the article with each comment. The problem is that the author might edit the subject at some point and break that link between the article and the comments. It's best to stick with using numeric IDs that are auto-assigned by the database. These IDs are never re-used or changed once they are assigned so it ensures that the relationships between objects do not get mixed up.
 
-### Why This Matters
+### Resources
 
-#### Using Rails' Association Tools Makes for More Consistent, Readable Code
+* [Rails Guide to ActiveRecord Associations][railsguides-associations]
+
+### In Summary
 
 The most striking thing about associations is how readable they make relationships between objects. Once you become acclimated to their use, you'll start to examine models by looking at how their declared associations work, their relations to dependents, as well as their validations and scopes. A single line of code in a model can tell you an enormous amount about a database relationship.
 
