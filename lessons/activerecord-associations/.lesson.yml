@@ -1,5 +1,5 @@
 ---
-title: "Associations"
+title: "ActiveRecord Associations"
 type: "article"
-description: "Learn how associations work in ActiveRecord"
-tags: "normalization, associations, activerecord, has_many, belongs_to"
+description: "Learn how associations work in ActiveRecord."
+tags: "normalization, databases, associations, active-record, one-to-many, many-to-many, sql"
