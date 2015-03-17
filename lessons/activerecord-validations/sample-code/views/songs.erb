@@ -1,0 +1,43 @@
+<h1>Songs</h1>
+
+<table class="songs">
+  <thead>
+    <tr>
+      <th>Track No. #</th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Length</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songs.each do |song| %>
+    <tr>
+      <td>
+        <%= song.track_number %>
+      </td>
+      <td>
+        <%= song.title %>
+      </td>
+      <td>
+        <%= song.artist %>
+      </td>
+      <td>
+        <%= song.album %>
+      </td>
+      <td>
+        <%= song.year %>
+      </td>
+      <td>
+        <%= song.genre %>
+      </td>
+      <td>
+        <%= seconds_to_time(song.length_in_seconds) %>
+      </td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
