@@ -1,0 +1,7 @@
+---
+title: "Brussels Sprouts Recipe Blog with Validations"
+type: "challenge"
+description: "Validation practice with ActiveRecord."
+depends: "rock-paper-scissors"
+ignore:
+- "evening-exercise-ar-validations.md"
