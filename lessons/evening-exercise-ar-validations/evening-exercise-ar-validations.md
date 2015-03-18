@@ -12,9 +12,7 @@ Time to validate our Brussels Sprouts recipes in our blog.
 * Validate that the length of a comment be a maximum of 140 characters long.
 * Validate that a comment has a recipe.
 * Add a field `yield` to your Recipe table. Yield is explained [here](http://chefsblade.monster.com/training/articles/211-the-ultimate-guide-to-recipe-calculation). `yield` is optional, but if supplied, it must be greater than or equal to 1. Write a validation for this.
-* Load up your app in irb (see the reading for a description of how to do this) and follow these directions:
-  * Add some recipes that confirm that your validations work.
-  * Add some comments that confirm that your validations work.
+* Load up your app in irb and comfirm that your validations work.
 
 ####Output
-Submit your code through `et`.
+Update your README.md file to include your validation checks. Submit your code through `et`.
