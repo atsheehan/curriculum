@@ -11,7 +11,7 @@ Time to validate our Brussels Sprouts recipes in our blog.
 * Validate that the title of each recipe contains "Brussels sprouts" in it.
 * Validate that the length of a comment be a maximum of 140 characters long.
 * Validate that a comment has a recipe.
-* Add a field `yield` to your Recipe model. `yield` is optional, but if supplied, it must be greater than or equal to 1. Write a validation for this.
+* Add a field `yield` to your Recipe table. `yield` is optional, but if supplied, it must be greater than or equal to 1. Write a validation for this.
 * Load up your app in irb (see the reading for a description of how to do this) and follow these directions:
   * Add some recipes that confirm that your validations work.
   * Add some comments that confirm that your validations work.
