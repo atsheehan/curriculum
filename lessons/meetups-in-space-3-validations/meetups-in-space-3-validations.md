@@ -7,7 +7,7 @@
 * For each column in your database, decide what (if any) validations it should have for incoming data. Use [change_column](http://edgeguides.rubyonrails.org/active_record_migrations.html#changing-columns) to add database-level validations to each necessary column.
   
   - `change_column` uses the following syntax:
-  - 
+
   
   ```
   change_column table_name, column_name, column_type, constraints
