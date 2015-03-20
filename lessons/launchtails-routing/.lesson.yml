@@ -1,0 +1,6 @@
+---
+title: "Launchtails - Routing and Controllers"
+type: "challenge"
+description: "Make controller and routing related changes to fix a broken application"
+ignore:
+  - "launchtails-routing.md"
