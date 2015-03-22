@@ -8,10 +8,12 @@ In this challenge, you'll work to enhance what we track for each drink that is a
 
 ## Instructions
 
-1. Clone the [repository][launchtails-gh] if you haven't already
-2. `cd` into the directory, run `bundle && rake db:create db:migrate db:test:prepare`
+1. Clone the [repository][launchtails-gh] if you haven't already.
+2. `cd` into the directory. 
 3. Switch to the `forms` branch. It's recommended you start with a clean github state. 
-  Switch with the following command line command: `git fetch origin && git checkout -b forms --track origin/forms`
+  Switch with the following command line command: `git fetch origin && git
+  checkout -b forms --track origin/forms`.
+3. Run `bundle && rake db:create db:migrate db:test:prepare`.
 4. Run the test suite via `rake spec`. 
   There are a series of new features we must add to the new Drink form in order for the tests to pass.
   You should not have to modify the test suite in order to fulfill the
