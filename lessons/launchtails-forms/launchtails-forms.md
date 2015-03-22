@@ -12,7 +12,10 @@ In this challenge, you'll work to enhance what we track for each drink that is a
 2. `cd` into the directory, run `bundle && rake db:create db:migrate db:test:prepare`
 3. Switch to the `forms` branch. It's recommended you start with a clean github state. 
   Switch with the following command line command: `git fetch origin && git checkout -b forms --track origin/forms`
-4. Run the test suite via `rake spec`. There are a series of new features we must add to the new Drink form.
+4. Run the test suite via `rake spec`. 
+  There are a series of new features we must add to the new Drink form in order for the tests to pass.
+  You should not have to modify the test suite in order to fulfill the
+  requirements needed to get the tests to pass.
 
 ## Tips and More Detail
 
@@ -30,6 +33,8 @@ In this challenge, you'll work to enhance what we track for each drink that is a
 * Create a means to identify a list of traits for a given drink. 
   For example, I could specify an Irish coffee to have hot, Irish, and cultural characteristics.
   You should utilize a `has_many :through` association and the `collection_check_boxes` view helper.
-  You should also modify `db/seeds.rb` to create a list of characteristics that drinks can have.
+  You should also modify `db/seeds.rb` to create a list of characteristics that
+  drinks can have. Modify the acceptance test to exercise this new
+  functionanlity.
 
 [launchtails-gh]: https://github.com/LaunchAcademy/launchtails
