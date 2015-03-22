@@ -27,5 +27,9 @@ In this challenge, you'll work to enhance what we track for each drink that is a
 * Follow the practice of outside in development to allow for the creation of new categories. 
   You will need a feature spec, view and a new controller, at a minimum. Be sure to utilize the `form_for` 
   Rails helper when creating the form to add a new category.
+* Create a means to identify a list of traits for a given drink. 
+  For example, I could specify an Irish coffee to have hot, Irish, and cultural characteristics.
+  You should utilize a `has_many :through` association and the `collection_check_boxes` view helper.
+  You should also modify `db/seeds.rb` to create a list of characteristics that drinks can have.
 
 [launchtails-gh]: https://github.com/LaunchAcademy/launchtails
