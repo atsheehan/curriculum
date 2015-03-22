@@ -179,7 +179,7 @@ Most of the time we'll be working within the **app** directory to change our mod
 Let's see what happens when we start up a default Rails application. Since we configured our app to connect to a PostgreSQL database, we need to create a blank database if it does not already exist:
 
 ```no-highlight
-$ rake db:migrate
+$ rake db:create
 ```
 
 Once that command finishes we can startup our server using the `rails` command:
@@ -232,9 +232,9 @@ Routing Error
 uninitialized constant ArticlesController
 ```
 
-Notice how we didn't have to restart the server. Rails will check for updated files and reload them on if they are changed. The only exceptions to this are if we include new libraries in our Gemfile or if we change a file in the `config/initializers` directory.
+Notice how we didn't have to restart the server. Rails will check for updated files and reload them if they are changed. The only exceptions to this are if we include new libraries in our Gemfile or if we change a file in the `config/initializers` directory.
 
-Back to the error message, we notice that is it looking for a controller. When a URL matches a route, Rails will attempt to find the corresponding controller to handle that request. Since we defined an articles resource, it will look for an articles controller.
+Back to the error message, we notice that it is looking for a controller. When a URL matches a route, Rails will attempt to find the corresponding controller to handle that request. Since we defined an articles resource, it will look for an articles controller.
 
 Add a file `app/controllers/articles_controller.rb` with the following contents:
 
@@ -271,7 +271,7 @@ Within the `index.html.erb` file add the following:
 </ul>
 ```
 
-This view displays the articles in an unordered list and generates a link for each one. We're using an instance variable `@articles` to pass information from the controller to the view and generating the link using the Rails `link_to` helper method. Let's update our controller to retrieve the list of articles and store them in the instance variable:
+This view displays the articles in an unordered list and generates a link for each one. We're using an instance variable `@articles` to pass information from the controller to the view and generating the link using the `link_to` helper method. Let's update our controller to retrieve the list of articles and store them in the instance variable:
 
 ```ruby
 class ArticlesController < ApplicationController
