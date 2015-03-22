@@ -1,15 +1,4 @@
----
-title: HTTP
-author: atsheehan
-complexity_score: 3
-scope: core
-type: review
-group_type: individual
----
-
-### Contents
-
-In this assignment, we'll review basic HTTP requests and how POST requests are constructed in Rails.
+In this article we'll review HTTP requests and how POST requests are handled via Rails.
 
 ### Learning Goals
 
@@ -18,31 +7,20 @@ In this assignment, we'll review basic HTTP requests and how POST requests are c
 * Manually send an HTTP POST request in a Rails to save some content
 * Learn about browser developer tools to view network requests
 
-### Resources
-
-* [List of HTTP Response Codes][response_codes]
-* [List of HTTP Verbs][request_methods]
-* [HTTP Tutorial](http://net.tutsplus.com/tutorials/tools-and-tips/http-the-protocol-every-web-developer-must-know-part-1/)
-
-### Implementation Details
-
-#### A Review of HTTP
-
-We've discussed HTTP in the context of our Sinatra apps, but let's quickly refresh our recollections before we dive into a Rails-specific discussion.
+### A Review of HTTP
 
 When we want to view a website, our browser will submit an **HTTP request** through the network to the server we want to talk to. When the server receives the HTTP request it will respond with an **HTTP response** that is sent back to our browser. The HTTP response will usually include some HTML that our browser knows how to display to the user.
 
-**GET** requests are uses to retrieve information from a server, while **POST** requests are used to modify or persist information on a server. Whenever we submit an HTML form, it defaults to issuing an HTTP POST request that includes our form data. That form data is sent as "parameters" to the site's server, where it will (probably) be persisted. For example, when we fill out a product review form on Amazon and click "submit", our review will be persisted on Amazon's servers.
+**GET** requests are uses to retrieve information from a server while **POST** requests are used to modify or persist information. The most common way to submit an HTTP POST is by submitting an HTML form. The inputs on the form are sent as **parameters** to the server where the information may be persisted in a database. For example, when we fill out a product review form on Amazon and click "submit", our review will be persisted in Amazon's database somewhere.
 
-#### POST requests in Rails
+### POST Requests
 
-Let's explore what an HTTP POST request looks like with a Rails application using Launcher News. If you don't already have the application checked out you can run the following commands to get setup:
+Let's explore what an HTTP POST request looks like in a Rails application. Run the following commands to clone and run Launcher News application if is not already setup:
 
 ```no-highlight
-$ cd ~/Dropbox/launchacademy
 $ git clone https://github.com/LaunchAcademy/launcher_news.git
 $ cd launcher_news
-$ bundle install
+$ bundle
 $ rake db:setup
 ```
 
@@ -56,7 +34,7 @@ $ rails server
 ...
 ```
 
-Now we have our own web server running locally on our laptop. We can view the site in a browser by visiting [http://localhost:3000/][homepage] which shows a few sample articles. If we wanted to submit a new article we can fill out the form at [http://localhost:3000/articles/new][new_article].
+We can view the site in a browser by visiting [http://localhost:3000/](http://localhost:3000) which shows a few sample articles. If we wanted to submit a new article we can fill out the form at [http://localhost:3000/articles/new](http://localhost:3000/articles/new).
 
 When we submit the new article form, our browser will send an HTTP POST request to our web server which will persist the article in the database. To see how our application handles that request we can run the `rake routes` command in the terminal:
 
@@ -84,7 +62,7 @@ $ telnet localhost 3000
 To submit the actual HTTP request, we can copy and paste this snippet into the terminal:
 
 ```no-highlight
-POST /articles HTTP/1.0
+POST /articles HTTP/1.1
 Host: localhost
 Content-Length: 100
 
@@ -93,7 +71,7 @@ article%5Btitle%5D=hello&article%5Burl%5D=http%3A%2F%2Fexample.com&article%5Bdes
 
 The first three lines form the HTTP request header. Here, we're specifying a `POST` request to the `/articles` path (which Rails will interpret as the `create` action on the `ArticlesController`). The last line lets the web server know how long the request body will be so it knows how much data to listen for: in this case it is expecting to receive 100 bytes.
 
-After the request header we include the request body which contains the actual form data we want to submit. Although it looks like a bunch of gibberish, certain characters are not allowed to be sent in the HTTP request body so they are **encoded** instead (e.g. the `!` character is encoded as `%21`). This is a requirement of the HTTP  protocol. If we were to decode the above string it would look something like:
+After the request header we include the request body which contains the actual form data we want to submit. Although it looks like a bunch of gibberish, certain characters are not allowed to be sent in the HTTP request body so they are **encoded** instead (e.g. the `!` character is encoded as `%21`). If we were to decode the above string it would look something like:
 
 ```no-highlight
 article[title]=hello&article[url]=http://example.com&article[description]=blarg!
@@ -105,7 +83,7 @@ When Rails is parsing the request it will extract these parameters into a hash s
 {"article"=>{"title"=>"hello", "url"=>"http://example.com", "description"=>"blarg!"}}
 ```
 
-This becomes part of the **params** hash that we can access in the controller to read in user input. We'll discuss more about the parameters hash and their use in controllers in a later assignment.
+This becomes part of the **params** hash that we can access in the controller to read in user input.
 
 If we're successful, we should get an HTTP response that looks something like:
 
@@ -128,17 +106,17 @@ Connection: close
 <html><body>You are being <a href="http://localhost/articles/10">redirected</a>.</body></html>
 ```
 
-The 302 HTTP response code is redirecting us to another page to view the article that we just created. If we visit [http://localhost:3000][homepage] we should see our new article has been added to the list.
+The 302 HTTP response code is redirecting us to another page to view the article that we just created. If we visit [http://localhost:3000](http://localhost:3000) we should see our new article has been added to the list.
 
-#### PUT, PATCH, DELETE
+### PUT, PATCH, DELETE
 
 While GET and POST are the most common HTTP requests you'll encounter, Rails also makes use of a handful of other HTTP verbs.
 
-A **PUT** request is similar to a POST except that it is typically used to modify an existing resource rather than creating a new one. **PATCH** is similar to PUT except that it is used for partially modifying a resource. A **DELETE** request is used when you want to remove a particular resource. The full list of verbs can be found [here][request_methods].
+A **PUT** request is similar to a POST except that it is typically used to modify an existing resource rather than creating a new one. **PATCH** is similar to PUT except that it is used for partially modifying a resource. A **DELETE** request is used when you want to remove a particular resource. The full list of verbs can be found [here](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods).
 
 For the most part, we don't need to worry too much about whether to send a POST vs. PUT or a PUT vs. PATCH as Rails will handle these details for us. The meaning of these verbs is primarily for semantic purposes and are used by Rails to simplify URLs. It's important to realize that every route is made up of both the verb _and_ the path: there is a very big difference between `GET /articles` and `POST /articles` (the former retrieves all articles and the latter will create a new article).
 
-#### HTTP is Stateless
+### HTTP is Stateless
 
 One very important aspect of HTTP is that it is **stateless**. This means that after we are done communicating with a server (i.e. we sent a request and received a response) the server can close the connection and forget all about us. The next time we connect to the server it won't necessarily retain any information about our past requests.
 
@@ -146,38 +124,8 @@ This simplifies the development of our application a bit. We don't have to worry
 
 The downside to this is that sometimes we do want to remember when someone has visited our site before. For example, if someone logs in on one request, we probably want to know that they are authenticated the next request they send to the site. For this we can use something called **HTTP cookies** to send bits of information back and forth with each request. This information could include the identify of the client so the server knows if they're logged in or not.
 
-#### Useful Tools
+### Resources
 
-It would be extremely tedious to have to type out each HTTP request to interact with a web site. All web browsers do this for us in the background when we click on a link or submit a form. Most browsers have some way for us to monitor the requests and responses going back and forth from the server. In Google Chrome, clicking on View -> Developer -> Developer Tools and then the Network tab will show each HTTP request and response sent between the browser and server. The same information can be seen in Firefox in the Tools -> Web Developer -> Network window.
-
-Another very useful utility is the `curl` command. `curl` is a command-line utility that will format and send HTTP requests. If we wanted to send an HTTP GET request to the `/` path of example.com we could run:
-
-```no-highlight
-$ curl -i example.com/
-```
-
-If we wanted to submit a POST request we could include the `-d` flag with our request body:
-
-```no-highlight
-$ curl -d "article%5Btitle%5D=hello&article%5Burl%5D=http%3A%2F%2Fexample.com&article%5Bdescription%5D=blarg%21" localhost:3000/articles
-```
-
-### Rules to Follow
-
-#### GET Requests Should (Usually) Not Modify Anything
-
-When responding to an HTTP GET request the application should not be writing or updating records in the database. Sometimes there are exceptions to this rule but consider first whether a POST request would be more appropriate.
-
-#### Everything in an HTTP Request Can Be Manipulated
-
-We saw above that it is relatively simple to manually send an HTTP GET or POST request to a server via `telnet` or `curl`. Although we may disable input fields on a form or use client-side validation, a malicious user can still hand-edit their HTTP request to circumvent those checks. Always view the information in an HTTP request with suspicion when dealing with sensitive information.
-
-### Why This is Important
-
-HTTP is the language of the web and is how browsers communicate with web applications. Understanding the information traveling back and forth between the client and server is important for understanding how routing and controllers operate in a Rails application.
-
-[response_codes]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
-[request_methods]: http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods
-[homepage]: http://localhost:3000/
-[new_article]: http://localhost:3000/articles/new
-[number_of_sites]: http://news.netcraft.com/archives/2013/12/06/december-2013-web-server-survey.html
+* [List of HTTP Response Codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+* [List of HTTP Verbs](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+* [HTTP Tutorial](http://net.tutsplus.com/tutorials/tools-and-tips/http-the-protocol-every-web-developer-must-know-part-1/)
