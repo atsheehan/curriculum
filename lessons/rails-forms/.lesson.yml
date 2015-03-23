@@ -1,0 +1,5 @@
+---
+title: "Rails Forms"
+type: "article"
+description: "Describes how to generate forms within Rails using helper methods."
+tags: "rails, html-forms, http, views, helpers, form-for"
