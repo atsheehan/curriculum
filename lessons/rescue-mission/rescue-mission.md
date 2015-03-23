@@ -1,23 +1,12 @@
-### Overview
-
-You're going to be building a website like
-[stackoverflow.com](http://stackoverflow.com/) for posting questions and
-answers.
+In this challenge you'll build a website like [stackoverflow.com](http://stackoverflow.com/) for posting questions and answers.
 
 ### Prerequisites
 
-**If you're not yet comfortable with the basics of Rails, please go through the
-official
-[Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)
-guide.**
-
-### Guiding Questions
-
-- How does Rails compare to Sinatra?
+**If you're not yet comfortable with the basics of Rails, please go through the official [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html) guide.**
 
 ### Learning Objectives
 
-- Build a basic Rails app
+- Build a Rails app
 - Compare Rails to Sinatra
 - Practice using Rails routes
 - Practice using Rails form helpers
@@ -35,10 +24,7 @@ guide.**
 
 ### Hints
 
-* When creating a migration in Rails you can use a Rails generator command
-  rather than `rake db:create_migration`. The format of the command is `rails
-  generate migration <name_of_migration>`. For example, to create a migration to
-  add a `questions` table you might run:
+* When creating a migration in Rails you can use a Rails generator command rather than `rake db:create_migration`. The format of the command is `rails generate migration <name_of_migration>`. For example, to create a migration to add a `questions` table you might run:
 
 ```no-highlight
 $ rails generate migration create_questions
@@ -46,32 +32,30 @@ $ rails generate migration create_questions
     create    db/migrate/20140612171601_create_questions.rb
 ```
 
-* Creating forms in Rails requires a bit of extra setup. Rather than hardcoding
-  the `<form>` element in HTML you can use the `form_for` helper method in your
-  views. You can read about the `form_for` helper [here][forms_for_models].
+* Creating forms in Rails requires a bit of extra setup. Rather than hardcoding the `<form>` element in HTML you can use the `form_for` helper method in your views. You can read about the `form_for` helper [here][forms_for_models].
+
+* Use Git to save the state of your code each time you complete a user story (or more often if it's a complex user story). Try using Git branches to store all commits related to a particular feature and then merge back into *master* when the feature is complete.
 
 ### Getting Started
 
+Start with a new Rails application configured with PostgreSQL:
+
 ```no-highlight
 # Generate a new Rails app that is set up for PostgreSQL and skips test setup
-rails new rescue_mission --database=postgresql --skip-test-unit
+$ rails new rescue_mission --database=postgresql --skip-test-unit --skip-turbolinks
+$ cd rescue_mission
+$ git init
+$ git add -A
+$ git commit -m 'Initial commit'
 ```
 
 ### User Stories
 
-#### Post a Question
+The application should support the following user stories. Review all of the user stories before beginning to get a sense of the scope of the project. Consider how you'll structure information within the database and sketch an initial ER diagram.
 
-```no-highlight
-As a user
-I want to post a question
-So that I can receive help from others
+Once you've reviewed the user stories below, implement **one user story at a time**. It is important to work incrementally and verify that a user story is complete before tackling the next one.
 
-Acceptance Criteria
-
-- I must provide a title that is at least 40 characters long
-- I must provide a description that is at least 150 characters long
-- I must be presented with errors if I fill out the form incorrectly
-```
+The user stories are ordered by increasing complexity and should build on top of each other. Note that the first user stories depend on viewing questions without having a form to create them. In this case you can use `rails console` or `psql rescue_mission_development` to directly add questions to the database for testing purposes.
 
 #### View All Questions
 
@@ -98,6 +82,20 @@ Acceptance Criteria
 - I must be able to get to this page from the questions index
 - I must see the question's title
 - I must see the question's description
+```
+
+#### Post a Question
+
+```no-highlight
+As a user
+I want to post a question
+So that I can receive help from others
+
+Acceptance Criteria
+
+- I must provide a title that is at least 40 characters long
+- I must provide a description that is at least 150 characters long
+- I must be presented with errors if I fill out the form incorrectly
 ```
 
 #### Answering a Question
