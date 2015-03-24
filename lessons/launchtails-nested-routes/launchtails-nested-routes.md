@@ -32,16 +32,16 @@ admins to edit existing drinks.
   functionality. You can either introduce flow control in your
   `DrinksController` to check for the existance of `params[:category_id]`, or
   you can create an entirely new controller.
-* Utilize namespaced routes for the `admin` section. Be sure to restrict routes
-  so that only `edit` and `update` are available in the `admin` namespace.
-* Do not worry about authorization (checking to see if the user is an admin) in the admin namespace. 
-  Someone else will ensure those URL's are protected and that only admins can modify drinks.
 
 ## Noncore Challenge
 
 * Utilize a partial to keep our new and edit drink forms DRY
 * Create an admin section where I can update category names. Again, do not worry
   about authorization (checking to see if a user is an admin).
+* Utilize namespaced routes for the `admin` section. Be sure to restrict routes
+  so that only `edit` and `update` are available in the `admin` namespace.
+* Do not worry about authorization (checking to see if the user is an admin) in the admin namespace. 
+  Someone else will ensure those URL's are protected and that only admins can modify drinks.
 * Create a file called `admin_updates_drink_spec.rb` in your features folder with the following code. Get the tests to pass!:
 
 ```ruby
