@@ -1,0 +1,5 @@
+---
+title: "Rails Asset Pipeline"
+type: "article"
+description: "Describes how Rails manages static assets."
+tags: "rails, assets, asset-pipeline, css, javascript, jquery, coffeescript, sass, scss"
