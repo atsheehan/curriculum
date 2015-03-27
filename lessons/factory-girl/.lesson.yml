@@ -1,0 +1,5 @@
+---
+title: "Factory Girl"
+type: "article"
+description: "Simplify test setup by using predefined factories with the factory_girl gem."
+tags: "testing, factories, factory_girl, tdd, refactoring"
