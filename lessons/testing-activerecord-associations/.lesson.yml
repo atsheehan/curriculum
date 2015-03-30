@@ -1,0 +1,5 @@
+---
+title: "Testing ActiveRecord Associations"
+type: "article"
+description: "Simplify testing ActiveRecord associations using the shoulda library."
+tags: "testing, shoulda, associations, active-record, unit-tests"
