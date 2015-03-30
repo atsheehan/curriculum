@@ -13,4 +13,4 @@ anna
 ```
 
 * Assume that punctuation and numbers will not be part of the string. Ignore capitalization (i.e., `A` should be treated like `a`) and spaces.
-* Do the assignment with TDD if you want some TDD practice!
+* Do the assignment with TDD if you want some TDD practice (you likely will need another file in addition to `code.rb` for your test suite if you choose to do this)!
