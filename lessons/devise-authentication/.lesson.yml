@@ -1,0 +1,5 @@
+---
+title: "Devise Authentication"
+type: "article"
+description: "Describes how to add user authentication to a Rails application using the devise gem."
+tags: "rails, authentication, devise"
