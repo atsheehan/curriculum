@@ -1,0 +1,8 @@
+---
+title: "Review Site"
+type: "challenge"
+description: "Build a review site for an item of your choosing."
+tags: "rails, pagination, search, authorization, authentication, email, voting, file-upload"
+ignore:
+- "review-site.md"
+- ".env"
