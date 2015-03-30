@@ -1,0 +1,7 @@
+---
+title: "Palindrome Checker"
+type: "challenge"
+description: "Use Ruby to determine if a string is a palindrome"
+depends: "rock-paper-scissors"
+ignore:
+- "evening-exercise-ruby-palindrome.md"
