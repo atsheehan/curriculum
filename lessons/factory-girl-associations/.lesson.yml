@@ -1,0 +1,5 @@
+---
+title: "Factory Girl Associations"
+type: "article"
+description: "Build multiple records in a single call to simplify test setup using Factory Girl associations."
+tags: "testing, factories, factory_girl, tdd, refactoring, associations"
