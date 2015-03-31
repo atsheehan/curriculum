@@ -1,0 +1,6 @@
+---
+title: "All the Badges"
+type: "tutorial"
+description: "All your badges are belong to your app."
+depends: "rock-paper-scissors"
+tags: "travis, rails, codeclimate, coveralls"
