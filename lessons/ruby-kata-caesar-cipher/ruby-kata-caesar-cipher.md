@@ -5,4 +5,5 @@ Write a method `def caesar_cipher(string, number)` that takes a string and a num
 * Punctuation, capitlization and spacing should be unchanged. Numbers also remain unchanged.
 
 Notes:
+
 * Do the assignment with TDD if you want some TDD practice (you likely will need another file in addition to `code.rb` for your test suite if you choose to do this)!
