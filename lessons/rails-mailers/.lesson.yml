@@ -1,0 +1,5 @@
+---
+title: "Sending Emails"
+type: "article"
+description: "Describes how to send email from a Rails application."
+tags: "rails, email, erb, testing, mandrill"
