@@ -1,0 +1,5 @@
+---
+title: "Cloud Storage"
+type: "article"
+description: "Describes how to store uploaded files on Amazon's S3 service rather than the web server."
+tags: "rails, file-upload, carrierwave, aws, s3, heroku, environment-variables, dotenv, api"
