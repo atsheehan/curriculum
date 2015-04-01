@@ -11,7 +11,7 @@ In many applications users will need to upload some sort of file to the web appl
 
 HTML forms support file uploading through the `<input type="file">` element. Browsers will display a dialog for the user to select a file from their local computer and then include the file contents as part of the HTTP request. The file is not part of the standard key-value parameters found in an HTTP POST body but is appended as a separate section of the body. To support this we also have to let our `<form>` tag know that we'll have multiple parts to our request using the `enctype` attribute:
 
-```HTML
+```html
 <form action="/upload" method="post" enctype="multipart/form-data">
   <div>
     <input name="some-file" type="file">
