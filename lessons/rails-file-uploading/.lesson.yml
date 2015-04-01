@@ -1,0 +1,5 @@
+---
+title: "File Uploading"
+type: "article"
+description: "Describes how to handle user uploaded files using the CarrierWave gem."
+tags: "rails, file-upload, carrierwave, html-forms"
