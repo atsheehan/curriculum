@@ -1,0 +1,5 @@
+---
+title: "Devise Authorization"
+type: "article"
+description: "Describes how to authorize certain actions based on a user's role."
+tags: "rails, authentication, authorization, devise, admin"
