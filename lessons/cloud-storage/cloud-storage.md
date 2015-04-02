@@ -50,10 +50,10 @@ S3 organizes files in **buckets** which we can use to store our user uploaded fi
 
 1. From the AWS Console click on the [S3](https://console.aws.amazon.com/s3/) service.
 2. Click on the **Create Bucket** button.
-3. Choose a name for the bucket. If your app is named **peanut_butter_jelly_time**, you might want to create a bucket called **peanut_butter_jelly_time_production** to store files uploaded in the production environment.
+3. Choose a name for the bucket. If your app is named **peanut\_butter\_jelly\_time**, you might want to create a bucket called **peanut\_butter\_jelly\_time\_production** to store files uploaded in the production environment.
 4. Select the **US Standard** Region and click **Create**.
 
-At this point we have a blank bucket setup that we can use to dump files into. You might also want to create a bucket for the development environment as well to test out the S3 integration (e.g. create another bucket called **peanut_butter_jelly_time_development**).
+At this point we have a blank bucket setup that we can use to dump files into. You might also want to create a bucket for the development environment as well to test out the S3 integration (e.g. create another bucket called **peanut\_butter\_jelly\_time\_development**).
 
 ### Integrating S3 with CarrierWave
 
