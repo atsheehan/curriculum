@@ -24,15 +24,15 @@ In this case it makes more sense to utilize a cloud storage solution that is opt
 
 ### Amazon Web Services
 
-Amazon offers a suite of services known as [Amazon Web Services (AWS)](http://aws.amazon.com/) that provide production-grade performance and reliability that we can use when deploying our applications. The service that we're interested in is Amazon's [Simple Storage Service (S3)](http://aws.amazon.com/s3/). S3 acts as a very large file system which we can use to store uploaded files.
+Amazon offers a suite of services known as [Amazon Web Services (AWS)][amazon-aws] that provide production-grade performance and reliability that we can use when deploying our applications. The service that we're interested in is Amazon's [Simple Storage Service (S3)][amazon-s3]. S3 acts as a very large file system which we can use to store uploaded files.
 
-To get started you'll need to [sign in to or sign up for an AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html). Once you're registered you can access the [AWS Console](https://console.aws.amazon.com/) to view the suite of services available.
+To get started you'll need to [sign in to or sign up for an AWS account][amazon-aws-registration]. Once you're registered you can access the [AWS Console](https://console.aws.amazon.com/) to view the suite of services available.
 
 ### Create a User Account
 
 Before we begin, let's create a new user account so that we limit access to only S3:
 
-1. From the AWS Console click on the [IAM (Identity and Access Management)](https://console.aws.amazon.com/iam) service.
+1. From the AWS Console click on the [IAM (Identity and Access Management)][amazon-iam] service.
 2. In the left panel click on the link for **Users**.
 3. Click on the **Create New Users** button.
 4. Enter a username for the user and ensure the *Generate an access key for each User* is selected.
@@ -48,12 +48,12 @@ Now we have a user configured that can only access the S3 service.
 
 S3 organizes files in **buckets** which we can use to store our user uploaded files. Let's create a bucket for our production environment:
 
-1. From the AWS Console click on the [S3](https://console.aws.amazon.com/s3/) service.
+1. From the AWS Console click on the [S3][amazon-s3] service.
 2. Click on the **Create Bucket** button.
-3. Choose a name for the bucket. If your app is named **peanut\_butter\_jelly\_time**, you might want to create a bucket called **peanut\_butter\_jelly\_time\_production** to store files uploaded in the production environment.
+3. Choose a name for the bucket. If your app is named **peanut\_butter\_jelly\_time**, you might want to create a bucket called **peanut-butter-jelly-time-production** to store files uploaded in the production environment. See [Amazon S3 Bucket Restrictions and Limitations][amazon-s3-bucket-restrictions] for rules on bucket naming.
 4. Select the **US Standard** Region and click **Create**.
 
-At this point we have a blank bucket setup that we can use to dump files into. You might also want to create a bucket for the development environment as well to test out the S3 integration (e.g. create another bucket called **peanut\_butter\_jelly\_time\_development**).
+At this point we have a blank bucket setup that we can use to dump files into. You might also want to create a bucket for the development environment as well to test out the S3 integration (e.g. create another bucket called **peanut-butter-jelly-time-development**).
 
 ### Integrating S3 with CarrierWave
 
@@ -120,7 +120,7 @@ Now that we know our environment file won't be picked up in a commit, we can cre
 ```no-highlight
 AWS_ACCESS_KEY_ID=AKIYOURKEYGOESHEREOA2VA
 AWS_SECRET_ACCESS_KEY=0NtSREPLACEWITHYOURSECRETKEYjmYAHRGlVoyR
-S3_BUCKET=peanut_butter_jelly_time_development
+S3_BUCKET=peanut-butter-jelly-time-development
 ```
 
 We just need to add the `dotenv-rails` gem to our `Gemfile`:
@@ -158,7 +158,13 @@ We can see that Heroku is reading our database credentials and secret key base (
 ```no-highlight
 $ heroku config:set AWS_ACCESS_KEY_ID=AKIYOURKEYGOESHEREOA2VA
 $ heroku config:set AWS_SECRET_ACCESS_KEY=0NtSREPLACEWITHYOURSECRETKEYjmYAHRGlVoyR
-$ heroku config:set S3_BUCKET=peanut_butter_jelly_time_production
+$ heroku config:set S3_BUCKET=peanut-butter-jelly-time-production
 ```
 
 Now when we deploy our application, our CarrierWave initializer will be able to read our AWS credentials from the environment.
+
+[amazon-aws]: http://aws.amazon.com/
+[amazon-s3]: http://aws.amazon.com/s3/
+[amazon-aws-registration]: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html
+[amazon-iam]: https://console.aws.amazon.com/iam
+[amazon-s3-bucket-restrictions]: http://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
