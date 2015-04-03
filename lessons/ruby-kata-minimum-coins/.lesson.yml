@@ -1,0 +1,7 @@
+---
+title: "Coins"
+type: "challenge"
+description: "Calculate the minimum number of coins needed."
+depends: "rock-paper-scissors"
+ignore:
+- "ruby-kata-minimum-coins.md"
