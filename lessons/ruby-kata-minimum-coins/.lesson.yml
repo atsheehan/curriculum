@@ -1,5 +1,5 @@
 ---
-title: "Coins"
+title: "Minimum Coins"
 type: "challenge"
 description: "Calculate the minimum number of coins needed."
 depends: "rock-paper-scissors"
