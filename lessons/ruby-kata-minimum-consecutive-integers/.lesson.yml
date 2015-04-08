@@ -1,0 +1,7 @@
+---
+title: "Minimum Consecutive Integers"
+type: "challenge"
+description: "Write a Ruby method to calculate the minimum number of integers required to make a sequence consecutive."
+depends: "rock-paper-scissors"
+ignore:
+- "ruby-kata-minimum-consecutive-integers.md"
