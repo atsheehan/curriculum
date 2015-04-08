@@ -9,3 +9,4 @@ Write a method `def minimum_consecutive_integers(array)` that takes an array of 
 Notes:
 
 * Do the assignment with TDD if you want some TDD practice (you likely will need another file in addition to `code.rb` for your test suite if you choose to do this)!
+* Assume each inputted `array` would have a minimum of 2 elements.
