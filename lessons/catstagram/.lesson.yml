@@ -1,0 +1,6 @@
+---
+title: "Catstagram"
+type: "tutorial"
+description: "Ajax in Rails"
+depends: "rock-paper-scissors"
+tags: "ajax, rails, javascript"
