@@ -59,6 +59,7 @@ Let's write the specs for the feature and implement it.
 Write the test:
 
 *spec/features/admin_views_users_page_spec.rb*
+
 ```
 require 'rails_helper'
 
@@ -79,6 +80,7 @@ end
 Run the test with `rspec spec/features/admin_views_users_page_spec.rb`
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb
 F
@@ -141,6 +143,7 @@ After reading about [routes](http://guides.rubyonrails.org/routing.html), we lea
 Going back to the error, our test is attempting to visit the `/admin/users` path. We can see from the `rake routes` command that the `/admin/users` path doesn't exist. That is the cause of the error. Let's add a route:
 
 *config/routes.rb*
+
 ```
 namespace :admin do
   resources :users, only: [:index]
@@ -150,6 +153,7 @@ end
 Now that we have a route to `/admin/users`, run the test again: `rspec spec/features/admin_views_users_page_spec.rb`
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb                                                 1 ↵
 F
@@ -175,6 +179,7 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 'ActionController::RoutingError: uninitialized constant Admin'. The router can't find the Admin namespace. Let's create a folder under controllers called 'admin'.
 
 *create folder*
+
 ```no-highlight
 mkdir app/controllers/admin
 ```
@@ -182,6 +187,7 @@ mkdir app/controllers/admin
 Run the test:
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb                                                 1 ↵
 F
@@ -205,11 +211,13 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 The presence of the `app/controllers/admin` folder gets us one step further. Our new error message is: 'uninitialized constant Admin::UsersController'. The router can find a UsersController. Let's create one:
 
 *create a controller*
+
 ```no-highlight
 touch app/controllers/admin/users_controller.rb
 ```
 
 *app/controllers/admin/users_controller.rb*
+
 ```
 module Admin
   class UsersController < ApplicationController
@@ -220,6 +228,7 @@ end
 we can also define the controller this way
 
 *app/controllers/admin/users_controller.rb*
+
 ```
 class Admin::UsersController < ApplicationController
 end
@@ -228,6 +237,7 @@ end
 Run the test:
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb
 F
@@ -263,6 +273,7 @@ end
 Run the test:
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb                                                 1 ↵
 F
@@ -290,6 +301,7 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 "Missing template admin/users/index". Let's give the test what it wants:
 
 *create a users index template*
+
 ```no-highlight
 mkdir app/views/admin
 mkdir app/views/admin/users
@@ -299,6 +311,7 @@ touch app/views/admin/users/index.html.erb
 Run the test:
 
 *failing test*
+
 ```
 F
 
@@ -320,6 +333,7 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 'expected to find text "gamefan1@gmail.com" in ""'. The test is looking for the user's email in a blank template. Let's write some code for the index view:
 
 *update the controller*
+
 ```
 class Admin::UsersController < ApplicationController
   def index
@@ -329,6 +343,7 @@ end
 ```
 
 *write the view*
+
 ```no-highlight
 This is left as an exercise for the reader.
 ```
@@ -336,6 +351,7 @@ This is left as an exercise for the reader.
 Run the test:
 
 *green spec*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb                                                 1 ↵
 .
@@ -360,6 +376,7 @@ When we utilize test-driven development, we only write the code needed to satisf
 Another important component to this feature is that unauthorized users are not allowed to see this page. Let's write a test for that.
 
 *spec/features/admin_views_users_page_spec.rb*
+
 ```
 scenario 'unauthorized users are redirected' do
   login_as(user)
@@ -370,6 +387,7 @@ end
 ```
 
 *failing test*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb
 .F
@@ -390,6 +408,7 @@ rspec ./spec/features/admin_views_users_page_spec.rb:14 # admin can see a list o
 ```
 
 *app/controllers/admin/users_controller.rb*
+
 ```
 class Admin::UsersController < ApplicationController
   before_filter :authorize_admin!
@@ -400,6 +419,7 @@ end
 ```
 
 *app/controllers/application_controller.rb*
+
 ```
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
@@ -414,6 +434,7 @@ end
 ```
 
 *app/models/user.rb*
+
 ```
 def is_admin?
   role == 'admin'
@@ -421,6 +442,7 @@ end
 ```
 
 *green specs*
+
 ```
 $ rspec spec/features/admin_views_users_page_spec.rb
 ..
