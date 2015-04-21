@@ -1,0 +1,7 @@
+---
+title: "Greatest Common Factor"
+type: "challenge"
+description: "Find the greatest common factor of two numbers."
+depends: "rock-paper-scissors"
+ignore:
+- "ruby-kata-greatest-common-factor.md"
