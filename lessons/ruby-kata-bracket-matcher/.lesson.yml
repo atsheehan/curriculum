@@ -1,0 +1,7 @@
+---
+title: "Match the Brackets"
+type: "challenge"
+description: "Determine if a string has matching brackets."
+depends: "rock-paper-scissors"
+ignore:
+- "ruby-kata-bracket-matcher.md"
