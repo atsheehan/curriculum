@@ -1,0 +1,6 @@
+---
+title: "Namespacing with TDD"
+type: "challenge"
+description: "Build a namespaced feature in a Rails application the test-driven way."
+ignore:
+- "namespacing-with-tdd.md"
