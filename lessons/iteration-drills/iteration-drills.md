@@ -63,7 +63,7 @@ sum = 0
 account.each do |transaction, value|
   sum += value
 end
-puts "The value the account is #{value}"
+puts "The value the account is #{sum}"
 ```
 
 6.
