@@ -105,7 +105,7 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 
 The ability to decipher error messages is a valuable skill. Let's look at the output of our failing test, and see if we can glean some information from it: `'No route matches [GET] "admin/users"'. # ./spec/features/admin_views_users_page_spec.rb:10`.
 
-If this error message makes absolutely no sense to us, it at least gives us a clue: a filename and a line number of where the error is occuring. Let's look at line 10 the admin_views_user_page_spec.rb: `visit '/admin/users'`. The error occurs when we try to check out the /admin/users path of our application.
+If this error message makes absolutely no sense to us, it at least gives us a clue: a filename and a line number of where the error is occuring. Let's look at line 10 the admin\_views\_user\_page\_spec.rb: `visit '/admin/users'`. The error occurs when we try to check out the /admin/users path of our application.
 
 We could do a search for this error message: `'No route matches [GET] "admin/users"'` and see what we get back. After reading a few stackoverflow posts, we learn about the `rake routes` command, and try that out:
 
@@ -262,7 +262,8 @@ rspec ./spec/features/admin_views_users_page_spec.rb:8 # admin can see a list of
 
 "The action 'index' could not be found for Admin::UsersController". Let's create an index method in the UsersController.
 
-*app/controllers/admin/users_controller.rb*
+*app/controllers/admin/users\_controller.rb*
+
 ```
 class Admin::UsersController < ApplicationController
   def index
@@ -375,7 +376,7 @@ When we utilize test-driven development, we only write the code needed to satisf
 
 Another important component to this feature is that unauthorized users are not allowed to see this page. Let's write a test for that.
 
-*spec/features/admin_views_users_page_spec.rb*
+*spec/features/admin\_views\_users\_page\_spec.rb*
 
 ```
 scenario 'unauthorized users are redirected' do
