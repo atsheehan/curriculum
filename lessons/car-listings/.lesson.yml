@@ -4,5 +4,6 @@ type: "challenge"
 description: "Create a web application to manage used cars."
 depends: "good-eats"
 visibility: "assign"
+progress_attribute: "systems_check_7"
 ignore:
 - "car-listings.md"

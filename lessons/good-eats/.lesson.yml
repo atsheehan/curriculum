@@ -4,5 +4,6 @@ type: "challenge"
 description: "Create a web application to review restaurants."
 depends: "rescue-mission"
 visibility: "assign"
+progress_attribute: "systems_check_6"
 ignore:
 - "good-eats.md"

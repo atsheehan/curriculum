@@ -4,5 +4,6 @@ type: "challenge"
 description: "Design a database schema with models to represent a shared project task list."
 depends: "meetups-in-space"
 visibility: "assign"
+progress_attribute: "systems_check_5"
 ignore:
 - "task-galaxy.md"
