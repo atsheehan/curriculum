@@ -1,3 +1,5 @@
+#
+
 1. [Taking care of the space and each other](#taking-care-of-the-space-and-each-other)
   - [Mission Control Guidelines](#mission-control-guidelines)
     * [Building Info](#building)
@@ -45,6 +47,8 @@ Thank you for helping us to keep Mission Control a clean, welcoming environment 
 - Leave funky food in the fridge or spills on the counters
 - Forget to return your key and FOB at the end of the cohort!
 
+[Back to top](#)
+
 ###Need-to-Know Information
 ####Building
 - **Restrooms:** There are keys hung up on the wall by the front door (5 for 5th Floor, 6 for 6th Floor). Occasionally the restroom doors are locked so you may use these to unlock them. Just as you would our suite space, please keep these tidy as we want to be sure any prospective hiring partners have clean bathrooms to visit as well.
@@ -55,6 +59,8 @@ To access the 6th Floor bathroom, you must use the elevator
 - **Smoking:** Tenants are asked to not smoke near the entrance to the building and are suggested to stand closer to the corner of Harrison and Beach Street.
 - **Bicycles:** Bikes are suggested to be brought up in the freight elevator. Call/text Building Manager Austin in advance of your arrival and he will assist you - 617.875.8172. If Austin is unavailable, try Switchboard at 617.426.1515. If no one is available when you arrive, feel free to use the passenger elevator, but please be cautious of other tenants and the walls! You may also ring the bell in the passenger elevator to alert Austin of your arrival if you’d still like his assistance getting your bike upstairs.
 
+[Back to top](#)
+
 ####Cleaning Up the Workstations and Kitchenette
 - **Work areas:** No food or open liquid containers at the work desks! Keep desks clean and check for trash on, around or near your area before you leave at the end of the day. Anything left out in the space will make it very difficult for the cleaning crew to do their job!
 - **“Leave-behinds”:** Anything left around the space (on chairs, tables, couches, etc.) and on the dish rack will be placed in a “leave-behind” bin, located on the bottom right shelf of the storage rack. Items should be removed from this bin by Friday afternoon as anything left in it come Monday morning will be tossed/donated. Utilize your lockers! The “leave-behind” bin can be found on the bottom shelf of the gray storage rack.
@@ -64,6 +70,8 @@ To access the 6th Floor bathroom, you must use the elevator
 - **Counters and table:** Please wipe up any spills and throw away all trash.  If you do not know how to wipe up spills, let a Launch staff member know and they will model it for you.
 - **Sink and dish rack:** Do not leave dishes in the sink. Utilize the dish rack and then move your items to the lockers.  Items left in the sink will be used as communal sponge holders.
 
+[Back to top](#)
+
 ####General Mission Control Items
 - **White boards:** If you do not want your work erased, please mark it clearly; otherwise the cleaning crew will erase it each evening.
 - **HVAC/Heat:** No one other than staff is allowed to touch the thermostat or heat valves. Bring layers!
@@ -72,6 +80,8 @@ To access the 6th Floor bathroom, you must use the elevator
 - **Internet:**
 WiFi Networks: Launch Academy
 Password: MakeNoBugs!
+
+[Back to top](#)
 
 ####Keys and FOBs
 Everyone will receive a key to the suite and a FOB to access the elevator off-hours. Building hours are posted by the side door so take note of these and lock up if you are the last to leave the suite at night. **Keys and FOBs are due back to the Operations Manager’s desk the Friday after Career Day by noon!**
@@ -83,6 +93,8 @@ Weekends:	8:00am -  5:00pm	(FOBs required for access)
 If the doors are locked in the front of the building or the gate is not up at these times, contact Whitney via Slack 1-to-1.
 
 You may leave the space after these hours but must do so via the back staircase located at the end of the hallway past the bathrooms.  The back staircase leads to the street on the side of the building.  The doors to and from the back staircase should never be propped open. This is a major security breach and can result in removal from the program.
+
+[Back to top](#)
 
 #Endorsement
 
@@ -102,8 +114,11 @@ If you fail one item, you and your mentor should have a discussion on how to get
 
 **If you fail two items within one category, you will lose your endorsement** and your privileges to attend Career Day. It is possible to re-earn your endorsement through extra hard work. You, your mentor, and DT will have a discussion on what steps can be taken and whether or not it is possible to re-earn your endorsement and Career Day attendance.
 
-There will be a page on Horizon where you can easily see whether you've any items, so you can keep easy track of where you stand in the cohort.
+There is page on Horizon where you can easily see whether you've any items, so you can keep easy track of where you stand in the cohort.
 
+
+[Back to top](#)
+
 #Career Services
 One of the many fantastic parts of Launch Academy are the Career Services you’ll have access to during and after your time here. Corinne is amazing at what she does, and she’s here for you as your own personal job-search-support-crew! That said, don’t spend the early weeks here worrying about job search prep. Your main job at the beginning is to work on becoming an awesome developer, and be ready to be on the ball as soon as Corinne needs things from you later down the line!
 
@@ -140,6 +155,8 @@ One of the many fantastic parts of Launch Academy are the Career Services you’
 - Office Hours with Corinne to review resume/LinkedIn
 - Final Career Day Presentation with Corinne
 
+[Back to top](#)
+
 ##Career Day
 
 Career day is a 2-day event that serves to showcase you and your classmates in front of a large number of awesome companies looking to hire. Towards the end of the cohort, you'll prepare a presentation on yourself and your breakable toy.
@@ -167,7 +184,8 @@ Career day is a 2-day event that serves to showcase you and your classmates in f
 **Friday, May 1**  
 **Return borrowed items:** Keys and FOBs (and borrowed laptops) are due to Whitney’s desk by 12:00 p.m.  
 
-
+[Back to top](#)
+
 #Launcher Life
 
 ##Daily Schedule
@@ -184,6 +202,8 @@ Free work time
 13:00 through 15:00 — Office Hours  
 15:00 — Clinic(s)  
 16:00 — Evening exercise released  
+
+[Back to top](#)
 
 ##Curriculum Overview
 
@@ -204,6 +224,8 @@ Weeks 9-10 are intentionally light in terms of new material and has an extensive
 
 We will hold technical workshops for material that requires reinforcement, but all planned educational material will be oriented around preparing you for the job interview.
 
+[Back to top](#)
+
 ##Important Dates
 
 **Mon, 5/25:** Memorial Day - day off!  
@@ -212,6 +234,8 @@ We will hold technical workshops for material that requires reinforcement, but a
 
 ##Launcher Lunches
 Launcher Lunches are a weekly chance for the staff to receive feedback directly from the students. Each Wednesday at noon, two EEs and five students will go out to lunch together and discuss how the program is going. Invites will be distributed via email so you know which week you are attending!
+
+[Back to top](#)
 
 ##Office Hours
 
@@ -226,8 +250,12 @@ Office Hours serve as a chance to sit down with an EE and take some time to work
 
 You should make sure to sign up for office hours around once every two weeks.
 
+[Back to top](#)
+
 ##Breakable Toys
 Your Breakable Toy is a project you will build over the course of your time here, and that is meant to showcase what you've learned at the end of the cohort. More details will be forthcoming about the ideal scope and focus of the project. Ideally, you'll be able to pick a great topic/goal/purpose, and make it something you're really passionate about! While the last two weeks of the cohort are purely dedicated to Breakable Toy work, it always helps to start earlier, so start brainstorming early what sort of project you might be excited to build.
+
+[Back to top](#)
 
 #Launch Tools
 
@@ -236,8 +264,12 @@ There are a number of different tools and resources you’ll have at your dispos
 ##Calendar
 You should have access to a Google Calendar called “Mission Control”. This will the home-base for information on lesson schedules, clinics, office hours, Launch events, tech community events. Visit here often to make sure you’re up-to-date with what’s going on!
 
+[Back to top](#)
+
 ##Slack and the Staff Announcements Channel
 On Slack, there is a channel called Staff Announcements. This is for only staff to post in (so don’t write anything there yourself!), and is where we will announce important day-to-day information such as the release of new challenges. Make sure that you pay attention to everything posted in that channel - you will get behind if you tune out!
+
+[Back to top](#)
 
 ##Horizon
 Horizon will in many ways be your home base for information at Launch. Luckily, you should already have some familiarity with Horizon from your Ignition challenge submissions!
@@ -254,7 +286,7 @@ Your [Horizon Dashboard](https://horizon.launchacademy.com/dashboard) serves as 
 
 The [questions queue](https://horizon.launchacademy.com/questions) will serve as your primary way of getting assistance from staff members. When stuck on a problem, make sure to search Horizon (via the topbar) to see if anyone else has asked a relevant question.
 
-After reading the **[guide on solving problems and asking questions]()**, if you still can't solve your problem, add a question on Horizon. An EE will either provide a possible answer, comment requesting more info, or add your question to the **Question Queue**.
+After reading the **[guide on solving problems and asking questions](asking-questions-at-launch)**, if you still can't solve your problem, add a question on Horizon. An EE will either provide a possible answer, comment requesting more info, or add your question to the **Question Queue**.
 
 The Question Queue is a list of questions in line to get in-person help from an EE. When it's your turn, you and an EE will work together to solve the problem. Once solved, write out the answer on your Horizon question so that others can benefit in the future!
 
@@ -263,6 +295,8 @@ After a question has been successfully answered, don't forget to click "accept a
 ###Lesson Plan
 
 Besides using the calendar to stay up-to-date on daily events, you can keep track of reading, assignments, and clinic notes by checking out the [Daily Lesson Plan](https://horizon.launchacademy.com/daily-lessons) on Horizon.
+
+[Back to top](#)
 
 ##Suggestion Ox
 [Suggestion Ox](http://www.suggestionox.com/response/zLQXp6) is our internal tool by which to receive anonymous feedback. We take a look at Suggestion Ox feedback once a week and discuss any suggestions as a team. Please be sure not to submit questions through Suggestion Ox that you need immediate feedback for or an individual response for.
