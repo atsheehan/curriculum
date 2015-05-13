@@ -4,7 +4,6 @@
     * [Workspace and Kitchenette Info](#cleaning-up-the-workstations-and-kitchenette)
     * [General Mission Control Info](#general-mission-control-items)
     * [Keys and Fobs](#keys-and-fobs)
-  - [Code of Conduct](#code-of-conduct-at-mission-control)
 2. [Endorsement](#endorsement)
   - Systems Checks
   - Mock Interviews
@@ -27,6 +26,10 @@
     * [Questions/Question Queue](#questions-queue)
     * [Lesson Feed](#lesson-feed)
   - [Suggestion Ox](#suggestion-ox)
+6. Orientation for your Mind
+  - <a href="cultural-agreement" target="_blank">Cultural Agreement</a>
+  - <a href="asking-questions-at-launch" target="_blank">How to Ask Questions</a>
+  - <a href="launch-andragogy" target="_blank">Learning Science and the Meta</a>
 
 #Taking Care of the Space and Each Other
 
@@ -34,6 +37,7 @@
 Thank you for helping us to keep Mission Control a clean, welcoming environment for our instructors, students, hiring partners, guest speakers and other visitors. This is your home for the next ten weeks, and you have a lot of roommates. The guidelines set here are to ensure that anyone who may enter our space gets the impression that our students are highly intelligent, hard-workers, who know how to be both professional and personable. Should we get a surprise visit from a prospective hiring partner, a clean, clutter-free space will help our case for employers to want to hire a Launcher – we have the most capable students and they know how to be great employees!
 
 **DO NOT:**  
+- Bring a bike upstairs using the passenger elevator
 - Go up to the roof
 - Prop open any doors (especially not external building doors)
 - Smoke near building access points
@@ -54,7 +58,7 @@ To access the 6th Floor bathroom, you must use the elevator
 ####Cleaning Up the Workstations and Kitchenette
 - **Work areas:** No food or open liquid containers at the work desks! Keep desks clean and check for trash on, around or near your area before you leave at the end of the day. Anything left out in the space will make it very difficult for the cleaning crew to do their job!
 - **“Leave-behinds”:** Anything left around the space (on chairs, tables, couches, etc.) and on the dish rack will be placed in a “leave-behind” bin, located on the bottom right shelf of the storage rack. Items should be removed from this bin by Friday afternoon as anything left in it come Monday morning will be tossed/donated. Utilize your lockers! The “leave-behind” bin can be found on the bottom shelf of the gray storage rack.
-- **Refrigerator:** Our space is funky, our fridge is not! Please mark items with your name and date. The fridge is cleared out every Friday and anything that is unmarked (or without a current date) or sprouting will be tossed.
+- **Refrigerator:** Our space is funky, our fridge is not! Please mark items with your name and date. The fridge is cleared out every Friday via a rotating student schedule, and anything that is unmarked (or without a current date) or sprouting will be tossed. If it is your turn to clean out the fridge: (1) Take out all unmarked items and put them on the counter (2) Send out a message to the cohort to come identify or throw away their items before a certain time (3) Clean up any spills in the fridge (4) Throw away whatever is left out on the counter. All students will be on cleanout duty once.
 - **Toaster ovens/microwaves:** Please wipe down after use so they are clean for the next person.
 - **Coffee maker:** We are a green organization so please bring a reusable cup/mug to Mission Control. We do have paper cups, but reserve those primarily for visitors’ use.  Please don’t remove your cup from the machine until after the light shuts off to prevent spillage
 - **Counters and table:** Please wipe up any spills and throw away all trash.  If you do not know how to wipe up spills, let a Launch staff member know and they will model it for you.
@@ -63,6 +67,7 @@ To access the 6th Floor bathroom, you must use the elevator
 ####General Mission Control Items
 - **White boards:** If you do not want your work erased, please mark it clearly; otherwise the cleaning crew will erase it each evening.
 - **HVAC/Heat:** No one other than staff is allowed to touch the thermostat or heat valves. Bring layers!
+- **Courtesy in the work areas:** Use headphones if you want to listen to music during individual exercises - no noisy video or music in the work area. Silence your phones (keep them on vibrate), and take calls away from the work area. No loud voices. No strong fragrances.
 - **Greeting visitors:** If you are nearest to a visitor when they enter Mission Control, please welcome them, ask for their name (and introduce yourself), and walk them to the appropriate staff member’s office. Should he/she not be at her desk, have them take a seat on the couches and alert the Operations Manager. Act as if Launch Academy is your company and a guest has just arrived.
 - **Internet:**
 WiFi Networks: Launch Academy
@@ -75,59 +80,13 @@ Everyone will receive a key to the suite and a FOB to access the elevator off-ho
 Monday-Friday: 	7:00am - 10:00 pm  
 Weekends:	8:00am -  5:00pm	(FOBs required for access)
 
-If the doors are locked in the front of the building or the gate is not up at these times, contact Whitney via Flowdock 1-to-1.
+If the doors are locked in the front of the building or the gate is not up at these times, contact Whitney via Slack 1-to-1.
 
 You may leave the space after these hours but must do so via the back staircase located at the end of the hallway past the bathrooms.  The back staircase leads to the street on the side of the building.  The doors to and from the back staircase should never be propped open. This is a major security breach and can result in removal from the program.
-
-
-##Code of Conduct at Mission Control
-The following is a summary of the most important points for you to follow during your time at Launch. All of the following are things that we consider important enough that failure to follow will make you subject to dismissal from the program.
-
-###Cheating and Academic Honesty
-Those found to be cheating will be removed immediately from the program. This includes copying other Launcher's work, falsifying data, lying in order to extend deadlines, or helping others to do any of the previously mentioned items. No warnings and no exceptions. We are all here to learn and grow together. If you are found to be cheating, you immediately indicate that you are no longer willing to learn the material.
-
-###Disrespect, Teasing, and Bullying
-It is important for Mission Control to be a safe place optimized for learning. Put downs, even when said in jest, can be taken the wrong way. Everyone is learning and growing together, so we have a zero tolerance for disrespect, teasing, and bullying. If you think it might be taken the wrong way, don't say it.
-
-###Tardiness and Absence
-The program is demanding. We need you to be here from standup to when formal instruction is complete for the day. Repeated absences or repeated tardiness will make you subject to dismissal.
-
-###Disturbing EE's When They Aren't On the Floor
-The Experience Team has an obligation to deliver on many different fronts to provide you with a premium experience. It is important to be attentive to who is on the floor and to not disturb those that aren't. Repeated attempts to distract or interrupt unavailable Experience Engineers will make you subject to dismissal.
-
-###Cleanliness
-Maintaining a cleanly and habitable work environment is part of the premium experience. Those found to be repeatedly leaving messes or not cleaning up after themselves will be subject to dismissal.
-
-###Courtesy in the Work Area
-- Use headphones if you want to listen to music during individual exercises
-- No noisy video or music in the work area
-- Silence your phones (keep them on vibrate)
-- Take calls away from the work area
-- No strong fragrances
-- No loud voices
-- Thermostat is only adjustable by Launch Academy staff
-
-###Food and Drink in the Work Area
-- Lids on all liquid containers
-- No food in the work areas
-- Use electronics elsewhere at your own risk
-
-###Professionalism At Mission Control
-- Do not email or exchange inappropriate content
-- If your boss wouldn't want to see it, the cohort doesn't either
-- Be mindful - we take discrimination and inappropriate conduct very seriously
-
-###In The Presentation Area
-- No phones visible
-- Notes and exercises only on the computers
-- We recommend that when guest speakers are presenting that you not bring your laptops with you. It shows that you're fully attentive to what the speaker is saying and that you are fully present as a listener.
-
-And on an more general note, make sure to follow the cultural agreement.
-
 
 #Endorsement
 
-While everyone entering Launch Academy is talented and has the potential to be a great developer, there’s no guarantee that everyone is going to keep up with the intense pace. Sometimes a student is not on track to be successful at Career Day, at which point Launch will choose not to endorse that student as a successful graduate of Launch Academy.
+While everyone entering Launch Academy is talented and has the potential to be a great developer, there’s no guarantee that everyone is going to keep up with the intense pace. While everybody gets to graduate from Launch, endorsement is only available to students who are able to perform up to Launch Academy standards. Sometimes a student is not on track to be successful at Career Day, at which point Launch will choose not to endorse that student. This means that the student will not be presented to hiring partners on Career Day.
 
 Whether or not a student is on track will be measured by looking at three different areas of their performance:
 
@@ -146,12 +105,12 @@ If you fail one item, you and your mentor should have a discussion on how to get
 There will be a page on Horizon where you can easily see whether you've any items, so you can keep easy track of where you stand in the cohort.
 
 #Career Services
-One of the many fantastic parts of Launch Academy are the stellar Career Services you’ll have access to during and after your time here. Corinne is amazing at what she does, and she’s here for you as your own personal job-search-support-crew! That said, don’t spend the early weeks here worrying about job search prep. Your main job at the beginning is to work on becoming an awesome developer, and be ready to be on the ball as soon as Corinne needs things from you later down the line!
+One of the many fantastic parts of Launch Academy are the Career Services you’ll have access to during and after your time here. Corinne is amazing at what she does, and she’s here for you as your own personal job-search-support-crew! That said, don’t spend the early weeks here worrying about job search prep. Your main job at the beginning is to work on becoming an awesome developer, and be ready to be on the ball as soon as Corinne needs things from you later down the line!
 
-##Timeline
+##Career Services Timeline
 
 ###Weeks 1-5
-- Career Service Presentation by Corinne
+- Career Services Presentation by Corinne
 - 1-on-1 interview between Corinne and each Launcher to learn about your backgrounds and future goals
 - Lots of guest speakers, tech community events, and time for personal development!
 
@@ -178,7 +137,6 @@ One of the many fantastic parts of Launch Academy are the stellar Career Service
 ###Week 10
 - Launcher Profile Part 2
 - Career Day Presentation with Dan
-- Office Hours with Whitney to review Launcher Profile Part 2
 - Office Hours with Corinne to review resume/LinkedIn
 - Final Career Day Presentation with Corinne
 
@@ -302,8 +260,9 @@ The Question Queue is a list of questions in line to get in-person help from an 
 
 After a question has been successfully answered, don't forget to click "accept answer" to show the answer fixed your problem.
 
-###Lesson Feed
+###Lesson Plan
 
-FILL THIS OUT once lesson feed is complete.
+Besides using the calendar to stay up-to-date on daily events, you can keep track of reading, assignments, and clinic notes by checking out the [Daily Lesson Plan](https://horizon.launchacademy.com/daily-lessons) on Horizon.
 
 ##Suggestion Ox
+[Suggestion Ox](http://www.suggestionox.com/response/zLQXp6) is our internal tool by which to receive anonymous feedback. We take a look at Suggestion Ox feedback once a week and discuss any suggestions as a team. Please be sure not to submit questions through Suggestion Ox that you need immediate feedback for or an individual response for.
