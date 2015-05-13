@@ -1,4 +1,4 @@
-#
+*Please get in touch with Christina if you notice anything missing from this document - we'd love to keep fleshing it out to better answer your questions!*
 
 1. [Taking care of the space and each other](#taking-care-of-the-space-and-each-other)
   - [Mission Control Guidelines](#mission-control-guidelines)
@@ -16,6 +16,7 @@
 4. [Launcher Life](#launcher-life)
   - [Daily Schedule](#daily-schedule)
   - [Curriculum Overview](#curriculum-overview)
+  - [Staff Availability](#staff-availability)
   - [Important Dates](#important-dates)
   - [Launcher Lunches](#launcher-lunches)
   - [Office Hours](#office-hours)
@@ -223,6 +224,18 @@ This period is group project time, during which we will study popular, third par
 Weeks 9-10 are intentionally light in terms of new material and has an extensive project orientation. During this time, you will work on your Breakable Toy, which will serve as your final and culminating project.
 
 We will hold technical workshops for material that requires reinforcement, but all planned educational material will be oriented around preparing you for the job interview.
+
+[Back to top](#)
+
+##Staff Availability
+
+Staff at Launch Academy have a lot of varied responsibilities, so it's important that we all organize our time carefully.
+
+When E.E.s are "off the floor" - i.e., in the E.E. lounge or the pairing office in the back of the room, they aren't available to answer technical questions. Both spaces are off-limits to students.
+
+For day-to-day technical questions, ask one of the two E.E.s who are on the floor every afternoon. You can also visit office office hours by signing up on the sheet of paper on the back picnic tables.
+
+In reference to broader concerns than your day-to-day technical questions, you should definitely feel comfortable getting in touch with your mentor! They are here to support you.
 
 [Back to top](#)
 
