@@ -1,0 +1,37 @@
+title: 'In Person Intensive'
+slug: 'in-person-intensive'
+contents:
+  week_1:
+    http:
+    - http
+    - http-challenge
+    dynamic-views:
+    - evening-veggie-recipe-printer
+    - dynamic-web-pages
+    - kickball-site
+    http-post-and-html-forms:
+    - evening-need-the-ingredients
+    - http-post-html-forms
+    - news-aggregator
+    html-and-css:
+    - evening-formatting-html-and-css
+    - html-and-css
+    - slacker-news
+  week_2:
+    database-persistence:
+    - evening-csv-to-db
+    - database-persistence
+    - news-aggregator-postgresql
+    database-relationships-and-foreign-keys:
+    - evening-brussels-sprouts-comments
+    - database-relationships
+    - sql-joins
+    - korning
+    sql-joins:
+    - evening-lost-dog-collars
+    - sql-queries
+    - hollywood-trivia
+    database-indices:
+    - evening-database-indices
+    - what-is-an-index
+    - movie-catalog-deluxe
