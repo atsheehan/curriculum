@@ -20,7 +20,7 @@
   - 9:38 am: Mentor Groups
   - 10:30 am: [Dynamic Views](https://horizon.launchacademy.com/lessons/dynamic-web-pages)
   - 2:30 pm: Clinic - Breaking Down Problems
-  - 3:30 pm: Clinic - Intro to Rack
+  - 3:30 pm: Clinic - Shortcuts in Atom
   - Daily Challenge: [Kickball Site](https://horizon.launchacademy.com/lessons/kickball-site)
   - Evening Reading: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
   - Evening Exercise: [Need the Ingredients](https://horizon.launchacademy.com/lessons/evening-need-the-ingredients)
@@ -29,7 +29,7 @@
 * Thurs 5/21
   - 9:38 am: Mentor Groups
   - 10:30 am: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
-  - 2:30 pm: Clinic - Data Structures and Methods Review
+  - 2:30 pm: Clinic - Further Basic Ruby Review
   - Daily Challenge: [News Aggregator](https://horizon.launchacademy.com/lessons/news-aggregator)
   - Evening Reading: [The Git Commit](https://horizon.launchacademy.com/lessons/git-commit)
   - Evening Exercise: None - rest up and get ready for the systems check!
