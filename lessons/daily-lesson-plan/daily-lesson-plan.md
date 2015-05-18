@@ -4,7 +4,6 @@
   - [Student Orientation Guide](https://horizon.launchacademy.com/lessons/student-orientation-guide)
   - Afternoon Challenge: [Leaderboard](https://horizon.launchacademy.com/lessons/leaderboard)
   - Evening Reading: [HTTP](https://horizon.launchacademy.com/lessons/http)
-  - Evening Challenge: TBA
 
 #
 * Tues 5/19
