@@ -19,8 +19,8 @@
 * Weds 5/20
   - 9:38 am: Mentor Groups
   - 10:30 am: [Dynamic Views](https://horizon.launchacademy.com/lessons/dynamic-web-pages)
-  - 2:30 pm: Clinic - Breaking Down Problems
-  - 3:30 pm: Clinic - Shortcuts in Atom
+  - 2:30 pm: Clinic - Shortcuts in Atom
+  - 3:30 pm: Clinic - Breaking Down Problems
   - Daily Challenge: [Kickball Site](https://horizon.launchacademy.com/lessons/kickball-site)
   - Evening Reading: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
   - Evening Exercise: [Need the Ingredients](https://horizon.launchacademy.com/lessons/evening-need-the-ingredients)
