@@ -22,6 +22,7 @@
   - [Launcher Lunches](#launcher-lunches)
   - [Office Hours](#office-hours)
   - [Breakable Toys](#breakable-toys)
+  - [Absences](#absences)
 5. [Launch Tools](#launch-tools)
   - [Calendar](#calendar)
   - [Staff Announcements Channel](#slack-and-the-staff-announcements-channel)
@@ -41,13 +42,13 @@
 Thank you for helping us to keep Mission Control a clean, welcoming environment for our instructors, students, hiring partners, guest speakers and other visitors. This is your home for the next ten weeks, and you have a lot of roommates. The guidelines set here are to ensure that anyone who may enter our space gets the impression that our students are highly intelligent, hard-workers, who know how to be both professional and personable. Should we get a surprise visit from a prospective hiring partner, a clean, clutter-free space will help our case for employers to want to hire a Launcher – we have the most capable students and they know how to be great employees!
 
 **DO NOT:**  
-- Bring a bike upstairs using the passenger elevator
-- Go up to the roof
-- Prop open any doors (especially not external building doors)
-- Smoke near building access points
-- Eat or have open containers at the work stations
-- Leave funky food in the fridge or spills on the counters
-- Forget to return your key and FOB at the end of the cohort!
+- Bring a bike upstairs using the passenger elevator  
+- Go up to the roof  
+- Prop open any doors (especially not external building doors)  
+- Smoke near building access points  
+- Eat or have open containers at the work stations  
+- Leave funky food in the fridge or spills on the counters  
+- Forget to return your key and FOB at the end of the cohort!  
 
 [Back to top](#)
 
@@ -219,7 +220,7 @@ Career day is a 2-day event that serves to showcase you and your classmates in f
 **Mornings**  
 ~09:00 — Arrive at Mission Control  
 09:40 — Meet in Mentor Groups to discuss evening exercise from night before  
-10:30 — Facilitation (lecture on reading from night before)
+10:30 — Facilitation (lecture on reading from night before)  
 11:15 — Post Facilitation Quiz  
 11:45 — Challenge Released / Lunch
 
@@ -267,11 +268,17 @@ In reference to broader concerns than your day-to-day technical questions, you s
 ##Important Dates
 
 **Mon, 5/25:** Memorial Day - day off!  
-**Sun, 7/3:** Independence Day (almost) - day off!  
+**Fri, 7/3:** Independence Day (almost) - day off!  
 **Tues, 7/28 - Weds, 7/29:** Career Day
 
 ##Launcher Lunches
 Launcher Lunches are a weekly chance for the staff to receive feedback directly from the students. Each Wednesday at noon, two EEs and five students will go out to lunch together and discuss how the program is going. Invites will be distributed via email so you know which week you are attending!
+
+##Absences
+
+It is very crucial to take full advantage of the time you have at Launch Academy and try to be present every single day. That said, if you are sick and can't be productive at Mission Control, get in touch with your mentor and the two of you can work together to make sure you stay caught up.
+
+While we don't recommend it, if you have a pre-existing obligation that you want to see if you can make work, talk to your mentor and they can help give you and idea about whether it's feasible or not with extra work.
 
 [Back to top](#)
 
