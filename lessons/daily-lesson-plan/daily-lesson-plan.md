@@ -1,7 +1,7 @@
 ## Week 1
 
 * Mon 5/18
-  - [Student Orientation Guide](https://horizon.launchacademy.com/lessons/student-orientation-guide)\
+  - [Student Orientation Guide](https://horizon.launchacademy.com/lessons/student-orientation-guide)
   - Afternoon Challenge: [Leaderboard](https://horizon.launchacademy.com/lessons/leaderboard)
   - Evening Reading: [HTTP](https://horizon.launchacademy.com/lessons/http)
   - Evening Challenge: TBA
