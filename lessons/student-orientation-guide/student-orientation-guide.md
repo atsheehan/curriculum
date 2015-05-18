@@ -332,7 +332,7 @@ After a question has been successfully answered, don't forget to click "accept a
 
 ###Lesson Plan
 
-Besides using the calendar to stay up-to-date on daily events, you can keep track of reading, assignments, and clinic notes by checking out the [Daily Lesson Plan](https://horizon.launchacademy.com/daily-lessons) on Horizon.
+Besides using the calendar to stay up-to-date on daily events, you can keep track of reading, assignments, and clinic notes by checking out the [Daily Lesson Plan](https://horizon.launchacademy.com/lessons/daily-lesson-plan) on Horizon.
 
 [Back to top](#)
 
