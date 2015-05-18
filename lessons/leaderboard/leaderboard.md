@@ -8,6 +8,7 @@ The NFL has tasked you with building a program that tracks game results as the s
 Additionally, teams should be ordered by rank (teams with more wins are ranked and listed higher).
 
 ####Tips:
+- Consider reorganizing the information into your own data structure, if you can think of a way to do it that better fits your needs!
 - Focus on organizing your code well.
 - Use methods as much as possible!
 
