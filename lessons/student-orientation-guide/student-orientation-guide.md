@@ -11,6 +11,7 @@
   - Mock Interviews
   - Profile & Resume Preparation
 3. [Career Services](#career-services)
+  - [Requirements](#requirements)
   - [Timeline](#timeline)
   - [Career Day](#career-day)
 4. [Launcher Life](#launcher-life)
@@ -122,6 +123,30 @@ There is page on Horizon where you can easily see whether you've any items, so y
 
 #Career Services
 One of the many fantastic parts of Launch Academy are the Career Services you’ll have access to during and after your time here. Corinne is amazing at what she does, and she’s here for you as your own personal job-search-support-crew! That said, don’t spend the early weeks here worrying about job search prep. Your main job at the beginning is to work on becoming an awesome developer, and be ready to be on the ball as soon as Corinne needs things from you later down the line!
+
+##Requirements
+
+To maintain access to Launch's Career Services, it's important to make sure you keep on top of the things Corinne needs from you. Here's a summary of what you'll need to do during and after the cohort. More information will be forthcoming as these requirements arise!
+
+###Pre-Career Day
+- Complete Parts 1 & 2 of the Launcher Profile
+- Participate in a One Hour Office Hour Appointment with Whitney
+- Complete Mock Technical Interview
+- Attend at Least One Office Hours Appointment with Corinne for Resume Review
+- Final Copy of Resume Due to Corinne by 5pm the Day Before Career Day
+- Resumes Printed and Brought to Both Career Days
+
+###Post-Career Day
+- Responding to Corinne’s emails within 24 hours (but, the earlier the better)
+- Attending all scheduling interviews/phone screens
+- Responding to hiring partners and/or other hiring companies in a timely manner - whether or not you are interested in interviewing for the role!
+- If you’re seeking a role in Boston, committing to staying in Boston for a minimum of three weeks following Career Day
+- Taking responsibility for the individual search by consulting the Career Resources doc, seeking out EE’s for technical advice, and booking office hours with Corinne when needed
+- Committing to Github at least once per week while searching for a job
+- Minimum of 1 event in the tech community attended per week
+- Completing the Post-Interview Debrief form on Wufoo after every interview (hiring partners and non-hiring partners)
+
+[Back to top](#)
 
 ##Career Services Timeline
 
