@@ -363,7 +363,7 @@ An HTTP response contains a header and (usually) a body. The header includes a *
 [google]: http://www.google.com
 [physical-server]: http://media.treehugger.com/assets/images/2011/10/data-center-servers-t001.jpg
 [http]: http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
-[status_codes]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+[status-codes]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes
 [google-no-www]: http://google.com
 [unstyled-todo]: http://hal-assets.launchacademy.com/http-sinatra/unstyled_todo.png
 [styled-todo]: http://hal-assets.launchacademy.com/http-sinatra/styled_todo.png
