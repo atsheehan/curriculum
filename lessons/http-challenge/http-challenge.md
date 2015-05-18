@@ -1,5 +1,3 @@
-# HTTP Challenge
-
 Let us put your newfound knowledge of HTTP to work!
 
 * Define the common HTTP verbs
