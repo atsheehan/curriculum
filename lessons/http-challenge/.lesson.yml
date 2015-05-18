@@ -1,0 +1,6 @@
+---
+title: "HTTP Challenge"
+type: "challenge"
+description: "Use HTTP verbs to interact with a website."
+ignore:
+- "http-challenge.md"
