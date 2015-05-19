@@ -6,9 +6,9 @@ Let us put your newfound knowledge of HTTP to work!
   - PUT/PATCH
   - DELETE
 
-* Retrieve the index of messages at [launch-academy-chat.herokuapp.com](http://launch-chat.herokuapp.com/messages). Use the tool of your choice.
+* Retrieve the index of messages at [launch-academy-chat.herokuapp.com](http://launch-academy-chat.herokuapp.com/messages). Use the tool of your choice.
 
-* Create a new message on [launch-academy-chat.herokuapp.com](http://launch-chat.herokuapp.com/) using the tool(s) of your choice. Share a quote or an inspirational message with your cohort.
+* Create a new message on [launch-academy-chat.herokuapp.com](http://launch-academy-chat.herokuapp.com/) using the tool(s) of your choice. Share a quote or an inspirational message with your cohort.
   - telnet (**HINT:** be sure to include the 'Host:' in the header)
   - curl
   - ruby
