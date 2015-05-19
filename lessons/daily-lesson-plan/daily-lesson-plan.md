@@ -9,8 +9,8 @@
 * Tues 5/19
   - 9:38 am: Mentor Groups
   - 10:30 am: HTTP Facilitation
-  - Daily Challenge: TBA
-  - 1:30 pm: Clinic - Basic Ruby Review
+  - Daily Challenge: [HTTP Challenge](https://horizon.launchacademy.com/lessons/http-challenge)
+  - 1:30 pm: Clinic - [Basic Ruby Review](https://github.com/davidrf/basic_ruby_review/blob/master/ruby_review.md)
   - 2:30 pm: Clinic - How to Pair
   - Evening Reading: [Dynamic Web Pages](https://horizon.launchacademy.com/lessons/dynamic-web-pages)
   - Evening Exercise: [Veggie Recipe Printer](https://horizon.launchacademy.com/lessons/evening-veggie-recipe-printer)
