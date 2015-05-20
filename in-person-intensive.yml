@@ -15,7 +15,7 @@ contents:
     - news-aggregator
     html-and-css:
     - evening-formatting-html-and-css
-    - html-and-css
+    - css
     - slacker-news
   week_2:
     database-persistence:
