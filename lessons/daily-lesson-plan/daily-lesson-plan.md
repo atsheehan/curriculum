@@ -2,6 +2,7 @@
 
 * Mon 5/18
   - [Student Orientation Guide](https://horizon.launchacademy.com/lessons/student-orientation-guide)
+  - <a href="www.google.com" target="_blank">Cultural Agreement</a>
   - Afternoon Challenge: [Leaderboard](https://horizon.launchacademy.com/lessons/leaderboard)
   - Evening Reading: [HTTP](https://horizon.launchacademy.com/lessons/http)
 
@@ -19,9 +20,9 @@
 * Weds 5/20
   - 9:38 am: Mentor Groups
   - 10:30 am: [Dynamic Views](https://horizon.launchacademy.com/lessons/dynamic-web-pages)
-  - 2:30 pm: Clinic - Shortcuts in Atom
-  - 3:30 pm: Clinic - Breaking Down Problems
   - Daily Challenge: [Kickball Site](https://horizon.launchacademy.com/lessons/kickball-site)
+  - 2:30 pm: Clinic - [Shortcuts in Atom](https://gist.github.com/cmkoller/23e9fc98484d12824736)
+  - 3:30 pm: Clinic - Breaking Down Problems
   - Evening Reading: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
   - Evening Exercise: [Need the Ingredients](https://horizon.launchacademy.com/lessons/evening-need-the-ingredients)
 
@@ -29,16 +30,15 @@
 * Thurs 5/21
   - 9:38 am: Mentor Groups
   - 10:30 am: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
-  - 2:30 pm: Clinic - Further Basic Ruby Review
   - Daily Challenge: [News Aggregator](https://horizon.launchacademy.com/lessons/news-aggregator)
+  - 2:30 pm: Clinic - Further Basic Ruby Review
   - Evening Reading: [The Git Commit](https://horizon.launchacademy.com/lessons/git-commit)
   - Evening Exercise: None - rest up and get ready for the systems check!
 
 #
 * Fri 5/22
   - 9:30 am - 12:30 pm: Systems Check
-  - 2:00 pm: [Facilitation] HTML/CSS
   - Afternoon/Weekend Challenge: [Slacker News](https://horizon.launchacademy.com/lessons/slacker-news)
+  - 2:00 pm: [Facilitation] HTML/CSS
   - Weekend Reading: [Database Persistence](https://horizon.launchacademy.com/lessons/database-persistence)
   - Evening Exercise: [CVS to Database](https://horizon.launchacademy.com/lessons/evening-csv-to-db)
-  - <a href="www.google.com" target="_blank">Cultural Agreement</a>
