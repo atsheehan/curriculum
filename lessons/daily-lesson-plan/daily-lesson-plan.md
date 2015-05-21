@@ -32,7 +32,7 @@
   - 10:30 am: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
   - Daily Challenge: [News Aggregator](https://horizon.launchacademy.com/lessons/news-aggregator)
   - 2:30 pm: Clinic - Further Basic Ruby Review
-  - Evening Reading: [The Git Commit](https://horizon.launchacademy.com/lessons/git-commit)
+  - Evening Reading: TBA
   - Evening Exercise: None - rest up and get ready for the systems check!
 
 #
