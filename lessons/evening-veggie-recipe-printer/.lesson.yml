@@ -5,3 +5,5 @@ description: "Write a program that prints out recipes in a particular format usi
 depends: "rock-paper-scissors"
 ignore:
 - "evening-veggie-recipe-printer.md"
+- "erb_ex1.rb"
+- "erb_ex2.rb"
