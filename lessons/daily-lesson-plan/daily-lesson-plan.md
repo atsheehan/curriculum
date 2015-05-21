@@ -31,8 +31,8 @@
   - 9:38 am: Mentor Groups
   - 10:30 am: [HTTP Post and HTML Forms](https://horizon.launchacademy.com/lessons/http-post-and-html-forms)
   - Daily Challenge: [News Aggregator](https://horizon.launchacademy.com/lessons/news-aggregator)
-  - 2:30 pm: Clinic - Further Basic Ruby Review
-  - Evening Reading: TBA
+  - 2:30 pm: Clinic - [Livecode Kickball Challenge](https://github.com/cmkoller/kickball_site_livecode)
+  - Evening Reading: [CSS](https://horizon.launchacademy.com/lessons/css)
   - Evening Exercise: None - rest up and get ready for the systems check!
 
 #
