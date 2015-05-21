@@ -1,26 +1,65 @@
-##The Amazing Vegetarian Recipe Printer!
+## The Amazing Vegetarian Recipe Printer!
 
-###Instructions
+### Instructions
+
 Write a program that prints out recipes in a particular format using Ruby and [Embedded Ruby](http://ruby-doc.org/stdlib-2.2.0/libdoc/erb/rdoc/ERB.html) or `erb`. Your `.rb` file should contain the `recipe` variable below. The output of your code should follow the format noted below under `output`.
 
 1. First produce the formatted output with plain Ruby.
 2. Next produce the formatted output with `erb`. A short blog titled [Ruby's ERB Templating System](http://www.rrn.dk/rubys-erb-templating-system) could be helpful here.
 
-###Learning Goals
+### ERB
+
+ERB is Embedded Ruby!
+
+ERB allows us to embed Ruby code into strings or documents.
+
+We can use ERB to evaluate and print. If we have a variable `name = "Dan"`, we can print out "Hello, Dan." like so:
+
+```ruby
+require "erb"
+
+name = "Dan"
+message = "Hello, <%= name %>."
+erb = ERB.new(message)
+
+puts erb.result  # => "Hello, Dan."
+```
+
+The following statement is evaluated using ERB, and the result is "Hello!":
+
+```ruby
+require "erb"
+
+message = "
+  <% if 5 >= 0 %>
+    Hello!
+  <% else %>
+    Goodbye!
+  <% end %>
+"
+erb = ERB.new(message)
+
+puts erb.result  # => "Hello!"
+```
+
+The main benefit of ERB is the ability to create dynamically generated documents based on Ruby variables.
+
+### Learning Goals
+
 * Utilizing a hash to print human readable format on the screen.
 * Make use of Ruby's `erb` library to print out data in specific format.
 
-###Input
+### Input
 
 ```ruby
 recipe = {
-  name: "Roasted Brussel Sprouts",
+  name: "Roasted Brussels Sprouts",
   ingredients: [
     "1 1/2 pounds Brussels sprouts",
     "3 tablespoons good olive oil",
     "3/4 teaspoon kosher salt",
     "1/2 teaspoon freshly ground black pepper"
-    ],
+  ],
   directions: [
     "Preheat oven to 400 degrees F.",
     "Cut off the brown ends of the Brussels sprouts.",
@@ -31,15 +70,16 @@ recipe = {
     "Shake the pan from time to time to brown the sprouts evenly.",
     "Sprinkle with more kosher salt ( I like these salty like French fries).",
     "Serve and enjoy!"
-    ]
-  }
+  ]
+}
 ```
 
-###Output
+### Output
+
 ```
-#=================================#
-# Recipe: Roasted Brussel Sprouts #
-#=================================#
+#==================================#
+# Recipe: Roasted Brussels Sprouts #
+#==================================#
 
 Ingredients
 -----------
