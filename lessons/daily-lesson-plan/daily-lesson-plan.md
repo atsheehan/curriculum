@@ -37,7 +37,7 @@
 
 #
 * Fri 5/22
-  - 9:30 am - 12:30 pm: Systems Check
+  - 9:30 am - 12:30 pm: Systems Check - [Grocery List](https://horizon.launchacademy.com/lessons/grocery-list)
   - Afternoon/Weekend Challenge: [Slacker News](https://horizon.launchacademy.com/lessons/slacker-news)
   - 2:00 pm: [Facilitation] HTML/CSS
   - Weekend Reading: [Database Persistence](https://horizon.launchacademy.com/lessons/database-persistence)
